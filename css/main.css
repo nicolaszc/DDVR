@@ -90,7 +90,16 @@ a:hover {
     text-decoration: none;
     background-color: var(--main-color);
 }
-/* //Boostrap theme mode */
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+footer p{
+    font-size: .875rem;
+}
+
 
 /* DDVR Theme */
 .logo{
