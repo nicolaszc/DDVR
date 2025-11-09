@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "titulo": "Desengrasante Alto Poder",
+    "descripcion": "Desengrasante para remover suciedades pesadas en diversas superficies.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "industrial/producto-1.webp",
+    "beneficios": [
+      "Elimina grasas y aceites adheridos",
+      "No inflamable",
+      "Libre de solventes clorados",
+      "Espuma fácil de enjuagar"
+    ],
+    "categoria": "desengrasantes"
+  },
+  {
+    "id": 2,
+    "titulo": "Desengrasante Ecológico Listo para Usar",
+    "descripcion": "Desengrasante para suciedades pesadas listo para aplicar.",
+    "formatos": ["5L", "10L", "22L", "208L"],
+    "imagen": "industrial/producto-2.webp",
+    "beneficios": [
+      "Listo para usar",
+      "No inflamable",
+      "Libre de soda cáustica",
+      "Biodegradable"
+    ],
+    "categoria": "desengrasantes ecologicos"
+  },
+  {
+    "id": 3,
+    "titulo": "Desengrasante Ecológico Industrial",
+    "descripcion": "Desengrasante para suciedades pesadas en entornos industriales.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "industrial/producto-3.webp",
+    "beneficios": [
+      "No inflamable",
+      "Libre de VOC",
+      "Libre de soda cáustica"
+    ],
+    "categoria": "desengrasantes ecologicos"
+  },
+  {
+    "id": 4,
+    "titulo": "Limpiador de Manos Exfoliante",
+    "descripcion": "Limpia suciedades pesadas en manos.",
+    "formatos": ["470ml", "5L"],
+    "imagen": "industrial/producto-4.webp",
+    "beneficios": [
+      "Contiene agentes humectantes",
+      "Aroma cítrico suave",
+      "Formato económico con alto rendimiento",
+      "Biodegradable"
+    ],
+    "categoria": "manos"
+  },
+  {
+    "id": 5,
+    "titulo": "Limpiador de Manos Orange",
+    "descripcion": "Limpia grasas y aceites en manos con acción rápida.",
+    "formatos": ["470ml", "5L"],
+    "imagen": "industrial/producto-5.webp",
+    "beneficios": [
+      "Alta eficacia en grasas y aceites",
+      "Biolípidos que humectan la piel",
+      "Abrasivos de origen natural",
+      "Uso con o sin enjuague",
+      "Aroma cítrico"
+    ],
+    "categoria": "manos"
+  },
+  {
+    "id": 6,
+    "titulo": "Limpia Contactos",
+    "descripcion": "Limpieza de circuitos y sistemas eléctricos.",
+    "formatos": ["325g"],
+    "imagen": "industrial/producto-6.webp",
+    "beneficios": [
+      "Secado rápido",
+      "No deja residuos",
+      "No agresivo con componentes",
+      "Asegura buen flujo de corriente",
+      "Aplicación controlada"
+    ],
+    "categoria": "electricos"
+  },
+  {
+    "id": 7,
+    "titulo": "Limpia Contactos No Inflamable",
+    "descripcion": "Limpieza de componentes eléctricos y electrónicos.",
+    "formatos": ["325g"],
+    "imagen": "industrial/producto-7.webp",
+    "beneficios": [
+      "No inflamable",
+      "Secado muy rápido sin residuos",
+      "Compatible con plásticos, gomas y metales",
+      "No afecta la continuidad eléctrica",
+      "Aplicación controlada"
+    ],
+    "categoria": "electricos"
+  },
+  {
+    "id": 8,
+    "titulo": "Aire Comprimido de Limpieza No Inflamable",
+    "descripcion": "Remoción de polvo y partículas en equipos y componentes.",
+    "formatos": ["300g"],
+    "imagen": "industrial/producto-8.webp",
+    "beneficios": [
+      "No inflamable",
+      "No deja residuos",
+      "Seguro para componentes electrónicos",
+      "Compatible con plásticos",
+      "Alta potencia de soplado"
+    ],
+    "categoria": "electricos"
+  },
+  {
+    "id": 9,
+    "titulo": "Desoxidante",
+    "descripcion": "Ayuda a desprender óxido en piezas trabadas.",
+    "formatos": ["300ml"],
+    "imagen": "industrial/producto-9.webp",
+    "beneficios": [
+      "Acción capilar penetrante",
+      "Alto poder lubricante",
+      "Reduce ruidos y chirridos",
+      "Aplicación precisa"
+    ],
+    "categoria": "lubricantes"
+  },
+  {
+    "id": 10,
+    "titulo": "Aceite Multipropósito",
+    "descripcion": "Lubricante y aflojatodo para múltiples mecanismos.",
+    "formatos": [],
+    "imagen": "industrial/producto-10.webp",
+    "beneficios": [
+      "Penetra óxido y corrosión",
+      "Desplaza humedad",
+      "Disminuye la fricción",
+      "Crea película protectora",
+      "Reduce chirridos"
+    ],
+    "categoria": "lubricantes"
+  },
+  {
+    "id": 11,
+    "titulo": "Anticorrosivo",
+    "descripcion": "Protección contra corrosión en múltiples industrias.",
+    "formatos": ["300g"],
+    "imagen": "industrial/producto-11.webp",
+    "beneficios": [
+      "Alta eficiencia en distintos metales",
+      "Película seca para uso en vertical",
+      "Neutraliza huellas",
+      "Sin siliconas ni ceras"
+    ],
+    "categoria": "solventes"
+  },
+  {
+    "id": 12,
+    "titulo": "Silicona Desmoldante Alta Temperatura",
+    "descripcion": "Desmolde de piezas plásticas y metálicas en altas temperaturas.",
+    "formatos": ["350ml"],
+    "imagen": "industrial/producto-12.webp",
+    "beneficios": [
+      "Fuerte capacidad de desmolde",
+      "Lubrica y protege moldes",
+      "No mancha",
+      "Rango amplio de temperatura"
+    ],
+    "categoria": "siliconas"
+  },
+  {
+    "id": 13,
+    "titulo": "Silicona Desmoldante GA",
+    "descripcion": "Desmolde para procesos de inyección, extrusión y similares.",
+    "formatos": ["350ml"],
+    "imagen": "industrial/producto-13.webp",
+    "beneficios": [
+      "Permite varios desmolde por aplicación",
+      "No deja manchas",
+      "No corrosiva, sin olor y sin color"
+    ],
+    "categoria": "siliconas"
+  },
+  {
+    "id": 14,
+    "titulo": "Limpiavidrios",
+    "descripcion": "Limpieza de vidrios y cristales.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "industrial/producto-14.webp",
+    "beneficios": [
+      "No deja aureolas",
+      "Secado rápido",
+      "Biodegradable"
+    ],
+    "categoria": "superficies"
+  },
+  {
+    "id": 15,
+    "titulo": "Solvente Dieléctrico 80 NC",
+    "descripcion": "Remoción rápida de grasas y suciedades en maquinaria y motores.",
+    "formatos": [],
+    "imagen": "industrial/producto-15.webp",
+    "beneficios": [
+      "Remueve carbonilla, grasa y aceite",
+      "Volatilidad controlada, apto para inmersión",
+      "Baja conductividad eléctrica"
+    ],
+    "categoria": "solventes"
+  },
+  {
+    "id": 16,
+    "titulo": "Dieléctrico No Inflamable",
+    "descripcion": "Limpieza y mantención de equipos y motores eléctricos.",
+    "formatos": ["5L", "19L", "60L", "208L"],
+    "imagen": "industrial/producto-16.webp",
+    "beneficios": [
+      "Solventes no conductores",
+      "Sin olor, ideal para interiores",
+      "Base biológica, no tóxica y biodegradable"
+    ],
+    "categoria": "electricos"
+  },
+  {
+    "id": 17,
+    "titulo": "Grasa Líquida Adhesiva",
+    "descripcion": "Lubricante para piezas sometidas a alta presión.",
+    "formatos": ["500ml"],
+    "imagen": "industrial/producto-17.webp",
+    "beneficios": [
+      "Larga duración",
+      "Alta adhesión al material",
+      "Protección contra corrosión",
+      "Reduce desgaste por fricción"
+    ],
+    "categoria": "lubricantes"
+  }
+]
