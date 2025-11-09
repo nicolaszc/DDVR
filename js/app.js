@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnAutomotriz = document.getElementById("btn-catalogo-automotriz");
   const btnIndustrial = document.getElementById("btn-catalogo-industrial");
+  const filtersGroup = document.querySelector(".filters-button-group");
 
   let productosData = [];
-  let iso = null; // para Isotope si luego lo agregas
+  let iso = null;
+  let filtroActual = "*";
 
   // Cargar catálogo desde JSON
   function cargarCatalogo(rutaJson) {
@@ -30,20 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         productosData = data;
         renderizarCards(data);
+        initIsotope();
       })
       .catch((err) => {
         console.error(err);
         contenedor.innerHTML = `
           <div class="col-12">
             <div class="alert alert-danger">
-              Error al cargar el catálogo (${rutaJson}). Revisa la ruta del JSON o ejecuta el sitio desde un servidor (no file://).
+              Error al cargar el catálogo (${rutaJson}). Revisa la ruta del JSON y ejecuta el sitio desde http:// (no file://).
             </div>
           </div>
         `;
       });
   }
 
-  // Render de las cards
+  // Pintar cards
   function renderizarCards(productos) {
     contenedor.innerHTML = "";
 
@@ -52,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ? producto.formatos.join(" / ")
         : (producto.formatos || "");
 
-      // Clases de categoría (para futuros filtros con Isotope)
+      // clases de categoría para filtros Isotope
       const categoriaClase = (producto.categoria || "")
         .split(" ")
         .map((c) => c.trim())
@@ -71,20 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
             <h4>${producto.titulo}</h4>
             <p class="card-text flex-grow-1">${producto.descripcion}</p>
             <p class="card-presentation d-flex align-items-center mb-2">
-              <i class="bi bi-info-circle me-2"></i><strong class="me-2">Formatos:</strong> ${formatosTexto}
+              <strong class="me-2">Formatos:</strong> ${formatosTexto}
             </p>
             <div class="d-flex justify-content-between align-items-center mt-4">
               <button
                 type="button"
-                class="btn btn-sm btn-primary p-2"
+                class="btn btn-sm btn-primary btn-ddvr py-2 px-4"
                 data-bs-toggle="modal"
                 data-bs-target="#modal-producto"
                 data-product-id="${producto.id}">
                 Ver Más
               </button>
               <a href="jvascript: void(0)" class="share-btn">
-                <small class="text-body-secondary">
-                        <i class="bi bi-share-fill"></i> Compartir
+                <small class="text-body-secondary lh-1">
+                  <i class="bi bi-share-fill"></i>
                 </small>
               </a>
             </div>
@@ -94,40 +97,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
       contenedor.appendChild(col);
     });
+  }
 
-    // Si Isotope está cargado en la página, se inicializa/actualiza
-    if (window.Isotope) {
-      if (!iso) {
-        iso = new Isotope(contenedor, {
-          itemSelector: ".grid-item",
-          layoutMode: "fitRows"
-        });
-      } else {
-        iso.reloadItems();
-        iso.layout();
-      }
+  // Inicializar / refrescar Isotope
+  function initIsotope() {
+    if (!window.Isotope) return;
+
+    if (!iso) {
+      iso = new Isotope(contenedor, {
+        itemSelector: ".grid-item",
+        layoutMode: "fitRows"
+      });
+    } else {
+      iso.reloadItems();
     }
+
+    iso.arrange({ filter: filtroActual });
   }
 
-  // change is-checked class on buttons
-  var buttonGroups = document.querySelectorAll(".filters-button-group");
-  for (var i = 0, len = buttonGroups.length; i < len; i++) {
-    var buttonGroup = buttonGroups[i];
-    filterButtonGroup(buttonGroup);
-  }
-
-  function filterButtonGroup(buttonGroup) {
-    buttonGroup.addEventListener("click", function(event) {
-      // only work with buttons
-      if (!matchesSelector(event.target, "button")) {
-        return;
-      }
-      buttonGroup.querySelector(".active").classList.remove("active");
-      event.target.classList.add("active");
-    });
-  }
-
-  // Lógica del modal
+  // Modal beneficios
   if (modalEl && modalTitleSpan && modalBeneficiosList) {
     modalEl.addEventListener("show.bs.modal", (event) => {
       const boton = event.relatedTarget;
@@ -152,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Eventos botones catálogo
+  // Botones catálogo
   if (btnAutomotriz) {
     btnAutomotriz.addEventListener("click", (e) => {
       e.preventDefault();
@@ -181,14 +169,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // (Opcional futuro) filtros con Isotope si agregas .filters-button-group
-  const filtersGroup = document.querySelector(".filters-button-group");
+  // Filtros Isotope
   if (filtersGroup) {
     filtersGroup.addEventListener("click", (e) => {
       const btn = e.target.closest("button");
       if (!btn || !iso) return;
-      const filterValue = btn.getAttribute("data-filter");
-      iso.arrange({ filter: filterValue });
+
+      // activo visual
+      filtersGroup.querySelectorAll("button").forEach((b) =>
+        b.classList.remove("active")
+      );
+      btn.classList.add("active");
+
+      // aplicar filtro
+      filtroActual = btn.getAttribute("data-filter") || "*";
+      iso.arrange({ filter: filtroActual });
     });
   }
 

@@ -1,8 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
 :root{
     --main-color: #ef7e09;
-    --main-color-hover: #be6709;
+    --main-color-hover: #ff8302;
     --main-light-color: #fff;
     --card-text-color: #999;
     --secondary-light-color: #ccc;
@@ -54,8 +71,9 @@ a:hover {
     text-shadow: none!important;
 }
 .btn-bd-primary:hover, .btn-bd-primary:focus, .btn-bd-primary:active, .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
-    background-color: var(--main-color-hover);
-    border-color:  var(--main-color-hover);
+    background-color: var(--main-color);
+    border-color:  var(--main-color);
+    color: var(--bs-white)
 }
 .bd-mode-toggle {
     z-index: 1500;
@@ -66,6 +84,11 @@ a:hover {
 }
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--bs-dropdown-link-active-color);
+    text-decoration: none;
+    background-color: var(--main-color);
 }
 /* //Boostrap theme mode */
 
@@ -99,9 +122,41 @@ a:hover {
 }
 .hero p{
     text-shadow: 0px 0px 3px #000000;
-    color: var(--secondary-light-color)
+    color: var(--secondary-light-color);
+}
+.btn-ddvr{
+    border:none;
+    overflow: hidden!important;
+    position: relative;
+    transition: all 1s ease;
+}
+.btn-ddvr::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(255,255,255,0.5)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
+.btn-ddvr:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.btn-ddvr:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(175%);
+}
 .list-unstyled a{
     text-decoration: none;
     font-weight: 200;
@@ -121,7 +176,6 @@ a:hover {
 .modal-header span{
     color: var(--card-text-color);
 }
-
 .card-img {
     background: var(--main-light-color);
     border-bottom-left-radius: 0;
@@ -131,22 +185,20 @@ a:hover {
     height: 200px;
     overflow: hidden;
 }
-
 .card-img img{
     width: auto;
     max-height: 160px;
 }
-
 .card-text{
     color: var(--card-text-color);
+    font-size: .875rem;
 }
-
 .card-presentation {
     color: var(--secondary-light-color);
     font-size: .875rem;
     margin-bottom: 2rem;
 }
-.card-presentation i, .card-presentation strong{
+.card-presentation strong{
     font-weight: 300;
     color: var(--main-light-color);
 }
@@ -159,55 +211,46 @@ a:hover {
 .card-body .share-btn:hover{
     color:  var(--main-color);
 }
-
-/* Asegurar que las cards se alineen bien en altura */
 #catalog .col {
     display: flex;
 }
-
 #catalog .card {
-    display: flex;
-    flex-direction: column;
+    border:none;
     width: 100%;
 }
-
 #catalog .card-body {
     display: flex;
     flex-direction: column;
 }
-
-#catalog .card-text {
-    flex-grow: 1;
+.filters-button-group .btn-dark{
+    border: none;
+    background-color: rgb(33, 37, 41);
+    font-weight: 200;
 }
-.filters-button-group .btn-outline-light{
-    border-color: rgba(255, 255, 255, .15);
+.filters-button-group .btn-dark:hover{
+    border: none;
     background-color: rgb(33, 37, 41);
     font-weight: 200;
 }
 .filters-button-group .btn.active {
-    border-color: var(--main-color);
+    border: none;
     background-color: var(--main-color);
     color: var(--main-light-color);
 }
-
 .to-top {
     font-size: 2rem;
 }
+@media(max-width: 576px) {
+    .filters-button-group .btn-dark{
+        width: 50%!important;
+        margin-bottom: .5rem;
+    }
+}
 /* LIGHT MODE */
 [data-bs-theme="light"] {
-    .filters-button-group .btn-outline-light{
-        border-color: rgba(0, 0, 0, .075);
-        background-color: #eee;
-        color: rgb(33, 37, 41);
-        font-weight: 200;
-    }
-    .filters-button-group .btn.active{
-        background-color: var(--main-color);
-        border-color: var(--main-color);
-        color: var(--main-light-color);
-    }
-    .card{
-        border-color: rgba(0, 0, 0, .075);
+    #catalog .card {
+        border:none;
+        width: 100%;
     }
     .card-body{
         background-color: #eee;
