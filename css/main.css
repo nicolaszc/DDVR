@@ -1,5 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+/* @font-face {
   font-family: 'Poppins';
   src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -16,7 +16,7 @@
   src: url('../fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
-}
+} */
 :root{
     --main-color: #ef7e09;
     --main-color-hover: #ff8302;
@@ -65,6 +65,11 @@ a:hover {
     color: var(--bs-white);
     border-color:  var(--main-color);
     text-shadow: none!important;
+}
+.btn-primary i{
+    font-size: 1.25rem;
+    font-weight: 200;
+    line-height: 1;
 }
 .btn-secondary{
     font-weight: 200;
@@ -166,11 +171,14 @@ footer p{
   opacity: 1;
   transform: rotate(-45deg) translateY(175%);
 }
+.list-unstyled li{
+    margin-bottom: .5rem;
+}
 .list-unstyled a{
     text-decoration: none;
     font-weight: 200;
+    font-size: .875rem;
 }
-
 .list-unstyled i{
     margin-left: .5rem;
 }
@@ -213,7 +221,7 @@ footer p{
 }
 .card-body .share-btn{
     color: var(--main-light-color) !important;
-    font-size: .875rem;
+    font-size: 1.25rem;
     font-weight: 200;
     text-decoration: none;
 }

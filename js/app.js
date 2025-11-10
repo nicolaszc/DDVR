@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 data-bs-toggle="modal"
                 data-bs-target="#modal-producto"
                 data-product-id="${producto.id}">
-                Ver Más
+                Ver Más<i class="bi bi-arrow-right-short ms-2"></i>
               </button>
               <a href="jvascript: void(0)" class="share-btn">
                 <small class="text-body-secondary lh-1">
