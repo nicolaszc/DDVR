@@ -204,10 +204,8 @@ footer p{
 .modal-body li{
     font-weight: 200;
 }
-
 .modal-header h1{
     font-weight: 300;
-
 }
 .modal-header span{
     color: var(--card-text-color);
@@ -272,6 +270,11 @@ footer p{
     border: none;
     background-color: var(--main-color);
     color: var(--main-light-color);
+}
+.offcanvas-body label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-left: 4px;
 }
 .to-top {
     font-size: 2rem;

@@ -189,4 +189,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Catálogo inicial
   cargarCatalogo("data/catalogo-automotriz.json");
+
+  // --- SCRIPT DE FORMULARIO DE CONTACTO ---
+  const form = document.getElementById('contact_form');
+  const offcanvasElement = document.getElementById('offcanvasScrolling');
+
+  if (form && offcanvasElement) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // evita el envío clásico
+
+      console.log("Formulario enviado correctamente");
+
+      // Cerrar el offcanvas
+      const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+      if (offcanvas) {
+        offcanvas.hide();
+      }
+
+      // Vaciar formulario
+      form.reset();
+    });
+  }
 });
