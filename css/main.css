@@ -29,6 +29,7 @@
 /* General styles */
 body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 a {
     color: var(--main-color);
@@ -170,6 +171,24 @@ footer p{
 .btn-ddvr:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(175%);
+}
+.btn-contact{
+    color: var(--main-color);
+}
+.abs-btn-contact {
+    bottom: 0;
+    right: 0;
+}
+.btn-menu{
+    color: var(--card-text-color);
+    font-size: 2rem;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-toggle, .abs-btn-contact{
+    width: 44px;
+    height: 36px;
 }
 .list-unstyled li{
     margin-bottom: .5rem;
