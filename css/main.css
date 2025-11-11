@@ -33,6 +33,9 @@ body {
 }
 a {
     color: var(--main-color);
+    font-size: .875rem;
+    font-weight: 200;
+    text-decoration: none;
 }
 p {
     font-weight: 200;
@@ -201,22 +204,13 @@ footer p{
 .list-unstyled i{
     margin-left: .5rem;
 }
-.modal-body li{
-    font-weight: 200;
-}
-.modal-header h1{
-    font-weight: 300;
-}
-.modal-header span{
-    color: var(--card-text-color);
-}
 .card-img {
     background: var(--main-light-color);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding: 1.25rem .75rem;
     text-align: center;
-    height: 200px;
+    height: 248px;
     overflow: hidden;
 }
 .card-img img{
@@ -271,10 +265,56 @@ footer p{
     background-color: var(--main-color);
     color: var(--main-light-color);
 }
+#offcanvasContact{
+    border: none;
+}
 .offcanvas-body label {
-  font-weight: 500;
-  margin-bottom: 4px;
-  margin-left: 4px;
+    font-weight: 200;
+    font-size: .875rem;
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
+.offcanvas-body input::placeholder, 
+.offcanvas-body textarea::placeholder, 
+.offcanvas-body select{
+    font-weight: 200;
+    font-size: .75rem;
+    columns: var(--card-text-color);
+}
+.offcanvas-body #visible-addon{
+    font-weight: 300;
+    font-size: .875rem;
+}
+#modal-producto .modal-content{
+    border: none;
+}
+#modal-producto ul{
+    padding-left: 1rem;
+}
+.modal-body li{
+    font-weight: 200;
+    font-size: .875rem;
+    color: var(--card-text-color);
+}
+.modal-body{
+    background-color: #212529;
+    padding-top: 0;
+}
+.modal-header{
+    background-color: rgb(33, 37, 41);
+    border: none;
+}
+.modal-header h1{
+    font-weight: 300;
+}
+.modal-header span{
+    color: var(--card-text-color);
+}
+.modal-body a i{
+    font-size: 1.25rem;
+}
+.modal-body a:hover{
+    color: var(--card-text-color);
 }
 .to-top {
     font-size: 2rem;

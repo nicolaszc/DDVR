@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalTitleSpan = modalEl
     ? modalEl.querySelector("#modal-producto-label span")
     : null;
+  const modalImg = document.getElementById("modal-img");
   const modalBeneficiosList = document.getElementById("modal-producto-beneficios");
+  const modalPDF = document.getElementById("modal-pdf");
 
   const btnAutomotriz = document.getElementById("btn-catalogo-automotriz");
   const btnIndustrial = document.getElementById("btn-catalogo-industrial");
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       col.innerHTML = `
         <div class="card shadow-sm h-100 d-flex flex-column">
-          <div class="card-img">
+          <div class="card-img pt-5">
             <img src="img/${producto.imagen}" alt="${producto.titulo}">
           </div>
           <div class="card-body d-flex flex-column">
@@ -106,7 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!iso) {
       iso = new Isotope(contenedor, {
         itemSelector: ".grid-item",
-        layoutMode: "fitRows"
+        layoutMode: "fitRows",
+        fitRows: {
+            equalheight: true
+           }
       });
     } else {
       iso.reloadItems();
@@ -128,6 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!producto) return;
 
       modalTitleSpan.textContent = producto.titulo;
+      modalImg.innerHTML = `<img src="img/${producto.imagen}" alt="${producto.titulo}">`;
+      modalPDF.innerHTML = `<a href="javascript: void(0)"><i class="bi bi-filetype-pdf me-2"></i>Descargar Ficha del Producto</a>`;
       modalBeneficiosList.innerHTML = "";
 
       if (Array.isArray(producto.beneficios)) {
