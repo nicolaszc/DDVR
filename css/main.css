@@ -204,6 +204,9 @@ footer p{
 .list-unstyled i{
     margin-left: .5rem;
 }
+.card h4{
+    font-size: 1.25rem;
+}
 .card-img {
     background: var(--main-light-color);
     border-bottom-left-radius: 0;
@@ -291,6 +294,9 @@ footer p{
 #modal-producto ul{
     padding-left: 1rem;
 }
+.modal-body h4{
+    font-size: 1.25rem;
+}
 .modal-body li{
     font-weight: 200;
     font-size: .875rem;
@@ -299,6 +305,7 @@ footer p{
 .modal-body{
     background-color: #212529;
     padding-top: 0;
+    padding-bottom: 0;
 }
 .modal-header{
     background-color: rgb(33, 37, 41);
@@ -315,6 +322,9 @@ footer p{
 }
 .modal-body a:hover{
     color: var(--card-text-color);
+}
+.modal-footer{
+    border: none;
 }
 .to-top {
     font-size: 2rem;
