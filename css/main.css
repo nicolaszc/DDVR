@@ -125,6 +125,25 @@ footer p{
     width: 200px;
     height: 60px;
 }
+.about{
+    height: calc(100vh - 76px);
+}
+header h4{
+    font-size: 1.375rem;
+    margin-bottom: .75rem;
+    color: var(--main-color);
+}
+header h6{
+    font-size: 1rem;
+}
+header ul{
+    font-size: .875rem;
+    font-weight: 200;
+    padding-left: 1rem;
+}
+.why-us ul{
+    list-style: none;
+}
 .navbar-toggler span{
     font-size: .875rem;
     font-weight: 200;
@@ -216,19 +235,6 @@ footer p{
 }
 .list-unstyled a{
     text-decoration: none;
-}
-header h4{
-    font-size: 1.25rem;
-    margin-bottom: .75rem;
-    color: var(--main-color);
-}
-header h6{
-    font-size: 1rem;
-}
-header ul{
-    font-size: .875rem;
-    font-weight: 200;
-    padding-left: 1rem;
 }
 .list-unstyled i{
     margin-left: .5rem;
