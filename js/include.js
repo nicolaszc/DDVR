@@ -1,9 +1,11 @@
 // include.js
 document.addEventListener("DOMContentLoaded", () => {
 Promise.all([
-    includeHTML("../header.html", "header"),
-    includeHTML("../footer.html", "footer"),
-    includeHTML("../components.html", "components")
+    includeHTML("../components/header.html", "header"),
+    includeHTML("../components/footer.html", "footer"),
+    includeHTML("../components/theme-toggle.html", "theme-toggle"),
+    includeHTML("../components/product-modal.html", "product-modal"),
+    includeHTML("../components/contact-form.html", "contact-form")
   ]).then(() => {
     console.log("Componentes cargados ✅");
     document.dispatchEvent(new Event("componentsLoaded"));

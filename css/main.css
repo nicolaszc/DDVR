@@ -417,7 +417,7 @@ header ul{
     background-color: var(--main-color);
     color: var(--main-light-color);
 }
-#offcanvasContact{
+#contactForm{
     border: none;
 }
 .offcanvas-body, 
