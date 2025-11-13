@@ -27,7 +27,7 @@
         </svg>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
     </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+    <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="bd-theme-text">
         <li>
             <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
                 <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
@@ -87,31 +87,31 @@
         <form id="contact_form">
             <div class="row">
             <div class="col-md-6 mb-2">
-                <label for="validationDefault01">Nombre</label>
-                <input type="text" class="form-control" id="validationDefault01" required>
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" required>
             </div>
             <div class="col-md-6 mb-2">
-                <label for="validationDefault02">Apellido</label>
-                <input type="text" class="form-control" id="validationDefault02" required>
+                <label for="last-name">Apellido</label>
+                <input type="text" class="form-control" id="last-name" required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-6 mb-2">
-                <label for="validationDefault03">Correo</label>
-                <input type="text" class="form-control" id="validationDefault03" placeholder="ejemplo@gmail.com" required>
+                <label for="mail">Correo</label>
+                <input type="text" name="mail" class="form-control" id="mail" placeholder="ejemplo@gmail.com" required>
             </div>
             <div class="col-md-6 mb-2">
-                <label for="validationDefault04">Telefono</label>
+                <label for="phone">Telefono</label>
                 <div class="input-group">
                 <span class="input-group-text" id="visible-addon">+56</span>
-                <input type="text" class="form-control" id="validationDefault04" placeholder="XXXXXXXXX" maxlength="9" required>
+                <input type="text" name="phone" class="form-control" id="phone" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" maxlength="9" required>
                 </div>
             </div>
             </div>
             <div class="row">
             <div class="col-md-6 mb-2">
-                <label for="validationDefault05">Asunto</label>
-                <select class="form-select" aria-label="Default select example" id="validationDefault05" required>
+                <label for="subject">Asunto</label>
+                <select class="form-select" aria-label="Default select example" id="subject" required>
                     <option selected>Seleccione asunto</option>
                     <option value="1">Venta</option>
                     <option value="2">Post-venta</option>
@@ -122,8 +122,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12 mb-2">
-                    <label for="validationDefault06">Mensaje</label>
-                    <textarea class="form-control" id="validationDefault06" style="height: 200px; resize: none; overflow-y: hidden;" placeholder="Escriba su mensaje aquí" required></textarea>
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-control" id="message" style="height: 200px; resize: none; overflow-y: hidden;" placeholder="Escriba su mensaje aquí" required></textarea>
                 </div>
             </div>
             <div class="d-flex justify-content-end mt-2">
@@ -131,23 +131,23 @@
                 <button class="btn btn-sm btn-primary btn-ddvr py-2 px-4 mt-2" type="submit">Enviar</button>
             </div>
             <div class="row mt-5">
-                <div class="col-6 my-2">
+                <div class="col-7 my-2">
                     <ul class="list-unstyled">
                     <li class="d-flex align-items-center"><i class="bi bi-person-fill me-2"></i>Pía Díaz-Valdés</li>
-                    <li class="d-flex align-items-center"><i class="bi bi-envelope-fill me-2"></i>pdiazvaldes@ddvr.cl</li>
-                    <li class="d-flex align-items-center"><i class="bi bi-telephone-fill me-2"></i>+56 9 94353546</li>
+                    <li class="d-flex align-items-center"><a href="mailto: pdiazvaldes@ddvr.cl"><i class="bi bi-envelope-fill me-2"></i>pdiazvaldes@ddvr.cl<i class="bi bi-arrow-right-short"></i></a></li>
+                    <li class="d-flex align-items-center"><a href="tel: +56994353546"><i class="bi bi-telephone-fill me-2"></i>+56 9 94353546<i class="bi bi-arrow-right-short"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-6 my-2">
+                <div class="col-5 my-2">
                     <ul class="list-unstyled">
                         <li class="d-flex align-items-center justify-content-end">
-                            <a href="#" class="text-white">Whatsapp</a><i class="bi bi-whatsapp ms-2"></i>
+                            <a href="#">Whatsapp<i class="bi bi-whatsapp ms-2"></i></a>
                         </li>
                         <li class="d-flex align-items-center justify-content-end">
-                            <a href="https://www.instagram.com/distribuidoradvr/" target="_blank" class="text-white">Instagram</a> <i class="bi bi-instagram ms-2"></i>
+                            <a href="https://www.instagram.com/distribuidoradvr/" target="_blank">Instagram<i class="bi bi-instagram ms-2"></i></a> 
                         </li>
                         <li class="d-flex align-items-center justify-content-end">
-                            <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank" class="text-white">Linkedin</a> <i class="bi bi-linkedin ms-2"></i>
+                            <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank">Linkedin<i class="bi bi-linkedin ms-2"></i></a> 
                         </li>
                     </ul>
                 </div>

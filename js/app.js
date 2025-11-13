@@ -69,13 +69,15 @@ function initApp() {
       col.className = `col grid-item ${categoriaClase}`;
 
       col.innerHTML = `
-        <div class="card shadow mb-2 my-1 h-100 d-flex flex-column">
+        <div class="card shadow mb-2 h-100 d-flex flex-column card-ddvr">
           <div class="card-img pt-5">
             <img src="img/${product.imagen}" alt="${product.titulo}">
           </div>
-          <div class="card-body d-flex flex-column py-4">
-            <h4>${product.titulo}</h4>
-            <p class="card-text flex-grow-1">${product.descripcion}</p>
+          <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
+            <div class="card-main-info">
+              <h4>${product.titulo}</h4>
+              <p class="card-text flex-grow-1">${product.descripcion}</p>
+            </div>
             <p class="card-presentation d-flex align-items-center mb-2">
               <strong class="me-2">Formatos:</strong> ${formatosTexto}
             </p>
@@ -86,19 +88,19 @@ function initApp() {
                 data-bs-toggle="modal"
                 data-bs-target="#modal-product"
                 data-product-id="${product.id}">
-                Ver Más<i class="bi bi-arrow-right-short ms-2"></i>
+                Ver Más<i class="bi bi-arrow-right-short"></i>
               </button>
                 
               <div class="share-container d-flex align-items-center">
                 <ul class="list-unstyled d-flex m-0 rrss">
-                  <li class="d-flex align-items-center m-0">
-                      <a href="https://www.instagram.com/distribuidoradvr/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <li class="d-flex align-items-center my-0">
+                      <a href="#"><i class="bi bi-whatsapp ms-2"></i></a> 
                   </li>
-                  <li class="d-flex align-items-center m-0">
-                      <a href="#"><i class="bi bi-facebook"></i></a> 
+                  <li class="d-flex align-items-center my-0">
+                      <a href="https://www.instagram.com/distribuidoradvr/" target="_blank"><i class="bi bi-instagram ms-2"></i></a>
                   </li>
-                  <li class="d-flex align-items-center m-0">
-                      <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank"><i class="bi bi-linkedin"></i></a> 
+                  <li class="d-flex align-items-center my-0">
+                      <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank"><i class="bi bi-linkedin ms-2"></i></a> 
                   </li>
                 </ul>
                 <button class="btn share-btn lh-1 d-flex pe-0">

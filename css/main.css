@@ -65,7 +65,8 @@ a:hover {
     vertical-align: -0.125em;
     fill: currentColor;
 }
-.btn-bd-primary, .btn-primary{
+.btn-bd-primary, 
+.btn-primary{
     background-color: var(--main-color);
     font-weight: 200;
     color: var(--bs-white);
@@ -81,7 +82,11 @@ a:hover {
     font-weight: 200;
     text-shadow: none!important;
 }
-.btn-bd-primary:hover, .btn-bd-primary:focus, .btn-bd-primary:active, .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+.btn-bd-primary:hover, 
+.btn-bd-primary:focus, .btn-bd-primary:active, 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active{
     background-color: var(--main-color);
     border-color:  var(--main-color);
     color: var(--bs-white)
@@ -100,7 +105,8 @@ a:hover {
     font-size: .875rem;
     font-weight: 200;
 }
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active, 
+.dropdown-item:active {
     color: var(--bs-dropdown-link-active-color);
     text-decoration: none;
     background-color: var(--main-color);
@@ -114,8 +120,42 @@ a:hover {
 footer p{
     font-size: .875rem;
 }
-
-
+.shadow{
+    box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .375) !important;
+}
+input, 
+textarea{
+    font-size: .875rem !important;
+    font-weight: 200 !important;
+}
+input:focus, 
+textarea:focus, 
+select:focus{
+    border-color: rgba(238, 125, 13, .5)!important;
+    box-shadow: 0 0 0 .25rem rgba(238, 125, 13, .25)!important;
+}
+input::placeholder, 
+textarea::placeholder, 
+select{
+    font-weight: 200!important;
+    font-size: .75rem!important;
+    color: var(--terciary-light-color)!important;
+}
+select{
+    padding: .5rem .75rem !important;
+}
+label{
+    font-weight: 200!important;
+    font-size: .875rem!important;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    color: var(--card-text-color)!important;
+}
+#visible-addon{
+    font-weight: 200!important;
+    font-size: .875rem!important;
+    color: var(--card-text-color)!important;
+}
 /* DDVR Theme */
 .logo{
     background: url(../img/logo-dark.webp);
@@ -126,7 +166,7 @@ footer p{
     height: 60px;
 }
 .about{
-    height: calc(100vh - 76px);
+    max-height: calc(100vh - 76px);
 }
 header h4{
     font-size: 1.375rem;
@@ -224,7 +264,8 @@ header ul{
 .dropdown-toggle::after {
     display: none;
 }
-.dropdown-toggle, .abs-btn-contact{
+.dropdown-toggle, 
+.abs-btn-contact{
     width: 44px;
     height: 36px;
 }
@@ -236,11 +277,46 @@ header ul{
 .list-unstyled a{
     text-decoration: none;
 }
-.list-unstyled i{
-    margin-left: .5rem;
+.card-ddvr{
+    border:none;
+    overflow: hidden!important;
+    position: relative;
+    transition: all 1s ease;
+}
+.card-ddvr::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(255,255,255,0.5)
+  );
+  transform: rotate(-45deg);
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.card-ddvr:hover {
+  transform: scale(1.025);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5)!important;
+}
+
+.card-ddvr .btn-ddvr:hover {
+  transform: scale(1.05);
+  box-shadow: none!important;
+}
+.card-ddvr:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(275%);
 }
 .card h4{
     font-size: 1.25rem;
+    color: var(--main-light-color);
 }
 .card-img {
     background: var(--main-light-color);
@@ -254,6 +330,9 @@ header ul{
 .card-img img{
     width: auto;
     max-height: 160px;
+}
+.card-main-info{
+    height: 7rem;
 }
 .card-text{
     color: var(--card-text-color);
@@ -286,13 +365,15 @@ header ul{
   transform: translateX(0);
   transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
 }
-.card-body .share-btn, .card-body .rrss a{
+.card-body .share-btn, 
+.card-body .rrss a{
     color: var(--secondary-light-color);
     font-weight: 200;
     text-decoration: none;
     border: none;
 }
-.card-body .share-btn:hover, .card-body .rrss a:hover{
+.card-body .share-btn:hover, 
+.card-body .rrss a:hover{
     color:  var(--main-color);
 }
 .card-body .share-btn.active{
@@ -334,22 +415,12 @@ header ul{
 #offcanvasContact{
     border: none;
 }
-.offcanvas-body label {
-    font-weight: 200;
-    font-size: .875rem;
-    margin-bottom: 4px;
-    margin-left: 4px;
+.offcanvas-body, 
+.offcanvas-body a{
+    color: var(--card-text-color);
 }
-.offcanvas-body input::placeholder, 
-.offcanvas-body textarea::placeholder, 
-.offcanvas-body select{
-    font-weight: 200;
-    font-size: .75rem;
-    columns: var(--card-text-color);
-}
-.offcanvas-body #visible-addon{
-    font-weight: 300;
-    font-size: .875rem;
+.offcanvas-body a:hover{
+    color: var(--main-color);
 }
 #modal-producto .modal-content{
     border: none;
@@ -412,31 +483,22 @@ header ul{
 }
 /* LIGHT MODE */
 [data-bs-theme="light"] {
-    #catalog .card {
+    .offcanvas-body, .offcanvas-body a, #visible-addon{
+        color: var(--card-text-color)!important;
+    }
+    input::placeholder, 
+    textarea::placeholder, 
+    select{
+        color: var(--terciary-light-color);
+    }
+    /* #catalog .card {
         border:none;
         width: 100%;
     }
-    .card-body{
-        background-color: #eee;
+    .card h4{
+        color: rgb(222, 226, 230);
     }
-    .card-presentation {
-        color: var(--card-text-color);
-        font-size: .875rem;
-        margin-bottom: 2rem;
-    }
-    .card-presentation i, .card-presentation strong{
-        color: #000;
-    }
-    .card-body .share-btn, .card-body .rrss a{
-    color: var(--terciary-light-color);
-    font-weight: 200;
-    text-decoration: none;
-    border: none;
-    }
-    .card-body .share-btn:hover, .card-body .rrss a:hover{
-        color:  var(--main-color);
-    }
-    .card-body .share-btn.active{
-        color: var(--card-text-color);
-    }
+    .card-body, footer{
+        background-color: #212529 !important;
+    } */
 }
