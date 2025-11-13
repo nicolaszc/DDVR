@@ -121,7 +121,7 @@ footer p{
     font-size: .875rem;
 }
 .shadow{
-    box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .375) !important;
+    box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .125) !important;
 }
 input, 
 textarea{
@@ -488,13 +488,13 @@ header ul{
 }
 /* LIGHT MODE */
 [data-bs-theme="light"] {
-    .offcanvas-body, .offcanvas-body a, #visible-addon{
-        color: var(--card-text-color)!important;
+    .offcanvas-body, .offcanvas-body a, #visible-addon, label{
+        color: var(--terciary-light-color)!important;
     }
     input::placeholder, 
     textarea::placeholder, 
     select{
-        color: var(--terciary-light-color);
+        color: var(--card-text-color)!important;
     }
     .shadow{
         box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .125) !important;
