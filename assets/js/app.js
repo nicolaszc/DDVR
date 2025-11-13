@@ -71,7 +71,7 @@ function initApp() {
       col.innerHTML = `
         <div class="card shadow mb-2 h-100 d-flex flex-column card-ddvr">
           <div class="card-img pt-5">
-            <img src="img/${product.imagen}" alt="${product.titulo}">
+            <img src="assets/img/${product.imagen}" alt="${product.titulo}">
           </div>
           <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
             <div class="card-main-info">
@@ -198,7 +198,7 @@ function initApp() {
   if (btnAutomotive) {
     btnAutomotive.addEventListener("click", (e) => {
       e.preventDefault();
-      cargarCatalogo("data/catalogo-automotriz.json");
+      cargarCatalogo("assets/data/catalogo-automotriz.json");
 
       btnAutomotive.classList.add("btn-primary");
       btnAutomotive.classList.remove("btn-secondary");
@@ -212,7 +212,7 @@ function initApp() {
   if (btnIndustrial) {
     btnIndustrial.addEventListener("click", (e) => {
       e.preventDefault();
-      cargarCatalogo("data/catalogo-industrial.json");
+      cargarCatalogo("assets/data/catalogo-industrial.json");
 
       btnIndustrial.classList.add("btn-primary");
       btnIndustrial.classList.remove("btn-secondary");
@@ -242,7 +242,7 @@ function initApp() {
   }
 
   // Catálogo inicial
-  cargarCatalogo("data/catalogo-automotriz.json");
+  cargarCatalogo("assets/data/catalogo-automotriz.json");
 
   // --- SCRIPT DE FORMULARIO DE CONTACTO ---
   const form = document.getElementById('contact_form');
