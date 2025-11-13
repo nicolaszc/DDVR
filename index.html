@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DDVR</title>
 
-    <!-- Bootstrap & estilos -->
+    <!-- Color Mode Script -->
     <script type="text/javascript" src="js/color-modes.js"></script>
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -17,47 +17,8 @@
   <body>
 
     <!-- Header -->
-    <header data-bs-theme="dark">
-      <div class="text-bg-dark collapse" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4>DDVR</h4>
-              <p class="text-body-secondary">
-                DVR Distribuidora es una empresa dedicada a la comercialización de productos químicos y soluciones industriales de alta calidad.
-                Nos especializamos en ofrecer materiales para limpieza, mantenimiento y protección de maquinaria, equipos y superficies,
-                garantizando rendimiento, seguridad y compromiso con el medio ambiente.
-              </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4>RRSS</h4>
-              <ul class="list-unstyled">
-                <li class="d-flex align-items-center">
-                  <a href="https://www.instagram.com/distribuidoradvr/" target="_blank" class="text-white">Instagram</a> <i class="bi bi-instagram ms-2"></i>
-                </li>
-                <li class="d-flex align-items-center">
-                  <a href="#" class="text-white">Facebook</a> <i class="bi bi-facebook ms-2"></i>
-                </li>
-                <li class="d-flex align-items-center">
-                  <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank" class="text-white">Linkedin</a> <i class="bi bi-linkedin ms-2"></i>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container">
-          <a href="#" class="navbar-brand d-flex align-items-center d-online-block logo">
-            <strong class="d-none">DDVR</strong>
-          </a>
-
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list"></i>
-          </button>
-        </div>
-      </div>
+    <header id="header" data-bs-theme="dark">
+    <!-- Include header.html -->
     </header>
 
     <!-- Main -->
@@ -75,10 +36,10 @@
               permitiendo identificar fácilmente la opción ideal para cada aplicación.
             </p>
             <p>
-              <a href="#" id="btn-catalogo-automotriz" class="btn btn-primary btn-ddvr m-2 py-2 px-4 shadow">
+              <a href="#" id="btn-automotive-catalog" class="btn btn-primary btn-ddvr m-2 py-2 px-4 shadow">
                 <span>Catálogo Automotriz</span>
               </a>
-              <a href="#" id="btn-catalogo-industrial" class="btn btn-secondary btn-ddvr m-2 py-2 px-4 shadow">
+              <a href="#" id="btn-industrial-catalog" class="btn btn-secondary btn-ddvr m-2 py-2 px-4 shadow">
                 <span>Catálogo Industrial</span>
               </a>
             </p>
@@ -106,7 +67,7 @@
       <!-- Catálogo -->
       <section class="catalog-content pt-4 pb-5 bg-body-tertiary">
         <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3" id="catalog">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3" id="catalog">
             <!-- Cards generadas por app.js -->
           </div>
         </div>
@@ -114,157 +75,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-body-secondary py-5 mt-5 ">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="mb-1">© 2025 DVR Distribuidora</p>
-            <p class="mb-1">Soluciones químicas e industriales para limpieza, mantenimiento y protección de superficies.</p>
-            <button class="btn btn-primary btn-ddvr py-2 d-flex align-items-center px-4 mt-2"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasContact" aria-controls="offcanvasContact">
-              Contáctanos<i class="bi bi-envelope-fill ms-2"></i>
-            </button>
-          </div>
-          <div class="col-md-6 text-end">
-            <a href="#" class="to-top"><i class="bi bi-arrow-up-short"></i></a>
-          </div>
-        </div>
-      </div>
+    <footer id="footer" class="text-body-secondary py-5 mt-5 ">
+    <!-- Include footer.html --> 
     </footer>
 
-    <!-- Icons defs -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
-      </symbol>
 
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
-      </symbol>
-
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
-      </symbol>
-
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
-      </symbol>
-    </svg>
-
-    <!-- Theme toggle -->
-    <div class="dropdown position-fixed bottom-0 end-0 mb-5 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary btn-ddvr py-2 dropdown-toggle d-flex align-items-center mb-3" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
-        <svg class="bi my-1 theme-icon-active" aria-hidden="true" style="margin-left: 2px;">
-          <use href="#moon-stars-fill"></use>
-        </svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark">
-            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modal-producto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-producto-label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modal-producto-label">
-              Beneficios: <span></span>
-            </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            <div id="modal-img" class="card-img mb-3 pt-5"></div>
-            <ul id="modal-producto-beneficios"></ul>
-            <div id="modal-pdf"></div>
-          </div>
-          <div class="modal-footer"></div>
-        </div>
-      </div>
-    </div>
-
-    <!--Boton contacto-->
-    <button class="btn btn-primary btn-ddvr py-2 d-flex align-items-center abs-btn-contact position-fixed mb-3 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasContact" aria-controls="offcanvasContact">
-      <i class="bi bi-envelope-fill fs-5"></i>
-    </button>
-
-    <!--Offcanvas-->
-    <div class="offcanvas offcanvas-start shadow" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasContact" aria-labelledby="offcanvasContactLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasContactLabel">Informacion de contacto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <form id="contact_form">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="validationDefault01">Nombre</label>
-              <input type="text" class="form-control" id="validationDefault01" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="validationDefault02">Apellido</label>
-              <input type="text" class="form-control" id="validationDefault02" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 mb-3">
-              <label for="validationDefault03">Correo</label>
-              <input type="text" class="form-control" id="validationDefault03" placeholder="ejemplo@gmail.com" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 mb-3">
-              <label for="validationDefault04">Telefono</label>
-              <div class="input-group">
-                <span class="input-group-text" id="visible-addon">+56</span>
-                <input type="text" class="form-control" id="validationDefault04" placeholder="XXXXXXXXX" maxlength="9" required>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 mb-3">
-              <label for="validationDefault05">Asunto</label>
-              <select class="form-select" aria-label="Default select example" id="validationDefault05" required>
-                <option selected>Seleccione asunto</option>
-                <option value="1">Venta</option>
-                <option value="2">Post-venta</option>
-                <option value="3">Contacto</option>
-                <option value="4">Otro</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 mb-3">
-              <label for="validationDefault06">Mensaje</label>
-              <textarea class="form-control" id="validationDefault06" style="height: 200px; resize: none; overflow-y: hidden;" placeholder="Escriba su mensaje aquí" required></textarea>
-            </div>
-          </div>
-          <div class="d-flex justify-content-end mt-2">
-            <button type="button" class="btn btn-sm btn-secondary btn-ddvr py-2 px-4 mt-2 me-2" data-bs-dismiss="offcanvas">Cerrar</button>
-            <button class="btn btn-sm btn-primary btn-ddvr py-2 px-4 mt-2" type="submit">Enviar</button>
-          </div>
-        </form>
-      </div>
+    <div id="components">    
+    <!-- Include components.html -->
     </div>
 
     <!-- Scripts -->
@@ -274,6 +91,9 @@
     <!-- Isotope -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> 
     <!-- <script src="js/isotope.pkgd.min.js"></script>-->
+
+    <!-- Includes -->
+    <script src="js/include.js"></script>
 
     <!-- Lógica del catálogo -->
     <script src="js/app.js"></script>

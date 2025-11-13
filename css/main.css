@@ -23,6 +23,7 @@
     --main-light-color: #fff;
     --card-text-color: #999;
     --secondary-light-color: #ccc;
+    --terciary-light-color: #666;
 
 }
 
@@ -39,6 +40,7 @@ a {
 }
 p {
     font-weight: 200;
+    font-size: .875rem;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
@@ -85,7 +87,7 @@ a:hover {
     color: var(--bs-white)
 }
 .bd-mode-toggle {
-    z-index: 1500;
+    z-index: 100;
 }
 .bd-mode-toggle .bi {
     width: 1em;
@@ -93,6 +95,10 @@ a:hover {
 }
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
+}
+.dropdown-item{
+    font-size: .875rem;
+    font-weight: 200;
 }
 .dropdown-item.active, .dropdown-item:active {
     color: var(--bs-dropdown-link-active-color);
@@ -118,6 +124,16 @@ footer p{
     background-position: center;
     width: 200px;
     height: 60px;
+}
+.navbar-toggler span{
+    font-size: .875rem;
+    font-weight: 200;
+}
+.navbar-toggler i{
+    transition: all .5s;
+}
+.navbar-toggler.collapsed i:before{
+    transform: rotate(180deg);
 }
 .hero{
     background: url(../img/hero.webp);
@@ -195,11 +211,24 @@ footer p{
 }
 .list-unstyled li{
     margin-bottom: .5rem;
+    font-weight: 200;
+    font-size: .875rem;
 }
 .list-unstyled a{
     text-decoration: none;
-    font-weight: 200;
+}
+header h4{
+    font-size: 1.25rem;
+    margin-bottom: .75rem;
+    color: var(--main-color);
+}
+header h6{
+    font-size: 1rem;
+}
+header ul{
     font-size: .875rem;
+    font-weight: 200;
+    padding-left: 1rem;
 }
 .list-unstyled i{
     margin-left: .5rem;
@@ -233,15 +262,43 @@ footer p{
     font-weight: 300;
     color: var(--main-light-color);
 }
-.card-body .share-btn{
-    color: var(--main-light-color) !important;
-    font-size: 1.25rem;
+.card-body .share-container i{
+    font-size: 1.125rem!important;
+}
+.rrss {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+
+.rrss.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
+}
+.card-body .share-btn, .card-body .rrss a{
+    color: var(--secondary-light-color);
     font-weight: 200;
     text-decoration: none;
+    border: none;
 }
-.card-body .share-btn:hover{
+.card-body .share-btn:hover, .card-body .rrss a:hover{
     color:  var(--main-color);
 }
+.card-body .share-btn.active{
+    color: var(--terciary-light-color);
+}
+.card-body .share-btn i{
+    transition: all .5s;
+}
+.card-body .share-btn.active i{
+    font-size: .875rem!important;
+}
+.card-body .share-btn.active i
 #catalog .col {
     display: flex;
 }
@@ -327,7 +384,19 @@ footer p{
     border: none;
 }
 .to-top {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    border: 1px solid var(--main-color);
+}
+.to-top:hover {
+    border: 1px solid var(--main-color);
+    color: var(--main-light-color);
+    background-color: var(--main-color);
+}
+.to-top i{
     font-size: 2rem;
+    line-height: 1;
 }
 @media(max-width: 576px) {
     .filters-button-group .btn-dark{
@@ -351,5 +420,17 @@ footer p{
     }
     .card-presentation i, .card-presentation strong{
         color: #000;
+    }
+    .card-body .share-btn, .card-body .rrss a{
+    color: var(--terciary-light-color);
+    font-weight: 200;
+    text-decoration: none;
+    border: none;
+    }
+    .card-body .share-btn:hover, .card-body .rrss a:hover{
+        color:  var(--main-color);
+    }
+    .card-body .share-btn.active{
+        color: var(--card-text-color);
     }
 }

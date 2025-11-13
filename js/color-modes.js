@@ -41,6 +41,7 @@
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
     const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
 
+    console.log(btnToActive);
     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
       element.classList.remove('active')
       element.setAttribute('aria-pressed', 'false')
@@ -64,17 +65,23 @@
     }
   })
 
-  window.addEventListener('DOMContentLoaded', () => {
-    showActiveTheme(getPreferredTheme())
+  function initThemeToggler() {
+    showActiveTheme(getPreferredTheme());
 
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          setStoredTheme(theme)
-          setTheme(theme)
-          showActiveTheme(theme, true)
-        })
-      })
-  })
+    document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const theme = toggle.getAttribute('data-bs-theme-value');
+        setStoredTheme(theme);
+        setTheme(theme);
+        showActiveTheme(theme, true);
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("componentsLoaded", initThemeToggler);
+  } else {
+    initThemeToggler();
+  }
+
 })()

@@ -1,24 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const contenedor = document.getElementById("catalog");
-  const modalEl = document.getElementById("modal-producto");
+function initApp() {
+
+  const catalog = document.getElementById("catalog");
+  const modalEl = document.getElementById("modal-product");
   const modalTitleSpan = modalEl
-    ? modalEl.querySelector("#modal-producto-label span")
+    ? modalEl.querySelector("#modal-product-label span")
     : null;
   const modalImg = document.getElementById("modal-img");
-  const modalBeneficiosList = document.getElementById("modal-producto-beneficios");
+  const modalBenefitsList = document.getElementById("modal-product-beneficios");
   const modalPDF = document.getElementById("modal-pdf");
 
-  const btnAutomotriz = document.getElementById("btn-catalogo-automotriz");
-  const btnIndustrial = document.getElementById("btn-catalogo-industrial");
+  const btnAutomotive = document.getElementById("btn-automotive-catalog");
+  const btnIndustrial = document.getElementById("btn-industrial-catalog");
   const filtersGroup = document.querySelector(".filters-button-group");
 
-  let productosData = [];
+  let productsData = [];
   let iso = null;
-  let filtroActual = "*";
+  let actualFilter = "*";
 
   // Cargar catálogo desde JSON
-  function cargarCatalogo(rutaJson) {
-    contenedor.innerHTML = `
+  function cargarCatalogo(jsonRoute) {
+    catalog.innerHTML = `
       <div class="col-12 text-center py-4">
         <div class="spinner-border" role="status">
           <span class="visually-hidden">Cargando...</span>
@@ -26,22 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    fetch(rutaJson)
+    fetch(jsonRoute)
       .then((res) => {
-        if (!res.ok) throw new Error("No se pudo cargar " + rutaJson);
+        if (!res.ok) throw new Error("No se pudo cargar " + jsonRoute);
         return res.json();
       })
       .then((data) => {
-        productosData = data;
+        productsData = data;
         renderizarCards(data);
         initIsotope();
       })
       .catch((err) => {
         console.error(err);
-        contenedor.innerHTML = `
+        catalog.innerHTML = `
           <div class="col-12">
             <div class="alert alert-danger">
-              Error al cargar el catálogo (${rutaJson}). Revisa la ruta del JSON y ejecuta el sitio desde http:// (no file://).
+              Error al cargar el catálogo (${jsonRoute}). Revisa la ruta del JSON y ejecuta el sitio desde http:// (no file://).
             </div>
           </div>
         `;
@@ -49,16 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Pintar cards
-  function renderizarCards(productos) {
-    contenedor.innerHTML = "";
+  function renderizarCards(products) {
+    catalog.innerHTML = "";
 
-    productos.forEach((producto) => {
-      const formatosTexto = Array.isArray(producto.formatos)
-        ? producto.formatos.join(" / ")
-        : (producto.formatos || "");
+    products.forEach((product) => {
+      const formatosTexto = Array.isArray(product.formatos)
+        ? product.formatos.join(" / ")
+        : (product.formatos || "");
 
       // clases de categoría para filtros Isotope
-      const categoriaClase = (producto.categoria || "")
+      const categoriaClase = (product.categoria || "")
         .split(" ")
         .map((c) => c.trim())
         .filter(Boolean)
@@ -68,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
       col.className = `col grid-item ${categoriaClase}`;
 
       col.innerHTML = `
-        <div class="card shadow-sm h-100 d-flex flex-column">
+        <div class="card shadow mb-2 my-1 h-100 d-flex flex-column">
           <div class="card-img pt-5">
-            <img src="img/${producto.imagen}" alt="${producto.titulo}">
+            <img src="img/${product.imagen}" alt="${product.titulo}">
           </div>
-          <div class="card-body d-flex flex-column">
-            <h4>${producto.titulo}</h4>
-            <p class="card-text flex-grow-1">${producto.descripcion}</p>
+          <div class="card-body d-flex flex-column py-4">
+            <h4>${product.titulo}</h4>
+            <p class="card-text flex-grow-1">${product.descripcion}</p>
             <p class="card-presentation d-flex align-items-center mb-2">
               <strong class="me-2">Formatos:</strong> ${formatosTexto}
             </p>
@@ -83,22 +84,66 @@ document.addEventListener("DOMContentLoaded", () => {
                 type="button"
                 class="btn btn-sm btn-primary btn-ddvr py-2 px-4"
                 data-bs-toggle="modal"
-                data-bs-target="#modal-producto"
-                data-product-id="${producto.id}">
+                data-bs-target="#modal-product"
+                data-product-id="${product.id}">
                 Ver Más<i class="bi bi-arrow-right-short ms-2"></i>
               </button>
-              <a href="jvascript: void(0)" class="share-btn">
-                <small class="text-body-secondary lh-1">
-                  <i class="bi bi-share-fill"></i>
-                </small>
-              </a>
+                
+              <div class="share-container d-flex align-items-center">
+                <ul class="list-unstyled d-flex m-0 rrss">
+                  <li class="d-flex align-items-center m-0">
+                      <a href="https://www.instagram.com/distribuidoradvr/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  </li>
+                  <li class="d-flex align-items-center m-0">
+                      <a href="#"><i class="bi bi-facebook"></i></a> 
+                  </li>
+                  <li class="d-flex align-items-center m-0">
+                      <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank"><i class="bi bi-linkedin"></i></a> 
+                  </li>
+                </ul>
+                <button class="btn share-btn lh-1 d-flex pe-0">
+                    <i class="bi bi-share-fill"></i>
+                </button>
+              </div>
+           
             </div>
           </div>
         </div>
       `;
 
-      contenedor.appendChild(col);
+      catalog.appendChild(col);
     });
+
+    // 🔹 Agregar listeners de share después de renderizar todas las cards
+    const shareButtons = catalog.querySelectorAll(".share-btn");
+
+    shareButtons.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const rrssCurrent = btn.closest(".share-container").querySelector(".rrss");
+        if (!rrssCurrent) return;
+
+        // 🔹 activar todos los demás .shareButtons
+         shareButtons.forEach((el) => {
+          if (el !== btn) el.classList.remove("active");
+        });
+
+        // 🔹 Alternar el actual
+        btn.classList.toggle("active");
+
+        // 🔹 Cerrar todos los demás .rrss
+        const allRrss = catalog.querySelectorAll(".rrss");
+        allRrss.forEach((el) => {
+          if (el !== rrssCurrent) el.classList.remove("active");
+        });
+
+        // 🔹 Alternar el actual
+        rrssCurrent.classList.toggle("active");
+      });
+    });
+
   }
 
   // Inicializar / refrescar Isotope
@@ -106,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!window.Isotope) return;
 
     if (!iso) {
-      iso = new Isotope(contenedor, {
+      iso = new Isotope(catalog, {
         itemSelector: ".grid-item",
         layoutMode: "fitRows",
         fitRows: {
@@ -117,44 +162,44 @@ document.addEventListener("DOMContentLoaded", () => {
       iso.reloadItems();
     }
 
-    iso.arrange({ filter: filtroActual });
+    iso.arrange({ filter: actualFilter });
   }
 
   // Modal beneficios
-  if (modalEl && modalTitleSpan && modalBeneficiosList) {
+  if (modalEl && modalTitleSpan && modalBenefitsList) {
     modalEl.addEventListener("show.bs.modal", (event) => {
       const boton = event.relatedTarget;
       if (!boton) return;
 
       const productId = boton.getAttribute("data-product-id");
-      const producto = productosData.find(
+      const product = productsData.find(
         (p) => String(p.id) === String(productId)
       );
-      if (!producto) return;
+      if (!product) return;
 
-      modalTitleSpan.textContent = producto.titulo;
-      modalImg.innerHTML = `<img src="img/${producto.imagen}" alt="${producto.titulo}">`;
-      modalPDF.innerHTML = `<a href="javascript: void(0)"><i class="bi bi-filetype-pdf me-2"></i>Descargar Ficha del Producto</a>`;
-      modalBeneficiosList.innerHTML = "";
+      modalTitleSpan.textContent = product.titulo;
+      modalImg.innerHTML = `<img src="img/${product.imagen}" alt="${product.titulo}">`;
+      modalPDF.innerHTML = `<a href="javascript: void(0)"><i class="bi bi-filetype-pdf me-2"></i>Descargar Ficha del Product</a>`;
+      modalBenefitsList.innerHTML = "";
 
-      if (Array.isArray(producto.beneficios)) {
-        producto.beneficios.forEach((b) => {
+      if (Array.isArray(product.beneficios)) {
+        product.beneficios.forEach((b) => {
           const li = document.createElement("li");
           li.textContent = b;
-          modalBeneficiosList.appendChild(li);
+          modalBenefitsList.appendChild(li);
         });
       }
     });
   }
 
   // Botones catálogo
-  if (btnAutomotriz) {
-    btnAutomotriz.addEventListener("click", (e) => {
+  if (btnAutomotive) {
+    btnAutomotive.addEventListener("click", (e) => {
       e.preventDefault();
       cargarCatalogo("data/catalogo-automotriz.json");
 
-      btnAutomotriz.classList.add("btn-primary");
-      btnAutomotriz.classList.remove("btn-secondary");
+      btnAutomotive.classList.add("btn-primary");
+      btnAutomotive.classList.remove("btn-secondary");
       if (btnIndustrial) {
         btnIndustrial.classList.add("btn-secondary");
         btnIndustrial.classList.remove("btn-primary");
@@ -169,9 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       btnIndustrial.classList.add("btn-primary");
       btnIndustrial.classList.remove("btn-secondary");
-      if (btnAutomotriz) {
-        btnAutomotriz.classList.add("btn-secondary");
-        btnAutomotriz.classList.remove("btn-primary");
+      if (btnAutomotive) {
+        btnAutomotive.classList.add("btn-secondary");
+        btnAutomotive.classList.remove("btn-primary");
       }
     });
   }
@@ -189,8 +234,8 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("active");
 
       // aplicar filtro
-      filtroActual = btn.getAttribute("data-filter") || "*";
-      iso.arrange({ filter: filtroActual });
+      actualFilter = btn.getAttribute("data-filter") || "*";
+      iso.arrange({ filter: actualFilter });
     });
   }
 
@@ -217,4 +262,11 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     });
   }
-});
+
+
+};
+if (document.readyState === "loading") {
+  document.addEventListener("componentsLoaded", initApp);
+} else {
+  initApp();
+}
