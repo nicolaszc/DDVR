@@ -256,7 +256,6 @@ label{
 /* Header */
 .about{
     max-height: calc(100vh - 76px);
-    background-color: rgb(38 43 48) !important;
 }
 @media (max-width: 576px){
     .about{
@@ -321,6 +320,10 @@ header ul{
 .hero p{
     text-shadow: 0px 0px 3px #000000;
     color: var(--secondary-light-color);
+}
+.hero .btn-secondary{
+    background-color: rgb(43 48 54) !important;
+    border-color: rgb(43 48 54) !important;
 }
 
 /* Catalog */
@@ -538,29 +541,43 @@ header ul{
 
 /* Light Mode */
 [data-bs-theme="light"] {
+    .bg-body-tertiary{
+        background-color: rgb(209 217 224) !important;
+    }
+    .about{
+        color: var(--terciary-light-color) !important;
+    }
+    .text-body-secondary{
+        color: var(--terciary-light-color) !important;
+    }
+    .hero .btn-secondary{
+        background-color: rgb(209 217 224) !important;
+        border-color: rgb(209 217 224) !important;
+        color: var(--terciary-light-color) !important;
+    }
     .offcanvas{
-        background-color: #eee;
+        background-color: rgb(209 217 224) !important;
     }
     .offcanvas-body, .offcanvas-body a, label{
         color: var(--terciary-light-color)!important;
     }
     #visible-addon{
-        background-color: #ddd !important;
-        border-color: var(--secondary-light-color);
+        background-color: rgb(200 208 215) !important;
+        border-color: #b0becb;
         color: var(--terciary-light-color)!important;
     }
     input, 
     textarea, 
     select{
-        background-color: #eee !important;
-        border-color: var(--secondary-light-color);
+        background-color: rgb(209 217 224) !important;
+        border-color: rgb(183 193 201);
         color: var(--terciary-light-color)!important;
     }
     input::placeholder, 
     textarea::placeholder, 
     select{
         color: var(--card-text-color)!important;
-        background-color: #eee !important;
+        background-color: rgb(209 217 224) !important;
     }
     .shadow{
         box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .125) !important;
