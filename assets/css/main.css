@@ -17,6 +17,7 @@
   font-weight: 200;
   font-style: normal;
 } */
+
 :root{
     --main-color: #ef7e09;
     --main-color-hover: #ff8302;
@@ -24,7 +25,6 @@
     --card-text-color: #999;
     --secondary-light-color: #ccc;
     --terciary-light-color: #666;
-
 }
 
 /* General styles */
@@ -97,6 +97,9 @@ footer p{
 .btn-secondary{
     font-weight: 200;
     text-shadow: none!important;
+}
+.btn-close:focus{
+    box-shadow: none;
 }
 .btn-bd-primary:hover, 
 .btn-bd-primary:focus, .btn-bd-primary:active, 
@@ -490,7 +493,7 @@ header ul{
 }
 #contactForm .offcanvas-body #btn-submit:disabled{
     text-decoration: line-through;
-    background-color: rgba(239, 126, 9, .75);
+    background-color: rgba(239, 126, 9, .625);
 }
 
 /* Modal Producto */
@@ -535,13 +538,29 @@ header ul{
 
 /* Light Mode */
 [data-bs-theme="light"] {
-    .offcanvas-body, .offcanvas-body a, #visible-addon, label{
+    .offcanvas{
+        background-color: #eee;
+    }
+    .offcanvas-body, .offcanvas-body a, label{
+        color: var(--terciary-light-color)!important;
+    }
+    #visible-addon{
+        background-color: #ddd !important;
+        border-color: var(--secondary-light-color);
+        color: var(--terciary-light-color)!important;
+    }
+    input, 
+    textarea, 
+    select{
+        background-color: #eee !important;
+        border-color: var(--secondary-light-color);
         color: var(--terciary-light-color)!important;
     }
     input::placeholder, 
     textarea::placeholder, 
     select{
         color: var(--card-text-color)!important;
+        background-color: #eee !important;
     }
     .shadow{
         box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .125) !important;
