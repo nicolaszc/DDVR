@@ -300,8 +300,8 @@ function initApp() {
       if (!iconEl) return;
       if (valid === null) { iconEl.innerHTML = ""; return; }
       iconEl.innerHTML = valid 
-          ? '<i class="bi bi-check text-success"></i>'
-          : '<i class="bi bi-x-circle text-danger"></i>';
+          ? '<i class="bi bi-check-circle-fill text-success"></i>'
+          : '<i class="bi bi-x-circle-fill text-danger"></i>';
     }
 
     function actualizar() {
