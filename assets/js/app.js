@@ -280,9 +280,10 @@ function initApp() {
     }
 
     function validarEmail(valor) {
-      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-.]+\.[A-Za-z]{2,}$/;
+      const regex = /^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+[A-Za-z]{2,}$/;
       return regex.test(valor.trim());
     }
+
 
     function validarTelefono(valor) {
       return /^[0-9]{9}$/.test(valor.trim());
