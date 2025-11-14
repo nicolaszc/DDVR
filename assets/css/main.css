@@ -163,7 +163,6 @@ select{
 select{
     padding: .5rem .75rem !important;
     background-position: right .5rem center;
-    color: var(--card-text-color) !important;
     background-color: transparent !important;
 }
 input:-webkit-autofill,
