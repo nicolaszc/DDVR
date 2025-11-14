@@ -244,24 +244,124 @@ function initApp() {
   // Catálogo inicial
   cargarCatalogo("assets/data/catalogo-automotriz.json");
 
-  // --- SCRIPT DE FORMULARIO DE CONTACTO ---
-  const form = document.getElementById('contact_form');
-  const offcanvasElement = document.getElementById('offcanvasScrolling');
+  // --- FORMULARIO DE CONTACTO ---
+  const form = document.getElementById("contact_form");
 
-  if (form && offcanvasElement) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault(); // evita el envío clásico
+  if (form) {
+    const nameInput = document.getElementById("name");
+    const lastNameInput = document.getElementById("last-name");
+    const mailInput = document.getElementById("mail");
+    const phoneInput = document.getElementById("phone");
+    const subjectSelect = document.getElementById("subject");
+    const messageTextarea = document.getElementById("message");
+    const btnSubmit = document.getElementById("btn-submit");
 
-      console.log("Formulario enviado correctamente");
+    const iconName = document.getElementById("icon-name");
+    const iconLastName = document.getElementById("icon-last-name");
+    const iconMail = document.getElementById("icon-mail");
+    const iconPhone = document.getElementById("icon-phone");
+    const iconSubject = document.getElementById("icon-subject");
+    const iconMessage = document.getElementById("icon-message");
 
-      // Cerrar el offcanvas
-      const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
-      if (offcanvas) {
-        offcanvas.hide();
-      }
+    // BLOQUEAR CARACTERES NO PERMITIDOS EN NOMBRE Y APELLIDO
+    function filtrarNombre(input) {
+      input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ -]/g, "");
+    }
 
-      // Vaciar formulario
+    // BLOQUEAR NO-NÚMEROS EN TELÉFONO
+    function filtrarTelefono(input) {
+      input.value = input.value.replace(/[^0-9]/g, "");
+    }
+
+    // VALIDACIONES
+    function validarNombreApellido(valor) {
+      const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ -]{3,}$/;
+      return regex.test(valor.trim());
+    }
+
+    function validarEmail(valor) {
+      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-.]+\.[A-Za-z]{2,}$/;
+      return regex.test(valor.trim());
+    }
+
+    function validarTelefono(valor) {
+      return /^[0-9]{9}$/.test(valor.trim());
+    }
+
+    function validarAsunto(selectEl) {
+      return selectEl.selectedIndex > 0;
+    }
+
+    function validarMensaje(valor) {
+      return valor.trim().length > 0;
+    }
+
+    function setIcon(iconEl, valid) {
+      if (!iconEl) return;
+      if (valid === null) { iconEl.innerHTML = ""; return; }
+      iconEl.innerHTML = valid 
+          ? '<i class="bi bi-check text-success"></i>'
+          : '<i class="bi bi-x-circle text-danger"></i>';
+    }
+
+    function actualizar() {
+    const vNombre = validarNombreApellido(nameInput.value);
+    const vApellido = validarNombreApellido(lastNameInput.value);
+    const vMail = validarEmail(mailInput.value);
+    const vTel = validarTelefono(phoneInput.value);
+    const vAsunto = validarAsunto(subjectSelect);
+    const vMsg = validarMensaje(messageTextarea.value);
+
+    // Íconos solo si se ha interactuado con el campo
+    setIcon(iconName, nameInput.value.length > 0 ? vNombre : null);
+    setIcon(iconLastName, lastNameInput.value.length > 0 ? vApellido : null);
+    setIcon(iconMail, mailInput.value.length > 0 ? vMail : null);
+    setIcon(iconPhone, phoneInput.value.length > 0 ? vTel : null);
+    setIcon(iconSubject, subjectSelect.selectedIndex > 0 ? vAsunto : null);
+    setIcon(iconMessage, messageTextarea.value.length > 0 ? vMsg : null);
+
+    // Validar todo el formulario
+    const todoValido =
+      vNombre &&
+      vApellido &&
+      vMail &&
+      vTel &&
+      vAsunto &&
+      vMsg;
+
+    // Activar/desactivar botón Enviar
+    if (todoValido) {
+      btnSubmit.disabled = false;
+      btnSubmit.classList.remove("btn-secondary");
+      btnSubmit.classList.add("btn-primary");
+    } else {
+      btnSubmit.disabled = true;
+      btnSubmit.classList.remove("btn-primary");
+      btnSubmit.classList.add("btn-secondary");
+    }
+  }
+
+    // FILTROS DE CARACTERES
+    nameInput.addEventListener("input", () => { filtrarNombre(nameInput); actualizar(); });
+    lastNameInput.addEventListener("input", () => { filtrarNombre(lastNameInput); actualizar(); });
+    phoneInput.addEventListener("input", () => {filtrarTelefono(phoneInput); actualizar(); });
+    mailInput.addEventListener("input", actualizar);
+    messageTextarea.addEventListener("input", actualizar);
+    subjectSelect.addEventListener("change", actualizar);
+
+    actualizar(); // inicial
+
+    // SUBMIT
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      console.log("Formulario enviado");
+
       form.reset();
+      actualizar();
+
+      const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById("contactForm"));
+      if (offcanvas) offcanvas.hide();
     });
   }
 

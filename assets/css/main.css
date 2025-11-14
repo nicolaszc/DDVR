@@ -167,6 +167,7 @@ label{
 }
 .about{
     max-height: calc(100vh - 76px);
+    background-color: rgb(38 43 48) !important;
 }
 @media (max-width: 576px){
     .about{
@@ -426,6 +427,36 @@ header ul{
 }
 .offcanvas-body a:hover{
     color: var(--main-color);
+}
+.icon-inside-select {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.icon-select {
+  right: 2.4rem;
+}
+.icon-inside-textarea {
+  position: absolute;
+  top: 0.05rem;
+  right: 0.75rem;
+  pointer-events: none;
+}
+.phone-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 5;
+}
+.phone-input {
+  padding-right: 2.5rem !important;
+}
+#visible-addon {
+  z-index: 3;
 }
 #modal-producto .modal-content{
     border: none;
