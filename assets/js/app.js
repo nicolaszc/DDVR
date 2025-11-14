@@ -180,7 +180,7 @@ function initApp() {
       if (!product) return;
 
       modalTitleSpan.textContent = product.titulo;
-      modalImg.innerHTML = `<img src="img/${product.imagen}" alt="${product.titulo}">`;
+      modalImg.innerHTML = `<img src="assets/img/${product.imagen}" alt="${product.titulo}">`;
       modalPDF.innerHTML = `<a href="javascript: void(0)"><i class="bi bi-filetype-pdf me-2"></i>Descargar Ficha del Product</a>`;
       modalBenefitsList.innerHTML = "";
 

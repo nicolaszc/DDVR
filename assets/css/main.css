@@ -522,11 +522,26 @@ header ul{
 }
 
 /* Modal Producto */
-#modal-producto .modal-content{
+#modal-product .modal-content{
     border: none;
+    color: #dee2e6 !important;
 }
-#modal-producto ul{
+#modal-product ul{
     padding-left: 1rem;
+}
+#modal-product #modal-img {
+    background: #e5ecfb;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1.25rem .75rem;
+    text-align: center;
+    height: 248px;
+    overflow: hidden;
+}
+#modal-product #modal-img img{
+    width: auto;
+    max-height: 160px;
+    mix-blend-mode: multiply;
 }
 .modal-body h4{
     font-size: 1.25rem;
