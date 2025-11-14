@@ -25,6 +25,7 @@
     --card-text-color: #999;
     --secondary-light-color: #ccc;
     --terciary-light-color: #666;
+    --dark-input-text-color: #000;
 }
 
 /* General styles */
@@ -143,12 +144,14 @@ input,
 textarea{
     font-size: .75rem !important;
     font-weight: 200 !important;
+    color: var(--card-text-color) !important;
+    background-color: transparent !important;
 }
 input:focus, 
 textarea:focus, 
 select:focus{
     border-color: rgba(238, 125, 13, .5)!important;
-    box-shadow: 0 0 0 .25rem rgba(238, 125, 13, .25)!important;
+    box-shadow: 0 0 0 .25rem rgba(238, 125, 13, .375)!important;
 }
 input::placeholder, 
 textarea::placeholder, 
@@ -160,7 +163,26 @@ select{
 select{
     padding: .5rem .75rem !important;
     background-position: right .5rem center;
+    color: var(--card-text-color) !important;
+    background-color: transparent !important;
 }
+input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus,
+    input.valid-fill,
+    textarea.valid-fill, 
+    select.valid-fill{
+        -webkit-box-shadow: 0 0 0px 1000px rgb(48 58 75) inset !important;
+        background-color: rgb(48 58 75) !important;
+        -webkit-text-fill-color: var(--main-light-color) !important;
+        font-weight: 200 !important;
+    }
 label{
     font-weight: 200!important;
     font-size: .875rem!important;
@@ -352,7 +374,7 @@ header ul{
     width: 100%;
 }
 #catalog .card-img {
-    background: var(--main-light-color);
+    background: #e5ecfb;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding: 1.25rem .75rem;
@@ -363,6 +385,7 @@ header ul{
 #catalog .card-img img{
     width: auto;
     max-height: 160px;
+    mix-blend-mode: multiply;
 }
 #catalog .card-body {
     display: flex;
@@ -558,19 +581,24 @@ header ul{
     .offcanvas{
         background-color: rgb(209 217 224) !important;
     }
-    .offcanvas-body, .offcanvas-body a, label{
+    .offcanvas-body, 
+    .offcanvas-body a, 
+    label{
         color: var(--terciary-light-color)!important;
+    }
+    .offcanvas-body a:hover{
+        color: var(--main-color)!important;
     }
     #visible-addon{
         background-color: rgb(200 208 215) !important;
-        border-color: #b0becb;
+        border-color: rgb(160 169 177);
         color: var(--terciary-light-color)!important;
     }
     input, 
     textarea, 
     select{
-        background-color: rgb(209 217 224) !important;
-        border-color: rgb(183 193 201);
+        background-color: transparent !important;
+        border-color: rgb(160 169 177);
         color: var(--terciary-light-color)!important;
     }
     input::placeholder, 
@@ -578,6 +606,23 @@ header ul{
     select{
         color: var(--card-text-color)!important;
         background-color: rgb(209 217 224) !important;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus,
+    input.valid-fill,
+    textarea.valid-fill, 
+    select.valid-fill{
+        -webkit-box-shadow: 0 0 0px 1000px rgb(228 235 252) inset !important;
+        background-color: rgb(228 235 252) !important;
+        -webkit-text-fill-color: var(--dark-input-text-color) !important;
+        font-weight: 200 !important;
     }
     .shadow{
         box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .125) !important;

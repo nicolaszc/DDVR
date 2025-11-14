@@ -293,15 +293,25 @@ function initApp() {
     }
 
     function validarMensaje(valor) {
-      return valor.trim().length > 0;
+      return valor.trim().length > 3;
     }
 
-    function setIcon(iconEl, valid) {
+    function setIcon(iconEl, inputEl, valid) {
       if (!iconEl) return;
-      if (valid === null) { iconEl.innerHTML = ""; return; }
-      iconEl.innerHTML = valid 
+      if (valid === null) { 
+        iconEl.innerHTML = "";        
+        return; 
+      }
+     /*  iconEl.innerHTML = valid 
           ? '<i class="bi bi-check-circle-fill text-success"></i>'
-          : '<i class="bi bi-x-circle-fill text-danger"></i>';
+          : '<i class="bi bi-x-circle-fill text-danger"></i>'; */
+      if(valid === true){
+        inputEl.classList.add("valid-fill");
+        iconEl.innerHTML = '<i class="bi bi-check-circle-fill text-success"></i>'
+      }else{
+        inputEl.classList.remove("valid-fill");
+        iconEl.innerHTML = '<i class="bi bi-x-circle-fill text-danger"></i>';
+      }
     }
 
     function actualizar() {
@@ -313,12 +323,12 @@ function initApp() {
     const vMsg = validarMensaje(messageTextarea.value);
 
     // Íconos solo si se ha interactuado con el campo
-    setIcon(iconName, nameInput.value.length > 0 ? vNombre : null);
-    setIcon(iconLastName, lastNameInput.value.length > 0 ? vApellido : null);
-    setIcon(iconMail, mailInput.value.length > 0 ? vMail : null);
-    setIcon(iconPhone, phoneInput.value.length > 0 ? vTel : null);
-    setIcon(iconSubject, subjectSelect.selectedIndex > 0 ? vAsunto : null);
-    setIcon(iconMessage, messageTextarea.value.length > 0 ? vMsg : null);
+    setIcon(iconName, nameInput, nameInput.value.length > 0 ? vNombre : null);
+    setIcon(iconLastName, lastNameInput, lastNameInput.value.length > 0 ? vApellido : null);
+    setIcon(iconMail, mailInput,mailInput.value.length > 0 ? vMail : null);
+    setIcon(iconPhone, phoneInput, phoneInput.value.length > 0 ? vTel : null);
+    setIcon(iconSubject, subjectSelect, subjectSelect.selectedIndex > 0 ? vAsunto : null);
+    setIcon(iconMessage, messageTextarea, messageTextarea.value.length > 0 ? vMsg : null);
 
     // Validar todo el formulario
     const todoValido =
