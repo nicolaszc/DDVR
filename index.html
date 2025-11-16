@@ -5,74 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DDVR</title>
 
+    <meta name="theme-color" content="#712cf9" />
+    <meta property="og:image" content="https://ddvr.cl/assets/img/qr-ddvr.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+
     <!-- Color Mode Script -->
     <script type="text/javascript" src="assets/js/color-modes.js"></script>
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <!--  <link rel="stylesheet" href="css/bootstrap-icons.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="assets/css/main.css" rel="stylesheet">
-    <meta name="theme-color" content="#712cf9" />
 
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css"> 
+    <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">-->
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="assets/img/ico.png" sizes="180x180">
+    <link rel="icon" href="assets/img/ico-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/img/ico-16x16.png" sizes="16x16" type="image/png">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/landing.css" rel="stylesheet">
   </head>
-  <body>
+  <body id="landing">
 
     <!-- Header -->
-    <div id="header">
+    <div id="header" class="vw-100">
     <!-- Include header.html -->
     </div>
+   
 
     <!-- Main -->
-    <main>
-      <!-- Hero -->
-      <section class="hero text-center position-relative">
-        
-        <div class="row py-5 position-relative" style="background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 75%);">
-          <div class="col-lg-6 col-md-8 mx-auto my-5">
-            <h1>DVR Distribuidora</h1>
-            <p class=" px-3 px-md-0">
-              Nuestro catálogo reúne una selección de productos químicos y soluciones industriales 
-              diseñadas para limpieza, mantenimiento y protección de superficies. 
-              Cada ficha incluye sus principales presentaciones y beneficios, 
-              permitiendo identificar fácilmente la opción ideal para cada aplicación.
-            </p>
-            <p>
-              <a href="#" id="btn-automotive-catalog" class="btn btn-primary btn-ddvr m-2 py-2 px-4 shadow">
-                <span>Catálogo Automotriz</span>
-              </a>
-              <a href="#" id="btn-industrial-catalog" class="btn btn-secondary btn-ddvr m-2 py-2 px-4 shadow">
-                <span>Catálogo Industrial</span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
+    <main class="bg-body-tertiary wip">
+        <div class="about container pb-3">
+            <div class="row pt-3">
+                <div class="col-md-6 py-4">
 
-      <!-- Filtros Isotope -->
-      <section class="pt-5 pb-3 bg-body-tertiary">
-        <div class="container">
-          <div class="filters-button-group text-center">
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4 active" data-filter="*"><span>Todos</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".desengrasantes"><span>Desengrasantes</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".electricos"><span>Eléctricos</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".lubricantes"><span>Lubricantes</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".manos"><span>Manos</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".interior"><span>Interior</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".exterior"><span>Exterior</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".superficies"><span>Vidrios / Superficies</span></button>
-            <button class="btn btn-dark btn-ddvr btn-sm mx-1 py-2 px-4" data-filter=".ecologicos"><span>Ecológicos</span></button>
-          </div>
-        </div>
-      </section>
+                    <h4>DDVR</h4>
+                    <p class="text-body-secondary">
+                        Distribuidora DVR es una empresa chilena dedicada a la comercialización de productos químicos y lubricantes para mantenimiento industrial y automotriz, orientada a brindar soluciones confiables, seguras y de alto rendimiento para empresas de diversos rubros productivos. Nos destacamos por nuestra atención personalizada, rápida respuesta y acompañamiento técnico en la selección de productos según las necesidades de cada cliente.
+                    </p>
 
-      <!-- Catálogo -->
-      <section class="catalog-content pt-4 pb-5 bg-body-tertiary">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3" id="catalog">
-            <!-- Cards generadas por app.js -->
-          </div>
+                    <h4>Principales Sectores Atendidos</h4>
+                    <ul class="text-body-secondary">
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1"></i>Plantas industriales y manufactureras</li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1"></i>Alimentarias y de envasado</li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1"></i>Minería y energía</li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1"></i>Talleres automotrices y flotas</li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1"></i>Empresas de mantenimiento y servicios técnicos</li>
+                    </ul>   
+                                
+                </div>
+                <div class="col-md-6 py-4 products-line">
+
+                    <h4>Líneas de Producto</h4>
+                    <h6>Catálogo Industrial DVR</h6>
+
+                    <ul class="text-body-secondary d-flex flex-column">
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Desengrasantes de alto poder<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Limpia contactos inflamable y no inflamable<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Anticorrosivos<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Aceites multipropósito<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Grasa líquida adhesiva<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Lubricantes técnicos<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Aerosoles de mantenimiento y limpieza<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                    </ul>
+
+                    <h6>Catálogo Automotriz DVR</h6>
+                    <ul class="text-body-secondary d-flex flex-column">
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Acondicionadores y limpiadores para motores<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Lubricantes y grasas especializadas<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Productos de limpieza y detailing<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                        <li><i class="bi bi-check2 me-2 fs-5 lh-1 d-inline-block d-md-none"></i>Protectores y restauradores de superficies<i class="bi bi-check2 ms-2 fs-5 lh-1 d-none d-md-inline-block"></i></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="row why-us mt-3">
+                <div class="col-md-10 offset-md-1">
+                    <h4 class="text-center mb-0">Por qué elegir DVR</h4>
+                    <ul class="text-body-secondary d-md-flex justify-content-between mt-3 ">
+                        <li class="text-center px-4 mt-2"><i class="bi bi-award-fill fs-1"></i><p>Productos de alta calidad y certificaciones vigentes</p>
+                        <li class="text-center px-4 mt-2"><i class="bi bi-truck fs-1"></i><p>Stock permanente y despachos rápidos a todo Chile</li></p>
+                        <li class="text-center px-4 mt-2"><i class="bi bi-person-fill-gear fs-1"></i><p>Asesoría técnica personalizada</li></p>
+                        <li class="text-center px-4 mt-2"><i class="bi bi-people-fill fs-1"></i><p>Relación directa con clientes de mantenimiento, operaciones y producción</li></p>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </section>
+     
     </main>
 
     <!-- Footer -->
@@ -84,26 +107,22 @@
     <!-- Include theme-toggle.html -->
     </div>
 
-    <div id="product-modal">    
-    <!-- Include product-modal.html -->
-    </div>
-
-    <div id="contact-form">    
-    <!-- Include contact-form.html -->
-    </div>
-
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> 
-    <!-- <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
     <!-- Isotope -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> 
-    <!-- <script src="js/isotope.pkgd.min.js"></script>-->
+    <!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>--> 
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+     <!-- qrcode.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <!-- Includes -->
     <script src="assets/js/include.js"></script>
 
     <!-- Lógica del catálogo -->
     <script src="assets/js/app.js"></script>
+
   </body>
 </html>

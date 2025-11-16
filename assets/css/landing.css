@@ -1,0 +1,22 @@
+/* Landing */
+#landing .about{
+        height: fit-content!important;
+        max-height: fit-content!important;
+    }
+#landing ul{
+    list-style: none!important;
+    padding: 0!important;
+    font-size: .875rem!important;
+    font-weight: .875rem!important;
+}
+#landing footer a, #landing footer li{
+    color: var(--card-text-color)!important;
+}
+#landing footer a:hover{
+    color: var(--main-color)!important;
+}
+@media(min-width: 768px){
+    #landing .products-line{
+        text-align: right!important;
+    }
+}
