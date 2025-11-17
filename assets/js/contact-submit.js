@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault(); // que no recargue la página
 
+    console.log('submit start');
     // Limpia mensaje anterior
     feedback.innerHTML = "";
 
