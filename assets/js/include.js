@@ -1,18 +1,7 @@
 // include.js
 document.addEventListener("DOMContentLoaded", () => {
 
-  if (window.location.hostname === "ddvr.cl" || window.location.href === "http://localhost:3000/") {
-    console.log("Index");
-  
-    Promise.all([includeHTML("components/header-no-nav.html", "header"),
-      includeHTML("components/footer.html", "footer")
-    ]).then(() => {
-      console.log("Componentes cargados ✅");
-      document.dispatchEvent(new Event("componentsLoaded"));
-    });
-  }
-
-  if (window.location.hostname === "ddvr.cl" || window.location.href === "http://localhost:3000/") {
+  if (window.location.href === "https://ddvr.cl" || window.location.href === "http://localhost:3000/") {
     console.log("Index");
   
     Promise.all([includeHTML("components/header-no-nav.html", "header"),

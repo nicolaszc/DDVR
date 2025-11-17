@@ -312,11 +312,8 @@ label{
 .navbar-toggler.collapsed i:before{
     transform: rotate(180deg);
 }
-.qr-col{
-    height: 246px;
-    min-height: 246px;
-}
-.qr{
+
+.qr img{
     width: 100px;
     height: 100px;
 }
@@ -333,8 +330,17 @@ footer #qr-container{
     width: 116px;
 }
 .bounce{
-    animation: bounce 5s infinite;
+    animation: bounce;
+    animation-duration: 2s; 
+    animation-iteration-count: 3;
+    animation-delay: 2s;
 }
+.pulse{
+    animation: shakeX;
+    animation-duration: .5s; 
+    animation-iteration-count: 1;
+}
+
 /* Hero */
 .hero{
     background: url(../img/hero.webp);

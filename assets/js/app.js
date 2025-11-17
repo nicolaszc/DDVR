@@ -7,9 +7,7 @@ function initApp() {
   
   const catalog = document.getElementById("catalog");
   const modalEl = document.getElementById("modal-product");
-  const modalTitleSpan = modalEl
-    ? modalEl.querySelector("#modal-product-label span")
-    : null;
+  const modalTitleSpan = modalEl ? modalEl.querySelector("#modal-product-label span") : null;
   const modalImg = document.getElementById("modal-img");
   const modalBenefitsList = document.getElementById("modal-product-beneficios");
   const modalPDF = document.getElementById("modal-pdf");
@@ -21,131 +19,12 @@ function initApp() {
 
   let filterIconParent = null;
   const filterIconObject = document.getElementById('filter-icon');
-  let myStorageObject = {
-      storedElement: filterIconObject
-  }; 
+  let myStorageObject = { storedElement: filterIconObject}; 
 
   const filterAnchor = document.getElementById('filter-anchor');
-  //const firstFilterIconParent = document.querySelector(".first.filter-icon-container");
-
   const btnSort = document.querySelector(".btn-sort");
-
-  /* const qrCode = document.getElementById('qr-code');
-  const copyQrCode = document.getElementById('copy-qr');
-  if (qrCode) {
-    qrCode.addEventListener("click", async () => {
-      // Tomamos la URL a copiar desde data-share o src si no existe
-      const imageUrl = qrCode.dataset.share || qrCode.src;
-      console.log('click');
-      try {
-        // Intentamos copiar la imagen como blob
-        const response = await fetch(imageUrl);
-        const blob = await response.blob();
-
-        copyQrCode.innerText = 'QR copiado!';
-        copyQrCode.classList.add('copied');
-        const clipboardItem = new ClipboardItem({ [blob.type]: blob });
-        await navigator.clipboard.write([clipboardItem]);
-
-        console.log("QR copiado como imagen al portapapeles 📋");
-        setTimeout(() => {
-            copyQrCode.innerText = 'Click y\ncopia QR';
-            copyQrCode.classList.remove('copied');
-        }, 8000);
-      } catch (err) {
-        // Si falla, hacemos fallback copiando la URL
-        try {
-          await navigator.clipboard.writeText(imageUrl);
-          console.log("QR no se pudo copiar como imagen, se copió la URL 📋");
-        } catch (err2) {
-          console.error("No se pudo copiar el QR ni la URL:", err2);
-        }
-      }
-    });
-  } */
-
- 
-  // --- 1️⃣ Generar QR ---
-  // Get the element where the QR code will be displayed
-const qrCodeContainer = document.getElementById("qr-code");
-
-// Define the data to be encoded in the QR code
-const qrLocation = window.location.href;
-
-// Create a new QRCode instance
-const qrcode = new QRCode(qrCodeContainer, {
-    width: 100,
-    height: 100,
-    colorDark: "#000000",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.L
-});
-
-qrcode.makeCode(qrLocation);
-
-let qrCodeData = qrCodeContainer.querySelector('img');
-
-// --- Aquí reemplazamos el setTimeout por el observer ---
-
-const observer = new MutationObserver(() => {
-    
-    let ogImage = document.querySelector('meta[property="og:image"]');
-    if (qrCodeData) {
-        qrCodeContainer.setAttribute('data-share', qrCodeData.src);
-        ogImage.setAttribute('content', qrCodeData.src);
-        observer.disconnect();
-    }
-});
-observer.observe(qrCodeContainer, { childList: true });
-
-// --- Resto de tu código sin cambios ---
-const copyQrCode = document.getElementById('copy-qr');
-if (qrCodeContainer) {
-    qrCodeContainer.addEventListener("click", async () => {
-        // Tomamos la URL a copiar desde data-share o src si no existe
-        const imageUrl = qrCodeContainer.dataset.share || qrCodeData.src;
-        console.log('click');
-        try {
-            // Intentamos copiar la imagen como blob
-            const response = await fetch(imageUrl);
-            const blob = await response.blob();
-
-            copyQrCode.innerText = 'QR copiado!';
-            copyQrCode.classList.add('copied');
-            const clipboardItem = new ClipboardItem({ [blob.type]: blob });
-            await navigator.clipboard.write([clipboardItem]);
-
-            console.log("QR copiado como imagen al portapapeles 📋");
-            setTimeout(() => {
-                copyQrCode.innerText = 'Click y\ncopia QR';
-                copyQrCode.classList.remove('copied');
-            }, 8000);
-        } catch (err) {
-            // Si falla, hacemos fallback copiando la URL
-            try {
-                await navigator.clipboard.writeText(imageUrl);
-                console.log("QR no se pudo copiar como imagen, se copió la URL 📋");
-            } catch (err2) {
-                console.error("No se pudo copiar el QR ni la URL:", err2);
-            }
-        }
-    });
-}
-
-// --- Generar link WhatsApp dinámico ---
-const message = `Comparte 🙏\nQR: ${qrLocation}`;
-const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
-
-const whatsappLink = document.getElementById('share-whatsapp');
-if (whatsappLink) {
-    whatsappLink.href = whatsappUrl;
-}
-
-
-
-  let productsData = [];
-  let iso = null;
-  let actualFilter = "*";
+  
+  /////////////// ABOUT SCROLL //////////////
 
   if(btnAbout){
     btnAbout.addEventListener('click', (e) => {
@@ -158,6 +37,156 @@ if (whatsappLink) {
       
     });
   }
+
+  ///////// QR //////////
+  
+  // Definir todos los elementos del flujo QR
+  const whatsappLink = document.getElementById('share-whatsapp');
+  // Get the element where the QR code will be displayed
+  const qrContainer = document.getElementById("qr-code");
+  // Define the data to be encoded in the QR code
+  const qrLocation = window.location.href;
+  const copyQr = document.getElementById('copy-qr');
+  const ogImage = document.querySelector('meta[property="og:image"]');
+
+
+  //////////////// GENERAR QR ////////////////
+
+  // Create a new QRCode instance
+  const qrcode = new QRCode(qrContainer, {
+      width: 300,
+      height: 300,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.L
+  });
+
+  qrcode.makeCode(qrLocation);
+
+  let qrImage = qrContainer.querySelector('img');
+
+  ///////////////// OG:IMAGE ////////////////
+
+  function fillOgImageContent(imgData) {
+
+        ogImage.setAttribute('content', qrImage.src);
+        console.log('filled');
+        //window.removeEventListener('scroll', fillOgImageContent());
+          
+  }
+  
+  //window.addEventListener('scroll', fillOgImageContent());
+
+  // --- Observer para esperar que se cree la imagen ---
+  const observer = new MutationObserver(() => {
+      console.log('og-obs');
+      if (qrImage.src) {
+        setTimeout(() => {  
+          console.log('og-info');
+          qrContainer.setAttribute('data-share', true)
+          fillOgImageContent(qrImage.src);
+          observer.disconnect();  
+          }, 1000); 
+      }
+  });
+  observer.observe(qrContainer, { subtree: true, childList: true, attributes: true });
+
+
+  ////////// ANIMATIONS /////////////////
+
+  let timeoutId;
+  let copyQrContent = copyQr.querySelector('span');
+  function startQrCopyAnimation(){
+    copyQr.classList.add('bounce');
+    copyQr.classList.remove('copied');
+    copyQrContent.innerText = 'Click y\ncopia QR';
+    qrContainer.classList.remove('pe-anone');
+    qrContainer.classList.add('pe-all');
+  }
+
+  function stopQrAnimation(){
+    copyQr.classList.remove('bounce');
+    whatsappLink.classList.remove('pulse');
+    copyQr.classList.add('copied');
+    copyQrContent.innerText = 'QR copiado!';
+    qrContainer.classList.remove('pe-all');
+    qrContainer.classList.add('pe-none');
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      timeoutId = null;
+      startTimeout();
+    }
+  }
+
+  // Animación botones del QR  
+  copyQr.addEventListener('animationend',  function(){
+    console.log('animation QR end');
+    copyQr.classList.remove('bounce');
+    whatsappLink.classList.add('pulse');
+  });
+
+  whatsappLink.addEventListener('animationend',  function(){
+    console.log('animation WA end');
+    this.classList.remove('pulse');
+    startTimeout();
+  });
+
+  function startTimeout() {
+    // Clear any existing timeout before setting a new one
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => { startQrCopyAnimation() }, 6000); // Set a new timeout for 2 seconds
+    console.log("Timeout started/restarted.");
+  }
+
+  ///////////// COPY QR ///////////////////////
+
+  if (qrContainer) {
+      qrContainer.addEventListener("click", async () => {
+          // Tomamos la URL a copiar desde data-share o src si no existe
+          const imageUrl = qrImage.src;
+c
+          try {
+              // Intentamos copiar la imagen como blob
+              const response = await fetch(imageUrl);
+              const blob = await response.blob();
+
+              stopQrAnimation();
+              
+              const clipboardItem = new ClipboardItem({ [blob.type]: blob });
+              await navigator.clipboard.write([clipboardItem]);
+
+              console.log("QR copiado como imagen al portapapeles 📋");
+             
+          } catch (err) {
+              // Si falla, hacemos fallback copiando la URL
+              try {
+                  await navigator.clipboard.writeText(imageUrl);
+                  console.log("QR no se pudo copiar como imagen, se copió la URL 📋");
+              } catch (err2) {
+                  console.error("No se pudo copiar el QR ni la URL:", err2);
+              }
+          }
+      });
+  }
+
+  ////////////// WHATSAPP LINK /////////////////////
+
+  const message = `Comparte 🙏\nQR: ${qrLocation}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+
+  if (whatsappLink) {
+      whatsappLink.href = whatsappUrl;
+  }
+
+
+  //////////////// CATALOG //////////////////////
+
+  let productsData = [];
+  let iso = null;
+  let actualFilter = "*";
+
   // Cargar catálogo desde JSON
   if (window.location.href === "https://ddvr.cl/home.html" || window.location.href === "http://localhost:3000/home.html") {
     function cargarCatalogo(jsonRoute) {
@@ -427,7 +456,7 @@ if (whatsappLink) {
     // Catálogo inicial
     cargarCatalogo("assets/data/catalogo-automotriz.json");
 
-    // --- FORMULARIO DE CONTACTO ---
+    /////////// --- FORMULARIO DE CONTACTO --- ////////////////
     const form = document.getElementById("contact_form");
 
     if (form) {
