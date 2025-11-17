@@ -16,6 +16,7 @@ function initApp() {
   const btnIndustrial = document.getElementById("btn-industrial-catalog");
 
   const filtersGroup = document.querySelector(".filters-button-group");
+  const filterGroupBtns = filtersGroup.querySelectorAll('button.btn-filter');
 
   let filterIconParent = null;
   const filterIconObject = document.getElementById('filter-icon');
@@ -430,22 +431,24 @@ function initApp() {
       });
     }
 
-    // Filtros Isotope
-    if (window.innerWidth >= 768) {
-      /* filterIconParent = document.getElementById('filter-icon-container');
-      filterIconParent.removeChild(filterIconObject);
-      filterIconParent.removeAttribute('id');
-      firstFilterIconParent.prepend(myStorageObject.storedElement);
-      firstFilterIconParent.setAttribute('id', 'filter-icon-container'); */
-    }
+    const filterContainer = document.getElementById('filters');
+    let filterOpenBtn = document.querySelector(('button:has(span#filter-icon-container'));
+
+    if(window.innerWidth < 768){
+        filterOpenBtn.addEventListener('click', (e) => {
+          filterGroupBtns.forEach((b) => 
+            b.classList.toggle('w-100').remove('d-none').add('d-block')
+          );
+        });
+     }
 
     if (filtersGroup) {
       filtersGroup.addEventListener('click', (e) => {
         const btn = e.target.closest('button.btn-filter');
+        let filterOpenBtn = document.querySelector(('button:has(span#filter-icon-container'));
         if (!btn || !iso) return;
 
         filterAnchor.scrollIntoView();
-        const filterGroupBtns = filtersGroup.querySelectorAll('button.btn-filter');
 
         filterIconParent = document.getElementById('filter-icon-container');
         filterIconParent.removeChild(filterIconObject);
@@ -453,13 +456,14 @@ function initApp() {
         
         // activo visual
         filterGroupBtns.forEach((b) => 
-          b.classList.remove('active')
+          b.classList.remove('active', 'pe-none')
+          
         );
-
+       
         const iconContainer = btn.querySelector('.filter-icon-container')
         iconContainer.prepend(myStorageObject.storedElement);
         iconContainer.setAttribute('id', 'filter-icon-container');
-        btn.classList.add('active');
+        btn.classList.add('active pe-none');
 
 
         // aplicar filtro
@@ -467,7 +471,7 @@ function initApp() {
         iso.arrange({ filter: actualFilter });
       });
     }
-
+   
     if(btnSort){
       btnSort.addEventListener('click', (e) =>{
           if (!btnSort || !iso) return;

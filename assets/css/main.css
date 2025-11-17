@@ -400,7 +400,12 @@ footer #qr-container{
     background-color: var(--main-color);
     color: var(--main-light-color);
 }
-
+@media (max-width: 768px){
+    #filters{
+        width: 170px;
+    }
+    
+}
 /* Card */
 #catalog .card {
     border:none;
