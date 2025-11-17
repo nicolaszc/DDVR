@@ -29,10 +29,8 @@ function initApp() {
 
   if(btnAbout){
     btnAbout.addEventListener('click', (e) => {
-      console.log("click");
       hasClass = btnAbout.classList.contains(aboutClassToCheck);
       if(hasClass){ 
-        console.log("open");
         headerAnchor.scrollIntoView();
       }
       
@@ -71,7 +69,6 @@ function initApp() {
   function fillOgImageContent(imgData) {
 
         ogImage.setAttribute('content', imgData);
-        console.log('filled');
         //window.removeEventListener('scroll', fillOgImageContent());
           
   }
@@ -80,7 +77,6 @@ function initApp() {
 
   // --- Observer para esperar que se cree la imagen ---
   const observer = new MutationObserver((async (mutationsList, observer) => {
-    console.log('mutation');
     const imageUrl = qrImage.src;
     fetch(imageUrl)
     .then(response => response.blob()) // Get the image as a Blob
@@ -154,13 +150,11 @@ function initApp() {
 
   // Animación botones del QR  
   copyQr.addEventListener('animationend',  function(){
-    console.log('animation QR end');
     copyQr.classList.remove('bounce');
     whatsappLink.classList.add('pulse');
   });
 
   whatsappLink.addEventListener('animationend',  function(){
-    console.log('animation WA end');
     this.classList.remove('pulse');
     startTimeout();
   });
@@ -171,7 +165,6 @@ function initApp() {
       clearTimeout(timeoutId);
     }
     timeoutId = setTimeout(() => { startQrCopyAnimation() }, 6000); // Set a new timeout for 2 seconds
-    console.log("Timeout started/restarted.");
   }
 
   ///////////// COPY QR ///////////////////////
@@ -190,15 +183,12 @@ function initApp() {
               const clipboardItem = new ClipboardItem({ [blob.type]: blob });
               await navigator.clipboard.write([clipboardItem]);
 
-              console.log("QR copiado como imagen al portapapeles 📋");
              
           } catch (err) {
               // Si falla, hacemos fallback copiando la URL
               try {
                   await navigator.clipboard.writeText(imageUrl);
-                  console.log("QR no se pudo copiar como imagen, se copió la URL 📋");
               } catch (err2) {
-                  console.error("No se pudo copiar el QR ni la URL:", err2);
               }
           }
       });
@@ -492,137 +482,6 @@ function initApp() {
     // Catálogo inicial
     cargarCatalogo("assets/data/catalogo-automotriz.json");
 
-    /////////// --- FORMULARIO DE CONTACTO --- ////////////////
-    const form = document.getElementById("contact_form");
-
-    if (form) {
-      const nameInput = document.getElementById("name");
-      const lastNameInput = document.getElementById("last-name");
-      const mailInput = document.getElementById("mail");
-      const phoneInput = document.getElementById("phone");
-      const subjectSelect = document.getElementById("subject");
-      const messageTextarea = document.getElementById("message");
-      const btnSubmit = document.getElementById("btn-submit");
-
-      const iconName = document.getElementById("icon-name");
-      const iconLastName = document.getElementById("icon-last-name");
-      const iconMail = document.getElementById("icon-mail");
-      const iconPhone = document.getElementById("icon-phone");
-      const iconSubject = document.getElementById("icon-subject");
-      const iconMessage = document.getElementById("icon-message");
-
-      // BLOQUEAR CARACTERES NO PERMITIDOS EN NOMBRE Y APELLIDO
-      function filtrarNombre(input) {
-        input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ -]/g, "");
-      }
-
-      // BLOQUEAR NO-NÚMEROS EN TELÉFONO
-      function filtrarTelefono(input) {
-        input.value = input.value.replace(/[^0-9]/g, "");
-      }
-
-      // VALIDACIONES
-      function validarNombreApellido(valor) {
-        const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ -]{3,}$/;
-        return regex.test(valor.trim());
-      }
-
-      function validarEmail(valor) {
-        const regex = /^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+[A-Za-z]{2,}$/;
-        return regex.test(valor.trim());
-      }
-
-
-      function validarTelefono(valor) {
-        return /^[0-9]{9}$/.test(valor.trim());
-      }
-
-      function validarAsunto(selectEl) {
-        return selectEl.selectedIndex > 0;
-      }
-
-      function validarMensaje(valor) {
-        return valor.trim().length > 3;
-      }
-
-      function setIcon(iconEl, inputEl, valid) {
-        if (!iconEl) return;
-        if (valid === null) { 
-          iconEl.innerHTML = "";        
-          return; 
-        }
-      /*  iconEl.innerHTML = valid 
-            ? '<i class="bi bi-check-circle-fill text-success"></i>'
-            : '<i class="bi bi-x-circle-fill text-danger"></i>'; */
-        if(valid === true){
-          inputEl.classList.add("valid-fill");
-          iconEl.innerHTML = '<i class="bi bi-check-circle-fill text-success"></i>'
-        }else{
-          inputEl.classList.remove("valid-fill");
-          iconEl.innerHTML = '<i class="bi bi-x-circle-fill text-danger"></i>';
-        }
-      }
-
-      function actualizar() {
-      const vNombre = validarNombreApellido(nameInput.value);
-      const vApellido = validarNombreApellido(lastNameInput.value);
-      const vMail = validarEmail(mailInput.value);
-      const vTel = validarTelefono(phoneInput.value);
-      const vAsunto = validarAsunto(subjectSelect);
-      const vMsg = validarMensaje(messageTextarea.value);
-
-      // Íconos solo si se ha interactuado con el campo
-      setIcon(iconName, nameInput, nameInput.value.length > 0 ? vNombre : null);
-      setIcon(iconLastName, lastNameInput, lastNameInput.value.length > 0 ? vApellido : null);
-      setIcon(iconMail, mailInput,mailInput.value.length > 0 ? vMail : null);
-      setIcon(iconPhone, phoneInput, phoneInput.value.length > 0 ? vTel : null);
-      setIcon(iconSubject, subjectSelect, subjectSelect.selectedIndex > 0 ? vAsunto : null);
-      setIcon(iconMessage, messageTextarea, messageTextarea.value.length > 0 ? vMsg : null);
-
-      // Validar todo el formulario
-      const todoValido =
-        vNombre &&
-        vApellido &&
-        vMail &&
-        vTel &&
-        vAsunto &&
-        vMsg;
-
-      // Activar/desactivar botón Enviar
-      if (todoValido) {
-        btnSubmit.disabled = false;
-        btnSubmit.classList.remove("btn-secondary");
-        btnSubmit.classList.add("btn-primary");
-      } else {
-        btnSubmit.disabled = true;
-        btnSubmit.classList.remove("btn-primary");
-        btnSubmit.classList.add("btn-secondary");
-      }
-    }
-
-      // FILTROS DE CARACTERES
-      nameInput.addEventListener("input", () => { filtrarNombre(nameInput); actualizar(); });
-      lastNameInput.addEventListener("input", () => { filtrarNombre(lastNameInput); actualizar(); });
-      phoneInput.addEventListener("input", () => {filtrarTelefono(phoneInput); actualizar(); });
-      mailInput.addEventListener("input", actualizar);
-      messageTextarea.addEventListener("input", actualizar);
-      subjectSelect.addEventListener("change", actualizar);
-
-      actualizar(); // inicial
-
-      // SUBMIT
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        console.log("Formulario enviado");
-
-        form.reset();
-        actualizar();
-
-        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById("contactForm"));
-        if (offcanvas) offcanvas.hide();
-      });
-    }
   }
 };
 if (document.readyState === "loading") {
