@@ -69,7 +69,7 @@ function initApp() {
 
   function fillOgImageContent(imgData) {
 
-        ogImage.setAttribute('content', qrImage.src);
+        ogImage.setAttribute('content', imgData);
         console.log('filled');
         //window.removeEventListener('scroll', fillOgImageContent());
           
@@ -78,19 +78,52 @@ function initApp() {
   //window.addEventListener('scroll', fillOgImageContent());
 
   // --- Observer para esperar que se cree la imagen ---
-  const observer = new MutationObserver(() => {
-      console.log('og-obs');
-      if (qrImage.src) {
-        setTimeout(() => {  
-          console.log('og-info');
-          qrContainer.setAttribute('data-share', true)
-          fillOgImageContent(qrImage.src);
-          observer.disconnect();  
-          }, 1000); 
-      }
-  });
-  observer.observe(qrContainer, { subtree: true, childList: true, attributes: true });
+  const observer = new MutationObserver((async (mutationsList, observer) => {
+    console.log('mutation');
+    const imageUrl = qrImage.src;
+    fetch(imageUrl)
+    .then(response => response.blob()) // Get the image as a Blob
+    .then(blob => createImageBitmap(blob)) // Create an ImageBitmap from the Blob
+    .then(imageBitmap => {
+      // Now you have an ImageBitmap, which can be drawn onto a canvas
+      // or transferred to a Web Worker.
+      const canvas = document.createElement('canvas');
+      canvas.width = imageBitmap.width;
+      canvas.height = imageBitmap.height;
+      canvas.type = imageBitmap.type;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(imageBitmap, 0, 0);
+      //document.body.appendChild(canvas);
+      ogImage.setAttribute('content', canvas);
+    })
+    .catch(error => {
+      console.error('Error creating ImageBitmap:', error);
+    });
+    /* <<<<<<<image = new Image();
+    try {
+      // Intentamos copiar la imagen como blob
+      const response = await fetch(imageUrl);
+      const blob = await response.blob();
 
+      stopQrAnimation();
+      image
+      fillOgImageContent(createImageBitmap(blob));
+      console.log("QR para og:image");
+
+    } catch (err) {
+        // Si falla, hacemos fallback copiando la URL
+        try {
+          ogImage.setAttribute('content', 'qr.png');
+          console.log("QR no se pudo copiar como imagen, se copió la URL 📋");
+
+        } catch (err2) {
+            console.error("No se pudo copiar el QR ni la URL:", err2);
+        }
+    } */
+    observer.disconnect();
+  }))
+
+  observer.observe(qrContainer, { subtree: true, childList: true, attributes: true });
 
   ////////// ANIMATIONS /////////////////
 
@@ -146,7 +179,6 @@ function initApp() {
       qrContainer.addEventListener("click", async () => {
           // Tomamos la URL a copiar desde data-share o src si no existe
           const imageUrl = qrImage.src;
-c
           try {
               // Intentamos copiar la imagen como blob
               const response = await fetch(imageUrl);
