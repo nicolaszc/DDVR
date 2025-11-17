@@ -5,7 +5,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <form id="contact_form">
+        <form id="contact_form" action="send-mail.php">
             <div class="row">
                 <div class="col-md-6 mb-2">
                     <label for="name">Nombre</label>
@@ -65,28 +65,29 @@
             <div class="d-flex justify-content-end mt-2">
                 <button id="btn-submit" class="btn btn-sm btn-primary btn-ddvr py-2 px-4 mt-2 hola" type="submit" disabled>Enviar</button>            
             </div>
-            <div class="row mt-5">
-                <div class="col-7 my-2">
-                    <ul class="list-unstyled">
-                    <li class="d-flex align-items-center"><i class="bi bi-person-fill me-2"></i>Pía Díaz-Valdés</li>
-                    <li class="d-flex align-items-center"><a href="mailto: pdiazvaldes@ddvr.cl"><i class="bi bi-envelope-fill me-2"></i>pdiazvaldes@ddvr.cl<i class="bi bi-arrow-right-short"></i></a></li>
-                    <li class="d-flex align-items-center"><a href="tel: +56994353546"><i class="bi bi-telephone-fill me-2"></i>+56 9 94353546<i class="bi bi-arrow-right-short"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-5 my-2">
-                    <ul class="list-unstyled">
-                        <li class="d-flex align-items-center justify-content-end">
-                            <a href="#">Whatsapp<i class="bi bi-whatsapp ms-2"></i></a>
-                        </li>
-                        <li class="d-flex align-items-center justify-content-end">
-                            <a href="https://www.instagram.com/distribuidoradvr/" target="_blank">Instagram<i class="bi bi-instagram ms-2"></i></a> 
-                        </li>
-                        <li class="d-flex align-items-center justify-content-end">
-                            <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank">Linkedin<i class="bi bi-linkedin ms-2"></i></a> 
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </form>
+        <div class="row mt-5">
+            <div class="col-7 my-2">
+                <ul class="list-unstyled">
+                <li class="d-flex align-items-center"><i class="bi bi-person-fill me-2"></i>Pía Díaz-Valdés</li>
+                <li class="d-flex align-items-center"><a href="mailto: pdiazvaldes@ddvr.cl"><i class="bi bi-envelope-fill me-2"></i>pdiazvaldes@ddvr.cl<i class="bi bi-arrow-right-short"></i></a></li>
+                <li class="d-flex align-items-center"><a href="tel: +56994353546"><i class="bi bi-telephone-fill me-2"></i>+56 9 94353546<i class="bi bi-arrow-right-short"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-5 my-2">
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center justify-content-end">
+                        <a href="#">Whatsapp<i class="bi bi-whatsapp ms-2"></i></a>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-end">
+                        <a href="https://www.instagram.com/distribuidoradvr/" target="_blank">Instagram<i class="bi bi-instagram ms-2"></i></a> 
+                    </li>
+                    <li class="d-flex align-items-center justify-content-end">
+                        <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank">Linkedin<i class="bi bi-linkedin ms-2"></i></a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
     </div>
 </div>
