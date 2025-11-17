@@ -38,7 +38,7 @@ if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 }
 
 // 4. Armar correo
-$to      = "martinzakrzewicz780@gmail.com"; // Cambia esto a donde quieras recibir los mensajes
+$to      = "ventas@ddvr.cl"; // Cambia esto a donde quieras recibir los mensajes
 $subjectMail = "Contacto DVR — $subject";
 $body = "Has recibido un nuevo mensaje desde el formulario de contacto:\n\n" .
         "Nombre: $name $last_name\n" .
@@ -47,7 +47,7 @@ $body = "Has recibido un nuevo mensaje desde el formulario de contacto:\n\n" .
         "Asunto: $subject\n\n" .
         "Mensaje:\n$message\n";
 
-$headers = "From: noreply@tu-dominio.cl\r\n";
+$headers = "From: noreply@ddvr.cl\r\n";
 $headers .= "Reply-To: $mail\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
