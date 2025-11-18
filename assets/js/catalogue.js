@@ -212,7 +212,7 @@ function initCatalog() {
     if (btnAutomotive) {
         btnAutomotive.addEventListener("click", (e) => {
         e.preventDefault();
-        cargarCatalogo("assets/data/catalogo-automotriz.json");
+        cargarCatalogo("data/automotive.json");
 
         btnAutomotive.classList.add("btn-primary");
         btnAutomotive.classList.remove("btn-secondary");
@@ -226,7 +226,7 @@ function initCatalog() {
     if (btnIndustrial) {
         btnIndustrial.addEventListener("click", (e) => {
         e.preventDefault();
-        cargarCatalogo("assets/data/catalogo-industrial.json");
+        cargarCatalogo("data/industrial.json");
 
         btnIndustrial.classList.add("btn-primary");
         btnIndustrial.classList.remove("btn-secondary");
@@ -290,9 +290,7 @@ function initCatalog() {
     }
 
     // Catálogo inicial
-    cargarCatalogo("assets/data/catalogo-automotriz.json");
-
-
+    cargarCatalogo("data/automotive.json");
 
 }
 // Esperar a que include.js termine de insertar los componentes (igual que app.js)
