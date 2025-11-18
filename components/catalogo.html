@@ -1,0 +1,34 @@
+<!-- Filtros Isotope -->
+<section id="filter-section" class="bg-body-tertiary shadow">
+  <div class="container">
+    <div class="filters-button-group d-flex justify-content-between align-items-start py-4">
+      <div id="filters">
+        
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-md-inline-block active" data-filter="*"><span id="filter-icon-container" class="first filter-icon-container"><i id="filter-icon" class="bi bi-filter fs-5 lh-1 me-2"></i>Todos</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".desengrasantes"><span class="filter-icon-container">Desengrasantes</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".electricos"><span class="filter-icon-container">Eléctricos</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".lubricantes"><span class="filter-icon-container">Lubricantes</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".manos"><span class="filter-icon-container">Manos</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".interior"><span class="filter-icon-container">Interior</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".exterior"><span class="filter-icon-container">Exterior</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".superficies"><span class="filter-icon-container">Vidrios / Superficies</span></button>
+        <button class="btn btn-dark btn-ddvr btn-filter btn-sm me-1 py-2 px-2 px-md-3 d-none d-md-inline-block" data-filter=".ecologicos"><span class="filter-icon-container">Ecológicos</span></button>
+      
+      </div>
+
+      <button id="sort" class="btn btn-dark btn-ddvr btn-sort btn-sm py-2 px-3 px-md-3" data-sort-by="name"><i class="bi bi-sort-alpha-down fs-5 lh-1 me-2 me-md-0"></i><span class="d-inline-block d-md-none">Ordenar</span></button>
+    
+    </div>
+  </div>       
+</section>
+
+<div id="filter-anchor"></div>
+
+<!-- Catálogo -->
+<section class="catalog-content pt-5 pb-5 bg-body-tertiary">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3" id="catalog">
+      <!-- Cards generadas por app.js -->
+    </div>
+  </div>
+</section>
