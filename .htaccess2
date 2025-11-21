@@ -1,5 +1,4 @@
-RewriteEngine On
-RewriteBase /develop/
+RewriteEngine on
 
 # ==========================================
 # DESACTIVAR CACHE DE HTML, CSS, JS (DEV MODE)
@@ -13,10 +12,12 @@ RewriteBase /develop/
 </IfModule>
 
 # ==========================================
-# CACHE SOLO PARA IMAGENES
+# CACHE SOLO PARA IMAGENES (PRODUCCIÓN)
 # ==========================================
 <IfModule mod_expires.c>
   ExpiresActive On
+
+  # Cache imágenes por 30 días
   ExpiresByType image/jpeg "access plus 30 days"
   ExpiresByType image/png "access plus 30 days"
   ExpiresByType image/gif "access plus 30 days"
@@ -24,15 +25,23 @@ RewriteBase /develop/
   ExpiresByType image/svg+xml "access plus 30 days"
 </IfModule>
 
-# Permitir PHP en .html (mantener si tus endpoints usan .html)
+# Permitir PHP dentro de archivos .html
 AddType application/x-httpd-ea-php81 .html
 AddHandler application/x-httpd-ea-php81 .html
 
-# No reescribir si existe el archivo, directorio o JSON/PHP
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d [OR]
-RewriteCond %{REQUEST_URI} \.(json|php)$
-RewriteRule ^ - [L]
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
 
-# Todo lo demás va a index.html (SPA)
-RewriteRule ^ index.html [L]
+RewriteBase /develop/
+
+# No reescribir si existe el archivo o carpeta
+#RewriteCond %{REQUEST_FILENAME} -f [OR]
+#RewriteCond %{REQUEST_FILENAME} -d
+# RewriteRule ^ - [L]
+
+# Todo lo demás va a index.html
+#RewriteRule ^ index.html [L]

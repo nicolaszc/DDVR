@@ -1,0 +1,60 @@
+<!-- Ficha Técica -->
+<div class="pdp-container  product container py-5">
+    <!-- Botón Volver -->
+    <div class="d-flex justify-content-between">
+        <button id="btn-back" class="btn btn-sm btn-primary btn-ddvr py-2 px-4">
+            <i class="bi bi-arrow-left-short"></i> Volver
+        </button>
+
+        <div class="share-container d-flex align-items-center">
+            <ul class="list-unstyled d-flex m-0 rrss">
+                <li class="d-flex align-items-center my-0">
+                    <a href="#"><i class="bi bi-whatsapp ms-2"></i></a>
+                </li>
+                <li class="d-flex align-items-center my-0">
+                    <a href="https://www.instagram.com/distribuidoradvr/" target="_blank"><i class="bi bi-instagram ms-2"></i></a>
+                </li>
+                <li class="d-flex align-items-center my-0">
+                    <a href="https://cl.linkedin.com/company/distribuidora-dvr" target="_blank"><i class="bi bi-linkedin ms-2"></i></a>
+                </li>
+            </ul>
+            <button class="btn share-btn lh-1 d-flex pe-0">
+                <i class="bi bi-share-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <h1 class="product-title mb-1 mt-4">{{titulo}}</h1>
+    <p class="product-category text-muted mb-4">Categoría: {{categoria}}</p>
+
+    <div class="row">
+        <!-- Imagen -->
+        <div class="col-md-5 mb-3">
+            <div class="pdp-img-container bg-light p-5 rounded text-center">
+                <img src="../assets/img/{{imagen}}" alt="{{titulo}}" class="img-fluid">
+            </div>
+
+            <h4 class="mt-4 mb-1">Descripción</h4>
+            <p class="product-text">{{descripcion}}</p>
+
+            <p class="product-presentation mb-2">
+                <strong>Formatos:</strong> {{formatosTexto}}
+            </p>
+
+            {{pdfHtml}}
+        </div>
+
+        <div class="col-md-6 offset-1">
+            {{beneficiosHtml}}
+            {{instruccionesHtml}}
+            {{aplicacionesHtml}}
+            {{precaucionesHtml}}
+        </div>
+    </div>
+    <!-- Random cards -->
+    <div id="random-cards" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 product">
+
+    </div>
+</div>
+
+

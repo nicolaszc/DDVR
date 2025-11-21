@@ -1,13 +1,13 @@
 <!--Offcanvas-->
 <div class="offcanvas offcanvas-start shadow" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="contactForm" aria-labelledby="contactFormLabel">
-    <div class="offcanvas-header">
+    <div class="offcanvas-header bg-dark d-dlex justify-content-between">
         <a href="index.html" class="navbar-brand d-flex align-items-center d-online-block">
             <strong class="d-none">DDVR</strong>
         </a>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn pe-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x fs-4"></i></button>
     </div>
     <div class="offcanvas-body">
-        <h5 class="offcanvas-title text-light" id="contactFormLabel">Informacion de contacto</h5>
+        <h5 class="offcanvas-title" id="contactFormLabel">Informacion de contacto</h5>
         <small class="mb-4 mt-1 d-block">* Al completar los campos se habilitará el botón de envío.</small>
         <form id="contact_form" action="api/mail/form-post.php" method="POST">
             <div class="row">
