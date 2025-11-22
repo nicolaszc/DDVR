@@ -1,0 +1,38 @@
+RewriteEngine On
+RewriteBase /develop/
+
+# ==========================================
+# DESACTIVAR CACHE DE HTML, CSS, JS (DEV MODE)
+# ==========================================
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm|css|js)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# ==========================================
+# CACHE SOLO PARA IMAGENES
+# ==========================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+
+# Permitir PHP en .html (mantener si tus endpoints usan .html)
+AddType application/x-httpd-ea-php81 .html
+AddHandler application/x-httpd-ea-php81 .html
+
+# No reescribir si existe el archivo, directorio o JSON/PHP
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_URI} \.(json|php)$
+RewriteRule ^ - [L]
+
+# Todo lo demás va a index.html (SPA)
+RewriteRule ^ index.html [L]

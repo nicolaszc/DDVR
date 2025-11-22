@@ -1,0 +1,1038 @@
+[
+  {
+    "id": 1,
+    "titulo": "Limpiador de Frenos",
+    "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de calipers, pastillas, discos y tambores de freno.",
+    "formatos": ["500ml", "5L"],
+    "imagen": "automotriz/producto-1.webp",
+    "beneficios": [
+        "Secado rápido sin residuos",
+        "Remueve grasas, polvo y hollín",
+        "Aplicación controlada"
+      ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "frenos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 2,
+    "titulo": "Dieléctrico No Inflamable",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de piezas, motores y sistemas eléctricos en automoción.",
+    "formatos": ["5L", "19L", "60L", "208L"],
+    "imagen": "automotriz/producto-2.webp",
+    "beneficios": [
+      "No inflamable",
+      "Solventes no conductores",
+      "Sin olor, apto para talleres cerrados",
+      "Base biológica y biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "electricos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 3,
+    "titulo": "Solvente Dieléctrico",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Remoción de grasas y suciedades pesadas en componentes eléctricos.",
+    "formatos": ["5L", "19L", "60L", "208L"],
+    "imagen": "automotriz/producto-3.webp",
+    "beneficios": [
+      "Remueve carbonilla, grasa y aceite",
+      "Apto para inmersión",
+      "Baja conductividad eléctrica"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "electricos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 4,
+    "titulo": "Limpia Contactos",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de conexiones y sistemas eléctricos del vehículo.",
+    "formatos": ["325g"],
+    "imagen": "automotriz/producto-4.webp",
+    "beneficios": [
+      "Secado rápido",
+      "No deja residuos",
+      "Protege el flujo de corriente",
+      "Aplicación precisa"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "electricos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 5,
+    "titulo": "Limpia Contactos No Inflamable",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza segura de componentes eléctricos y electrónicos.",
+    "formatos": ["325g"],
+    "imagen": "automotriz/producto-5.webp",
+    "beneficios": [
+      "No inflamable",
+      "Secado ultra rápido",
+      "Compatible con plásticos y gomas",
+      "No deja residuos"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "electricos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 6,
+    "titulo": "Desengrasante Alto Poder",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Desengrasante para suciedades pesadas en áreas automotrices.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-6.webp",
+    "beneficios": [
+      "Elimina grasas y aceites",
+      "No inflamable",
+      "Sin solventes clorados",
+      "Fácil enjuague"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "desengrasantes",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 7,
+    "titulo": "Limpiaparabrisas",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de parabrisas y superficies vidriadas del vehículo.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-7.webp",
+    "beneficios": [
+      "Limpia y desengrasa",
+      "No deja marcas ni aureolas",
+      "Biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "superficies",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 8,
+    "titulo": "Limpiador de Manos Exfoliante",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza profunda de manos con suciedad automotriz.",
+    "formatos": ["470ml", "5L"],
+    "imagen": "automotriz/producto-8.webp",
+    "beneficios": [
+      "Con humectantes",
+      "Rinde hasta ~1000 lavados",
+      "Biodegradable",
+      "Aroma cítrico"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "manos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 9,
+    "titulo": "Limpiador de Manos Orange",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Removedor de grasas y aceites con abrasivos naturales.",
+    "formatos": ["470ml", "5L"],
+    "imagen": "automotriz/producto-9.webp",
+    "beneficios": [
+      "Alta eficacia en suciedades pesadas",
+      "Biolípidos hidratantes",
+      "Uso con o sin enjuague",
+      "Aroma cítrico"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "manos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 10,
+    "titulo": "Grasa Líquida Adhesiva",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Lubricante para piezas sometidas a alta presión.",
+    "formatos": ["500ml"],
+    "imagen": "automotriz/producto-10.webp",
+    "beneficios": [
+      "Larga duración",
+      "Alta adhesión",
+      "Protege contra corrosión",
+      "Reduce desgaste"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "lubricantes",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 11,
+    "titulo": "Aceite Multipropósito",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Aceite aflojatodo para mecanismos automotrices.",
+    "formatos": [],
+    "imagen": "automotriz/producto-11.webp",
+    "beneficios": [
+      "Penetra óxido",
+      "Desplaza humedad",
+      "Disminuye fricción",
+      "Protege contra corrosión"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "lubricantes",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 12,
+    "titulo": "Limpiador Aire Acondicionado",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de ductos y sistema de aire acondicionado del vehículo.",
+    "formatos": ["100ml"],
+    "imagen": "automotriz/producto-12.webp",
+    "beneficios": [
+      "Aroma fresco",
+      "Ayuda a reducir alergias",
+      "Aplicación simple de descarga total",
+      "Biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "interior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 13,
+    "titulo": "Líquido de Frenos DOT 3 / DOT 4",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Para sistemas hidráulicos de freno y embrague.",
+    "formatos": ["500ml"],
+    "imagen": "automotriz/producto-13.webp",
+    "beneficios": [
+      "Compatible con DOT 3 y DOT 4",
+      "Cumple normas internacionales",
+      "Estabilidad y seguridad en frenado"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "frenos",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 14,
+    "titulo": "Limpiador de Llantas / Aluminio",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza intensiva de llantas de acero y aluminio.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-14.webp",
+    "beneficios": [
+      "Actúa rápido",
+      "Apto para superficies delicadas",
+      "No inflamable",
+      "Biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 15,
+    "titulo": "Limpiador de Llantas Rim Cleaner",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza y cuidado de llantas (excepto aluminio pulido/anodizado sin protección).",
+    "formatos": ["950ml"],
+    "imagen": "automotriz/producto-15.webp",
+    "beneficios": [
+      "Remueve suciedad pesada",
+      "Acabado limpio y brillante",
+      "Espuma fácil de enjuagar"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 16,
+    "titulo": "Limpiador de Llantas Intensivo",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza intensiva de llantas de acero y aluminio.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-16.webp",
+    "beneficios": [
+      "Apto para superficies delicadas",
+      "No inflamable",
+      "Biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 17,
+    "titulo": "Shampoo Prelavado Ácido",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Prelavado para remover suciedades difíciles.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-17.webp",
+    "beneficios": [
+      "Desincrusta y desoxida",
+      "Alto poder desengrasante",
+      "Biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "desengrasantes",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 18,
+    "titulo": "Shampoo Automotriz Concentrado",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Detergente para carrocería que no daña pintura.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-18.webp",
+    "beneficios": [
+      "Alto poder de limpieza",
+      "Compatible con aguas duras",
+      "Formato industrial"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 19,
+    "titulo": "Shampoo Automotriz Espuma Controlada",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Shampoo de baja espuma para lavados controlados.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-19.webp",
+    "beneficios": [
+      "Control de espuma",
+      "Cumple normativa de descargas",
+      "No daña pintura"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 20,
+    "titulo": "Shampoo Seco Ecológico",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Lavado sin enjuague para carrocería.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-20.webp",
+    "beneficios": [
+      "No requiere enjuague",
+      "Bajo esfuerzo físico",
+      "Alto poder lubricante",
+      "Sin agentes abrasivos"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "ecologicos exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 21,
+    "titulo": "Shampoo Seco Concentrado",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Shampoo seco concentrado para lavado sin enjuague.",
+    "formatos": ["5L"],
+    "imagen": "automotriz/producto-21.webp",
+    "beneficios": [
+      "Alta concentración (dilución hasta 1:20)",
+      "Ahorro de espacio",
+      "Alto poder lubricante"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "ecologicos exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 22,
+    "titulo": "Cera Líquida Alto Brillo",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Cera para máximo brillo y protección de la pintura.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-22.webp",
+    "beneficios": [
+      "Protege contra contaminantes",
+      "Reflejo profundo",
+      "Capa protectora duradera",
+      "Aplicable incluso a la luz solar"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 23,
+    "titulo": "Cera Alta Presión Autosecante",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Cera para lavados con alta presión que facilita el escurrido.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-23.webp",
+    "beneficios": [
+      "Facilita el secado",
+      "Rompe tensión superficial del agua"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 24,
+    "titulo": "Limpiador de Motor",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de motores, llantas, neumáticos y piezas mecánicas.",
+    "formatos": ["950ml"],
+    "imagen": "automotriz/producto-24.webp",
+    "beneficios": [
+      "Remueve suciedad pesada",
+      "Seguro en gomas, plásticos y metales"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "mecanico",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 25,
+    "titulo": "All Purpose Cleaner",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de superficies interiores y exteriores.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-25.webp",
+    "beneficios": [
+      "Realza colores",
+      "Incluye agentes secuestrantes",
+      "Biodegradable y libre de fosfatos"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "interior exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 26,
+    "titulo": "Limpiavidrios",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpieza de vidrios y cristales del vehículo.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-26.webp",
+    "beneficios": [
+      "Sin aureolas",
+      "Secado rápido",
+      "Biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "superficies",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 27,
+    "titulo": "Renovador de Gomas",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Devuelve el aspecto original a gomas y cauchos.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-27.webp",
+    "beneficios": [
+      "Alta concentración",
+      "Biodegradable",
+      "Libre de fosfatos"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 28,
+    "titulo": "Acondicionador Gomas y Plásticos",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Realza y protege plásticos, vinilos y gomas.",
+    "formatos": ["950ml"],
+    "imagen": "automotriz/producto-28.webp",
+    "beneficios": [
+      "Restaura brillo y color",
+      "Previene envejecimiento",
+      "No deja sensación grasosa"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "interior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 29,
+    "titulo": "Silicona Emulsionada",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Restauración de cueros y plásticos automotrices.",
+    "formatos": ["5L", "22L", "208L"],
+    "imagen": "automotriz/producto-29.webp",
+    "beneficios": [
+      "pH neutro",
+      "Repele agua y polvo",
+      "Resistente a rayos UV",
+      "Biodegradable"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "interior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 30,
+    "titulo": "Acondicionador Cueros",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Limpia y humecta tapicería y superficies de cuero.",
+    "formatos": ["950ml"],
+    "imagen": "automotriz/producto-30.webp",
+    "beneficios": [
+      "Limpia, acondiciona y protege",
+      "Previene decoloración",
+      "Aporta suavidad"
+    ],
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "interior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  },
+  {
+    "id": 31,
+    "titulo": "Restaurador de Plásticos y Gomas",
+     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar el proceso de limpieza de calipers, pastillas, discos y tambores de frenos. Su fórmula en base a alcohol permite una remoción rápida y eficaz de suciedades grasas, oleosas, polvo adherido y hollín. El producto presenta un secado instantáneo sin dejar residuos. No daña los o-rings, el propileno ni la pintura. Su formato aerosol permite controlar el uso y otorga una cómoda aplicación. Puede ser usado como un limpiador universal de grasas y aceites.",
+    "descripcion_corta": "Restaura plásticos y gomas exteriores e interiores.",
+    "formatos": ["5L", "22L"],
+    "imagen": "automotriz/producto-31.webp",
+    "beneficios": [
+      "Con protección UV",
+      "Potencia color por semanas",
+      "Aroma agradable",
+      "Aplicación controlada"
+    ],
+
+    "instrucciones": [
+        "Agitar bien antes de usar",
+        "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
+        "Dejar evaporar el producto",
+        "En caso de suciedad extrema, repetir la operación"
+    ],
+    "aplicaciones": [
+      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+      "Balatas de embrague, prensas, volantes y elementos en general",
+      "Engranajes, bomba de aceite, disco",
+      "Piezas del motor, carburados y bombas de combustible"
+    ],
+    "precauciones": [
+      "Mantener fuera del alcance de niños",
+      "No ingerir",
+      "Evitar el contacto con los ojos y la piel",
+      "No respirar los vapores"
+    ],
+    "categoria": "interior exterior",
+    "pdf": "/assets/pdf/producto-1.pdf"
+  }
+]

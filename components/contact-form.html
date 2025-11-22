@@ -1,11 +1,15 @@
 <!--Offcanvas-->
 <div class="offcanvas offcanvas-start shadow" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="contactForm" aria-labelledby="contactFormLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="contactFormLabel">Informacion de contacto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header bg-dark d-dlex justify-content-between">
+        <a href="index.html" class="navbar-brand d-flex align-items-center d-online-block">
+            <strong class="d-none">DDVR</strong>
+        </a>
+        <button type="button" class="btn pe-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x fs-4"></i></button>
     </div>
     <div class="offcanvas-body">
-        <form id="contact_form" action="assets/send-mail/send-mail.php" method="POST">
+        <h5 class="offcanvas-title" id="contactFormLabel">Informacion de contacto</h5>
+        <small class="mb-4 mt-1 d-block">* Al completar los campos se habilitará el botón de envío.</small>
+        <form id="contact_form" action="api/mail/form-post.php" method="POST">
             <div class="row">
                 <div class="col-md-6 mb-2">
                     <label for="name">Nombre</label>
@@ -36,7 +40,7 @@
                     <div class="position-relative">
                         <div class="input-group">
                             <span class="input-group-text" id="visible-addon">+56</span>
-                            <input type="text" name="phone" class="form-control phone-input" id="phone" maxlength="9" required>
+                            <input type="text" name="phone" class="form-control phone-input" id="phone" maxlength="9" placeholder="*********" required>
                         </div>
                         <span id="icon-phone" class="phone-icon position-absolute top-50 translate-middle-y pe-none"></span>
                     </div>
@@ -67,8 +71,9 @@
 
             <div id="contactFeedback" class="mt-2"></div>
 
-            <div class="d-flex justify-content-end mt-2">
-                <button id="btn-submit" class="btn btn-sm btn-primary btn-ddvr py-2 px-4 mt-2 hola" type="submit" disabled>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+                <a href="mailto: ventas@ddvr.cl" class="d-flex align-items-center lh-1"><i class="bi bi-envelope-fill me-2"></i>ventas@ddvr.cl</a>
+                <button id="btn-submit" class="btn btn-sm btn-primary btn-ddvr py-2 px-4" type="submit" disabled>
                     Enviar
                 </button>            
             </div>

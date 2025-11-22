@@ -1,0 +1,42 @@
+/index.html          ← entrypoint de la SPA, contiene el main <div> y carga scripts
+
+/assets/
+│
+└── js/                 ← librerías locales (solo copias, offline)
+     ├── [jquery, isotope, etc.] 
+     └── ...            
+
+/pages/
+│
+├── js/
+│   ├── router/         ← lógica del SPA
+│   │   ├── include.js
+│   │   ├── router.js
+│   │   └── main.js      ← entrypoint que arranca todo
+│   │
+│   ├── app.js           ← funciones generales de UI
+│   ├── plp.js           ← lógica específica de la PLP
+│   └── pdp.js           ← lógica específica de la PDP
+│
+├── plp.html             ← markup de catálogo
+└── pdp.html             ← markup de ficha de producto
+
+/components/
+│
+├── js/
+│   ├── form-post.js
+│   └── qr-btns.js
+│
+└── [otros componentes...] 
+
+/data/                  ← JSONs de productos
+│   ├── automotive.json
+│   └── industrial.json
+│
+/api/                   ← endpoints PHP
+│
+├── qr/
+│   └── qr-get.php
+│
+└── mail/
+    └── form-post.php
