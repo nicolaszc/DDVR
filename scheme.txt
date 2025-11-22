@@ -40,3 +40,7 @@
 │
 └── mail/
     └── form-post.php
+
+/admin/                 
+   ├── login.php
+   └── upload.php
