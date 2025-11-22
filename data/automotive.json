@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "titulo": "Limpiador de Frenos",
+    "titulo": "Limpiador de 4",
     "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar la seguridad en el frenado, removiendo grasa, aceite, polvo de fricción y otras suciedades en calipers, discos, tambores y componentes asociados. Gracias a su fórmula de secado rápido, no deja residuos que puedan afectar el desempeño del sistema de frenos y puede ser usado como un limpiador universal de grasas y aceites.",
     "descripcion_corta": "Limpieza de calipers, pastillas, discos y tambores de freno.",
     "formatos": ["500ml", "5L"],
@@ -30,7 +30,7 @@
       "No respirar los vapores"
     ],
     "categoria": "frenos",
-    "pdf": "/uploads/pdf/automotriz/limpiador-de-frenos.pdf"
+    "pdf": "uploads/pdf/automotriz/limpiador-de-frenos.pdf"
   },
   {
     "id": 2,
@@ -64,7 +64,7 @@
       "No respirar los vapores"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/automotriz/dielectrico-no-inflamable.pdf"
+    "pdf": "uploads/pdf/automotriz/dielectrico-no-inflamable.pdf"
   },
   {
     "id": 3,
@@ -97,7 +97,7 @@
       "No respirar los vapores"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/automotriz/solvente-dielectrico.pdf"
+    "pdf": "uploads/pdf/automotriz/solvente-dielectrico.pdf"
   },
   {
     "id": 4,
@@ -131,7 +131,7 @@
       "No respirar los vapores"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/automotriz/limpia-contactos.pdf"
+    "pdf": "uploads/pdf/automotriz/limpia-contactos.pdf"
   },
   {
     "id": 5,
@@ -165,7 +165,7 @@
       "No respirar los vapores"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/automotriz/limpia-contactos-no-inflamable.pdf"
+    "pdf": "uploads/pdf/automotriz/limpia-contactos-no-inflamable.pdf"
   },
   {
     "id": 6,
@@ -199,7 +199,7 @@
       "No respirar los vapores"
     ],
     "categoria": "desengrasantes",
-    "pdf": "/uploads/pdf/automotriz/desengrasante-alto-poder.pdf"
+    "pdf": "uploads/pdf/automotriz/desengrasante-alto-poder.pdf"
   },
   {
     "id": 7,
@@ -266,7 +266,7 @@
       "No respirar los vapores"
     ],
     "categoria": "manos",
-    "pdf": "/uploads/pdf/automotriz/limpiador-de-manos-exfoliante.pdf"
+    "pdf": "uploads/pdf/automotriz/limpiador-de-manos-exfoliante.pdf"
   },
   {
     "id": 9,
@@ -300,7 +300,7 @@
       "No respirar los vapores"
     ],
     "categoria": "manos",
-    "pdf": "/uploads/pdf/automotriz/limpiador-de-manos-orange.pdf"
+    "pdf": "uploads/pdf/automotriz/limpiador-de-manos-orange.pdf"
   },
   {
     "id": 10,
@@ -334,7 +334,7 @@
       "No respirar los vapores"
     ],
     "categoria": "lubricantes",
-    "pdf": "/uploads/pdf/automotriz/grasa-liquida-adhesiva.pdf"
+    "pdf": "uploads/pdf/automotriz/grasa-liquida-adhesiva.pdf"
   },
   {
     "id": 11,
@@ -368,7 +368,7 @@
       "No respirar los vapores"
     ],
     "categoria": "lubricantes",
-    "pdf": "/uploads/pdf/automotriz/aceite-multiproposito.pdf"
+    "pdf": "uploads/pdf/automotriz/aceite-multiproposito.pdf"
   },
   {
     "id": 12,
@@ -806,7 +806,7 @@
       "No respirar los vapores"
     ],
     "categoria": "motor",
-    "pdf": "/uploads/pdf/automotriz/limpiador-de-motor.pdf"
+    "pdf": "uploads/pdf/automotriz/limpiador-de-motor.pdf"
   },
   {
     "id": 25,
