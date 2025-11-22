@@ -395,11 +395,11 @@ footer #qr-container{
     
 }
 /* Card */
-#plp .card {
+.card {
     border:none;
     width: 100%;
 }
-#plp .card-img {
+.card-img {
     background: #e5ecfb;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -408,12 +408,12 @@ footer #qr-container{
     height: 248px;
     overflow: hidden;
 }
-#plp .card-img img{
+.card-img img{
     width: auto;
     max-height: 160px;
     mix-blend-mode: multiply;
 }
-#plp .card-body {
+.card-body {
     display: flex;
     flex-direction: column;
 }
@@ -476,13 +476,13 @@ footer #qr-container{
     transform: translateX(0);
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
 }
-#plp .card-ddvr{
+.card-ddvr{
     border:none;
     overflow: hidden!important;
     position: relative;
     transition: all 1s ease;
 }
-#plp .card-ddvr::before {
+.card-ddvr::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -495,16 +495,16 @@ footer #qr-container{
     opacity: 0;
 }
 
-#plp .card-ddvr:hover {
+.card-ddvr:hover {
     transform: scale(1.025);
     box-shadow: 0 0 .625rem rgba(255,255,255,0.25)!important;
 }
 
-#plp .card-ddvr .btn-ddvr:hover {
+.card-ddvr .btn-ddvr:hover {
     transform: scale(1.05);
     box-shadow: none!important;
 }
-#plp .card-ddvr:hover::before {
+.card-ddvr:hover::before {
     opacity: 1;
     transform: rotate(-45deg) translateY(275%);
 }
@@ -608,6 +608,12 @@ footer #qr-container{
 .pdp-container ul li{
     margin-bottom: 0;
 }
+.pdp-img-container{
+    background: #e5ecfb;
+}
+.pdp-img-container img{
+    mix-blend-mode: multiply;
+}
 /* Footer */
 footer a{
     color: var(--bs-secondary-color);
@@ -677,8 +683,23 @@ footer a{
         -webkit-text-fill-color: var(--dark-input-text-color) !important;
         font-weight: 200 !important;
     }
+    .pdp-container.product h1, .pdp-container.product h4{
+        color: rgb(102, 102, 102) !important;
+    }
+    .pdp-container.product .product-text {
+        color: var(--terciary-light-color) !important;
+    }
     .shadow{
         box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .125) !important;
+    }
+    .pdp-container .pdp-img-container.shadow{
+        box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .02) !important;
+    }
+    .pdp-container .product-presentation {
+        color: rgb(102, 102, 102) !important;
+    }
+    .pdp-container .product-presentation strong{
+        color: var(--terciary-light-color) !important;
     }
     .card-ddvr:hover {
         box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .375) !important;
