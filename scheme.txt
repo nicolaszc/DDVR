@@ -44,3 +44,13 @@
 /admin/                 
    ├── login.php
    └── upload.php
+
+/uploads/
+│
+├── img/
+│   ├── automotriz
+│   └── industrial
+│
+└── pdf/
+    ├── automotriz
+    └── industrial
