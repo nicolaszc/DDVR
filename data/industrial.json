@@ -35,7 +35,7 @@
       "No respirar los vapores"
     ],
     "categoria": "desengrasantes",
-    "pdf": "/uploads/pdf/industrial/desengrasante-alto-poder.pdf"
+    "pdf": "uploads/pdf/industrial/desengrasante-alto-poder.pdf"
   },
   {
     "id": 2,
@@ -72,7 +72,7 @@
       "No respirar los vapores"
     ],
     "categoria": "desengrasantes",
-    "pdf": "/uploads/pdf/industrial/desengrasante-ecologico-listo-para-usar.pdf"
+    "pdf": "uploads/pdf/industrial/desengrasante-ecologico-listo-para-usar.pdf"
   },
   {
     "id": 3,
@@ -110,7 +110,7 @@
       "No respirar los vapores"
     ],
     "categoria": "desengrasantes",
-    "pdf": "/uploads/pdf/industrial/desengrasante-ecologico-industrial.pdf"
+    "pdf": "uploads/pdf/industrial/desengrasante-ecologico-industrial.pdf"
   },
   {
     "id": 4,
@@ -147,7 +147,7 @@
       "No respirar los vapores"
     ],
     "categoria": "manos",
-    "pdf": "/uploads/pdf/industrial/limpiador-de-manos-exfoliante.pdf"
+    "pdf": "uploads/pdf/industrial/limpiador-de-manos-exfoliante.pdf"
   },
   {
     "id": 5,
@@ -184,7 +184,7 @@
       "No respirar los vapores"
     ],
     "categoria": "manos",
-    "pdf": "/uploads/pdf/industrial/limpiador-de-manos-orange.pdf"
+    "pdf": "uploads/pdf/industrial/limpiador-de-manos-orange.pdf"
   },
   {
     "id": 6,
@@ -220,7 +220,7 @@
       "No respirar los vapores"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/industrial/limpia-contactos.pdf"
+    "pdf": "uploads/pdf/industrial/limpia-contactos.pdf"
   },
   {
     "id": 7,
@@ -256,7 +256,7 @@
       "No respirar los vapores"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/industrial/limpia-contactos-no-inflamable.pdf"
+    "pdf": "uploads/pdf/industrial/limpia-contactos-no-inflamable.pdf"
   },
   {
     "id": 8,
@@ -292,7 +292,7 @@
       "No utilizar cerca de llamas o fuentes de calor"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/industrial/aire-comprimido-de-limpieza-no-inflamable.pdf"
+    "pdf": "uploads/pdf/industrial/aire-comprimido-de-limpieza-no-inflamable.pdf"
   },
   {
     "id": 9,
@@ -329,7 +329,7 @@
       "Usar elementos de protección personal durante su aplicación"
     ],
     "categoria": "tratamientos",
-    "pdf": "/uploads/pdf/industrial/desoxidante.pdf"
+    "pdf": "uploads/pdf/industrial/desoxidante.pdf"
   },
   {
     "id": 10,
@@ -366,7 +366,7 @@
       "No aplicar en sistemas donde se requiera lubricante específico"
     ],
     "categoria": "lubricantes",
-    "pdf": "/uploads/pdf/industrial/aceite-multiproposito.pdf"
+    "pdf": "uploads/pdf/industrial/aceite-multiproposito.pdf"
   },
   {
     "id": 11,
@@ -404,7 +404,7 @@
       "Usar elementos de protección personal según ficha de seguridad"
     ],
     "categoria": "tratamientos",
-    "pdf": "/uploads/pdf/industrial/anticorrosivo.pdf"
+    "pdf": "uploads/pdf/industrial/anticorrosivo.pdf"
   },
   {
     "id": 12,
@@ -440,7 +440,7 @@
       "No aplicar cerca de fuentes de ignición"
     ],
     "categoria": "desmoldantes",
-    "pdf": "/uploads/pdf/industrial/silicona-desmoldante-alta-temperatura.pdf"
+    "pdf": "uploads/pdf/industrial/silicona-desmoldante-alta-temperatura.pdf"
   },
   {
     "id": 13,
@@ -476,7 +476,7 @@
       "No pulverizar cerca de llamas o superficies calientes"
     ],
     "categoria": "desmoldantes",
-    "pdf": "/uploads/pdf/industrial/silicona-desmoldante-ga.pdf"
+    "pdf": "uploads/pdf/industrial/silicona-desmoldante-ga.pdf"
   },
   {
     "id": 14,
@@ -552,7 +552,7 @@
       "Usar en áreas ventiladas y con elementos de protección personal"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/industrial/solvente-dielectrico-80-nc.pdf"
+    "pdf": "uploads/pdf/industrial/solvente-dielectrico-80-nc.pdf"
   },
   {
     "id": 16,
@@ -591,7 +591,7 @@
       "No respirar los vapores"
     ],
     "categoria": "electricos",
-    "pdf": "/uploads/pdf/industrial/dielectrico-no-inflamable.pdf"
+    "pdf": "uploads/pdf/industrial/dielectrico-no-inflamable.pdf"
   },
   {
     "id": 17,
@@ -627,7 +627,7 @@
       "No inhalar el aerosol, usar en ambientes ventilados"
     ],
     "categoria": "lubricantes",
-    "pdf": "/uploads/pdf/industrial/grasa-liquida-adhesiva.pdf"
+    "pdf": "uploads/pdf/industrial/grasa-liquida-adhesiva.pdf"
   }
 ]
 
