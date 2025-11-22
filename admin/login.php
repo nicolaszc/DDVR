@@ -92,6 +92,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin-bottom:1rem;
         }
     </style>
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="card">

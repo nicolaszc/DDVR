@@ -169,97 +169,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Administrador de archivos – Catálogo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:#f3f4f6;
-            margin:0;
-            padding:1.5rem;
-        }
-        header{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            margin-bottom:1.5rem;
-        }
-        h1{
-            margin:0;
-            font-size:1.4rem;
-        }
-        a.logout{
-            font-size:0.9rem;
-            color:#ef4444;
-            text-decoration:none;
-        }
-        .wrapper{
-            max-width:900px;
-            margin:0 auto;
-        }
-        .messages{
-            margin-bottom:1rem;
-        }
-        .msg{
-            background:#e5f3ff;
-            border-left:4px solid #2563eb;
-            padding:0.4rem 0.7rem;
-            border-radius:6px;
-            font-size:0.85rem;
-            margin-bottom:0.25rem;
-        }
-        .grid{
-            display:grid;
-            gap:1rem;
-        }
-        @media (min-width: 768px){
-            .grid{
-                grid-template-columns:repeat(2, minmax(0,1fr));
-            }
-        }
-        .card{
-            background:#fff;
-            border-radius:12px;
-            padding:1rem 1.25rem 1.25rem;
-            box-shadow:0 10px 25px rgba(0,0,0,0.04);
-        }
-        .card h2{
-            margin-top:0;
-            font-size:1rem;
-        }
-        .card p{
-            font-size:0.85rem;
-            color:#4b5563;
-        }
-        .field{
-            margin:0.75rem 0;
-        }
-        label{
-            display:block;
-            font-size:0.85rem;
-            margin-bottom:0.25rem;
-        }
-        input[type="file"],
-        select{
-            width:100%;
-            font-size:0.85rem;
-        }
-        button{
-            margin-top:0.5rem;
-            padding:0.5rem 0.9rem;
-            border-radius:999px;
-            border:none;
-            background:#111827;
-            color:#fff;
-            font-size:0.85rem;
-            cursor:pointer;
-        }
-        small{
-            font-size:0.75rem;
-            color:#6b7280;
-        }
-    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="wrapper">
+
+    <header data-bs-theme="dark">
+        
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="/" class="navbar-brand d-flex align-items-center d-online-block">
+                    <strong class="d-none">DDVR</strong>
+                </a>
+                <a class="logout" href="?logout=1">Cerrar sesión</a>
+                <button id="btn-about" class="navbar-toggler collapsed pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span>Somos DDVR</span><i class="bi bi-arrow-up-short ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </header>
     <header>
         <h1>Panel de administración del catálogo</h1>
         <a class="logout" href="?logout=1">Cerrar sesión</a>
