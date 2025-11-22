@@ -52,7 +52,6 @@ $headers .= "Reply-To: $mail\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 // 5. Enviar correo
-
 $sent = mail($to, $subjectMail, $body, $headers);
 
 if ($sent) {
