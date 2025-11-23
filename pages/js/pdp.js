@@ -1,10 +1,10 @@
 // pdp.js
-
+let urlParams = null;
 function initPdp() {
     console.log("PDP inicializada");
 
     // Obtener ID desde URL ?id=1
-    const urlParams = new URLSearchParams(window.location.search);
+    urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
 
     if (!id) {
@@ -50,6 +50,8 @@ function loadPdp(id) {
     if (backBtn) {
         backBtn.addEventListener("click", e => {
             e.preventDefault();
+            navbarHeaderCollapsel();
+            scrollToTop();
             window.history.back();
         });
     }

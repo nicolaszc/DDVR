@@ -24,7 +24,9 @@ $rootDir       = dirname(__DIR__);           // sube de /admin a raíz
 $dataDir       = $rootDir . '/data/';
 $uploadsImgDir = $rootDir . '/uploads/img/';
 $uploadsPdfDir = $rootDir . '/uploads/pdf/';
-
+$success = '<div class="d-flex justify-content-center align-items-center alert alert-success mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-check-circle-fill me-2"></i>Catálogo actualizado correctamente.! <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+$error = '<div class="d-flex justify-content-center align-items-center alert alert-danger mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-x-octagon-fill me-2"></i>Error actualizando el catálogo. <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+$no_file = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>No se seleccionaron archivos. <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 $messages = [];
 
 /**
@@ -43,7 +45,7 @@ function sanitize_filename($filename) {
  */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
-
+    
     // 1) Sobrescribir automotive.json
     if ($action === 'upload_automotive_json') {
         if (isset($_FILES['automotive_json']) && $_FILES['automotive_json']['error'] === UPLOAD_ERR_OK) {
@@ -52,17 +54,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ext  = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
             if ($ext !== 'json') {
-                $messages[] = 'El archivo de catálogo automotriz debe ser .json';
+                $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>El archivo de catálogo automotriz debe ser .json</div>';
             } else {
                 $dest = $dataDir . 'automotive.json';
                 if (move_uploaded_file($tmp, $dest)) {
-                    $messages[] = 'automotive.json actualizado correctamente.';
+                    $messages[] = $success;
                 } else {
-                    $messages[] = 'Error al mover automotive.json al directorio /data.';
+                    $messages[] = $error;
                 }
             }
         } else {
-            $messages[] = 'No se recibió archivo para automotive.json.';
+            $messages[] = $no_file;
         }
     }
 
@@ -74,17 +76,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ext  = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
             if ($ext !== 'json') {
-                $messages[] = 'El archivo de catálogo industrial debe ser .json';
+                $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>El archivo de catálogo industrial debe ser .json</div>';
             } else {
                 $dest = $dataDir . 'industrial.json';
                 if (move_uploaded_file($tmp, $dest)) {
-                    $messages[] = 'industrial.json actualizado correctamente.';
+                    $messages[] = $success;
                 } else {
-                    $messages[] = 'Error al mover industrial.json al directorio /data.';
+                    $messages[] = $error;
                 }
             }
         } else {
-            $messages[] = 'No se recibió archivo para industrial.json.';
+            $messages[] = $no_file;
         }
     }
 
@@ -106,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
                     if (!in_array($ext, $allowed, true)) {
-                        $messages[] = "Archivo de imagen '$name' ignorado (extensión no permitida).";
+                        $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>Archivo '.$name.' ignorado (extensión no permitida).</div>';
                         continue;
                     }
 
@@ -114,13 +116,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $dest = $targetBase . $cleanName;
 
                     if (move_uploaded_file($tmp, $dest)) {
-                        $messages[] = "Imagen '$cleanName' subida correctamente a /uploads/img/$categoria.";
+                        $messages[] = $success;
                     } else {
-                        $messages[] = "Error al subir la imagen '$cleanName'.";
+                        $messages[] = $error;
                     }
                 }
             } else {
-                $messages[] = 'No se seleccionaron imágenes.';
+                $messages[] = $no_file;
             }
         }
     }
@@ -143,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
                     if (!in_array($ext, $allowed, true)) {
-                        $messages[] = "Archivo '$name' ignorado (debe ser PDF).";
+                        $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>Archivo '.$name.' ignorado (debe ser PDF).</div>';
                         continue;
                     }
 
@@ -151,24 +153,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $dest = $targetBase . $cleanName;
 
                     if (move_uploaded_file($tmp, $dest)) {
-                        $messages[] = "PDF '$cleanName' subido correctamente a /uploads/pdf/$categoria.";
+                        $messages[] = $success;
                     } else {
-                        $messages[] = "Error al subir el PDF '$cleanName'.";
+                        $messages[] = $error;
                     }
                 }
             } else {
-                $messages[] = 'No se seleccionaron PDFs.';
+                $messages[] = $no_file;
             }
         }
     }
 }
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <title>Administrador de archivos – Catálogo</title>
+    <title>DDVR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#712cf9" />
+    <!-- Favicon -->
+    <link id="icon-at" rel="apple-touch-icon" href="../assets/img/ico.png" sizes="180x180">
+    <link id="icon-lg" rel="icon" href="../assets/img/ico.png" sizes="32x32" type="image/png">
+    <link id="icon-sm" rel="icon" href="../assets/img/ico.png" sizes="16x16" type="image/png">
+
+    <!-- Color Mode Script -->
+    <script type="text/javascript" src="../components/js/color-modes.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -178,115 +188,143 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="css/admin.css" rel="stylesheet">
 
 </head>
-<body>
-<div class="wrapper">
+<body class="bg-body-tertiary">
 
     <header data-bs-theme="dark">
-        
+       
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a href="/" class="navbar-brand d-flex align-items-center d-online-block">
+                <span class="navbar-brand d-flex align-items-center">
                     <strong class="d-none">DDVR</strong>
-                </a>
-                <a class="logout" href="?logout=1">Cerrar sesión</a>
-                <button id="btn-about" class="navbar-toggler collapsed pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span>Somos DDVR</span><i class="bi bi-arrow-up-short ms-2"></i>
-                </button>
+                </span>
+                <a class="logout navbar-toggler pe-0" href="?logout=1"><span>Cerrar sesión</span><i class="bi bi-box-arrow-right ms-2"></i></a>
             </div>
         </div>
+
     </header>
-    <header>
-        <h1>Panel de administración del catálogo</h1>
-        <a class="logout" href="?logout=1">Cerrar sesión</a>
-    </header>
+ 
 
     <?php if (!empty($messages)): ?>
-        <div class="messages">
+        <div class="messages container mb-0">
             <?php foreach ($messages as $m): ?>
-                <div class="msg"><?= htmlspecialchars($m) ?></div>
+                <?= $m ?>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
 
-    <div class="grid">
-
-        <!-- 1. Subir /data/automotive.json -->
-        <div class="card">
-            <h2>Actualizar catálogo automotriz (JSON)</h2>
-            <p>Este archivo pisará <code>/data/automotive.json</code>.</p>
-            <form method="post" enctype="multipart/form-data">
-                <input type="hidden" name="action" value="upload_automotive_json">
-                <div class="field">
-                    <label for="automotive_json">Archivo automotive.json</label>
-                    <input type="file" name="automotive_json" id="automotive_json" accept=".json" required>
-                    <small>Debes subir un archivo .json con la estructura correcta.</small>
+    <main class="bg-body-tertiary py-5">
+        <div class="container"> 
+            <div class="row">    
+                <h1 class="fs-3 mb-3">Panel de administración</h1>
+                <!-- 1. Subir /data/automotive.json -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
+                        <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
+                        <div class="d-flex justify-content-between align-items-center w-100 mb-2">
+                            <h4 class="mb-0 lh-1">Actualizar catálogo automotriz</h4>
+                            <button type="submit" class="btn">
+                                <i class="bi bi-download fs-5 lh-1"></i>
+                            </button>
+                        </div>
+                        <p>Este archivo reemplazara el actual <code>automotive.json</code>.</p>
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="action" value="upload_automotive_json">
+                                <div class="field">
+                                    <input type="file" class="form-control w-50"  class="form-control w-50" name="automotive_json" id="automotive_json" accept=".json" required>
+                                    <small class="d-block mt-2">* Debes subir un archivo .json con la estructura correcta.</small>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir automotive.json<i class="bi bi-upload ms-2"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit">Subir automotive.json</button>
-            </form>
+                <!-- 2. Subir /data/industrial.json -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
+                        <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
+                            <div class="d-flex justify-content-between align-items-center w-100 mb-2">   
+                                <h4>Actualizar catálogo industrial</h4>
+                                <button type="submit" class="btn">
+                                    <i class="bi bi-download fs-5 lh-1"></i>
+                                </button>
+                            </div>
+                            <p>Este archivo reemplazara el actual <code>industrial.json</code>.</p>
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="action" value="upload_industrial_json">
+                                <div class="field">
+                                    <input type="file" class="form-control w-50"  name="industrial_json" id="industrial_json" accept=".json" required>
+                                    <small class="d-block mt-2">* Debes subir un archivo .json con la estructura correcta.</small>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir industrial.json<i class="bi bi-upload ms-2"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3. Subir imágenes -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
+                        <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
+                            <h4>Subir imágenes de productos</h4>
+                            <p>Se guardan en <code>/uploads/img/automotriz</code> o <code>/uploads/img/industrial</code>.</p>
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="action" value="upload_images">
+                                <div class="field">
+                                    <label class="ms-0 mb-3" for="img_categoria">Categoría</label>
+                                    <select class="form-select pe-5 w-50" name="img_categoria" id="img_categoria" required>
+                                        <option value="">Selecciona...</option>
+                                        <option value="automotriz">Automotriz</option>
+                                        <option value="industrial">Industrial</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <input type="file" class="form-control w-50"  name="images[]" id="images" accept=".jpg,.jpeg,.png,.webp,.gif" multiple required>
+                                    <small class="d-block mt-2">* Extensiones permitidas: jpg, jpeg, png, webp, gif.</small>
+                                </div>
+                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir imágenes<i class="bi bi-upload ms-2"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4. Subir PDFs -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
+                        <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
+                            <h4>Subir fichas técnicas</h4>
+                            <p>Se guardan en <code>/uploads/pdf/automotriz</code> o <code>/uploads/pdf/industrial</code>.</p>
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="action" value="upload_pdfs">
+                                <div class="field">
+                                    <label class="ms-0 mb-3" for="pdf_categoria">Categoría</label>
+                                    <select class="form-select pe-5 w-50" name="pdf_categoria" id="pdf_categoria" required>
+                                        <option value="">Selecciona...</option>
+                                        <option value="automotriz">Automotriz</option>
+                                        <option value="industrial">Industrial</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <input type="file" class="form-control w-50"  name="pdfs[]" id="pdfs" accept=".pdf" multiple required>
+                                    <small class="d-block mt-2">* Sólo se permiten archivos .pdf.</small>
+                                </div>
+                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir PDFs<i class="bi bi-upload ms-2"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </main>
 
-        <!-- 2. Subir /data/industrial.json -->
-        <div class="card">
-            <h2>Actualizar catálogo industrial (JSON)</h2>
-            <p>Este archivo pisará <code>/data/industrial.json</code>.</p>
-            <form method="post" enctype="multipart/form-data">
-                <input type="hidden" name="action" value="upload_industrial_json">
-                <div class="field">
-                    <label for="industrial_json">Archivo industrial.json</label>
-                    <input type="file" name="industrial_json" id="industrial_json" accept=".json" required>
-                    <small>Debes subir un archivo .json con la estructura correcta.</small>
+    <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5">
+        <div class="container">
+             <div class="row">
+                <div class="col-12 d-flex justify-content-center mt-5 mb-2">
+                    <small class="mt-3 mb-0">© 2025 DVR Distribuidora</small>
                 </div>
-                <button type="submit">Subir industrial.json</button>
-            </form>
+            </div>
         </div>
-
-        <!-- 3. Subir imágenes -->
-        <div class="card">
-            <h2>Subir imágenes de productos</h2>
-            <p>Se guardan en <code>/uploads/img/automotriz</code> o <code>/uploads/img/industrial</code>.</p>
-            <form method="post" enctype="multipart/form-data">
-                <input type="hidden" name="action" value="upload_images">
-                <div class="field">
-                    <label for="img_categoria">Categoría</label>
-                    <select name="img_categoria" id="img_categoria" required>
-                        <option value="">Selecciona...</option>
-                        <option value="automotriz">Automotriz</option>
-                        <option value="industrial">Industrial</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="images">Imágenes (puedes seleccionar varias)</label>
-                    <input type="file" name="images[]" id="images" accept=".jpg,.jpeg,.png,.webp,.gif" multiple required>
-                    <small>Extensiones permitidas: jpg, jpeg, png, webp, gif.</small>
-                </div>
-                <button type="submit">Subir imágenes</button>
-            </form>
-        </div>
-
-        <!-- 4. Subir PDFs -->
-        <div class="card">
-            <h2>Subir fichas técnicas (PDF)</h2>
-            <p>Se guardan en <code>/uploads/pdf/automotriz</code> o <code>/uploads/pdf/industrial</code>.</p>
-            <form method="post" enctype="multipart/form-data">
-                <input type="hidden" name="action" value="upload_pdfs">
-                <div class="field">
-                    <label for="pdf_categoria">Categoría</label>
-                    <select name="pdf_categoria" id="pdf_categoria" required>
-                        <option value="">Selecciona...</option>
-                        <option value="automotriz">Automotriz</option>
-                        <option value="industrial">Industrial</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="pdfs">PDFs (puedes seleccionar varios)</label>
-                    <input type="file" name="pdfs[]" id="pdfs" accept=".pdf" multiple required>
-                    <small>Sólo se permiten archivos .pdf.</small>
-                </div>
-                <button type="submit">Subir PDFs</button>
-            </form>
-        </div>
-
-    </div>
-</div>
+    </footer>
+<!-- Scripts -->
+<script src="../assets/js/lib/bootstrap.bundle.min.js" crossorigin="anonymous"></script>    
 </body>
 </html>

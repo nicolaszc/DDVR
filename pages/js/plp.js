@@ -2,7 +2,7 @@
 // Root
 // =========================
 
-let siteRoot = null; 
+//let siteRoot = null; 
 
 
 // =========================
@@ -147,6 +147,8 @@ function renderCards(products) {
             // Buscar el producto en productsData
             const product = productsData.find(p => String(p.id) === String(productId));
             if (!product) return console.error("Producto no encontrado");
+
+            //scrollToTop();
 
             // Random cards
             window.pendingRandomCards = renderRandomCardsHtml(product);
@@ -340,7 +342,7 @@ function renderRandomCardsHtml(currentProduct) {
 
     html = 
     `<div class="container mb-4">
-        <h2 class="product-title mb-3 mt-4">Otros usuarios también vieron</h1>
+        <h2 class="product-title mb-3 mt-4 fs-4">Otros usuarios también vieron</h1>
         <div id="plp" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 product">
             ${html}
         </div>
@@ -356,10 +358,10 @@ function renderRandomCardsHtml(currentProduct) {
 document.addEventListener("plpLoaded", () => {
 
     // Se obtiene el siteRoot AQUÍ
-    siteRoot = document.getElementById('site-root').getAttribute('content');
+    //siteRoot = document.getElementById('site-root').getAttribute('content');
 
     // ⬇️ SE MUEVE AQUÍ el fetch de templates
-    templatesReady = fetch(siteRoot + 'components/card.html')
+    templatesReady = fetch(siteRoot + 'components/card.php')
         .then(res => res.text())
         .then(html => {
             cardTemplate = html;

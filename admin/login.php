@@ -24,7 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: upload.php');
         exit;
     } else {
-        $error = 'Usuario o contraseña incorrectos.';
+        $error = '<div class="d-flex justify-content-center align-items-center alert alert-danger mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-x-octagon-fill me-2"></i>Usuario o contraseña incorrectos.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>' ;
+
     }
 }
 ?>
@@ -34,90 +35,75 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Login Admin Catálogo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:#f5f5f5;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            min-height:100vh;
-            margin:0;
-        }
-        .card{
-            background:#fff;
-            padding:2rem;
-            border-radius:12px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.08);
-            max-width:360px;
-            width:100%;
-        }
-        h1{
-            margin-top:0;
-            font-size:1.5rem;
-            text-align:center;
-        }
-        .field{
-            margin-bottom:1rem;
-        }
-        label{
-            display:block;
-            margin-bottom:0.25rem;
-            font-size:0.9rem;
-        }
-        input[type="text"],
-        input[type="password"]{
-            width:100%;
-            padding:0.5rem 0.75rem;
-            border-radius:8px;
-            border:1px solid #ccc;
-            font-size:0.95rem;
-        }
-        button{
-            width:100%;
-            padding:0.6rem;
-            border:none;
-            border-radius:999px;
-            font-size:1rem;
-            cursor:pointer;
-            background:#111827;
-            color:#fff;
-        }
-        .error{
-            background:#fee2e2;
-            color:#b91c1c;
-            padding:0.5rem 0.75rem;
-            border-radius:8px;
-            font-size:0.85rem;
-            margin-bottom:1rem;
-        }
-    </style>
+    <meta name="theme-color" content="#712cf9" />
+    <!-- Favicon -->
+    <link id="icon-at" rel="apple-touch-icon" href="../assets/img/ico.png" sizes="180x180">
+    <link id="icon-lg" rel="icon" href="../assets/img/ico.png" sizes="32x32" type="image/png">
+    <link id="icon-sm" rel="icon" href="../assets/img/ico.png" sizes="16x16" type="image/png">
+
+    <!-- Color Mode Script -->
+    <script type="text/javascript" src="../components/js/color-modes.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="css/admin.css" rel="stylesheet">
 
 </head>
 <body>
-<div class="card">
-    <h1>Admin Catálogo</h1>
+<main class="bg-body-tertiary py-5">
+    <div class="container"> 
+        <div class="row"> 
 
-    <?php if ($error): ?>
-        <div class="error"><?= htmlspecialchars($error) ?></div>
-    <?php endif; ?>
+            <div class="col-md-6 offset-md-3 mt-5 text-center">
+                <span class="navbar-brand d-block m-auto">
+                    <strong class="d-none">DDVR</strong>
+                </span>
+            </div>
 
-    <form method="post" action="">
-        <div class="field">
-            <label for="username">Usuario</label>
-            <input type="text" name="username" id="username" required>
+            <div class="col-md-4 offset-md-4 d-flex justify-content-center mt-2 mb-5">
+                
+                <div class="card shadow mb-2 h-100 d-flex flex-column rounded overflow-hidden card-ddvr">
+                    <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
+                    <h4 class="text-center">Panel de administración</h4>
+
+                    <?php if ($error): ?>
+                        <div class="messages container mb-0"></div>
+                    <?php endif; ?>
+
+                        <form method="post" action="">
+                            <div class="field">
+                                <label for="username" class="ms-0">Usuario</label>
+                                <input type="text" name="username" id="username" class="form-control" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="password" class="ms-0">Contraseña</label>
+                                <input type="password" name="password" id="password" class="form-control" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">Entrar<i class="bi bi-box-arrow-in-right ms-2"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</main>
 
-        <div class="field">
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" required>
+ <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5">
+    <div class="container">
+            <div class="row">
+            <div class="col-12 d-flex justify-content-center mt-5 mb-2">
+                <small class="mt-3 mb-0">© 2025 DVR Distribuidora</small>
+            </div>
         </div>
+    </div>
+</footer>
 
-        <button type="submit">Entrar</button>
-    </form>
-</div>
+<!-- Scripts -->
+<script src="../assets/js/lib/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

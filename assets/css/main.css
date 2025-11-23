@@ -26,6 +26,7 @@
     --secondary-light-color: #ccc;
     --terciary-light-color: #666;
     --dark-input-text-color: #000;
+
 }
 
 /* General styles */
@@ -200,6 +201,7 @@ label{
     font-weight: 200!important;
     font-size: .75rem!important;
     color: var(--card-text-color)!important;
+    background-color: rgba(255,255,255,0.05);
     padding: .375rem;
     z-index: 3;
 }
@@ -326,7 +328,7 @@ footer #qr-container{
 
 /* Hero */
 .hero{
-    background: url(../img/hero.webp);
+    background: rgb(33, 37, 41) url(../img/hero.webp);
     background-size: cover;
     background-position: center;
 }
@@ -418,7 +420,7 @@ footer #qr-container{
     flex-direction: column;
 }
 .product-main-info{
-    height: 6.25rem;
+    height: 6.5rem;
     line-height: 1.5;
 }
 .product h4{
@@ -428,7 +430,16 @@ footer #qr-container{
 }
 .product-text{
     color: var(--card-text-color);
-    font-size: .8125rem;
+    font-size: .875rem;
+}
+.card .product-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: none;
+    overflow: hidden;
+    hyphens: auto;
 }
 .product-presentation {
     color: var(--secondary-light-color);
@@ -648,6 +659,9 @@ footer a{
     #contactForm .offcanvas-body a:hover{
         color: var(--main-color)!important;
     }
+    .offcanvas-header i{
+        color: var(--main-light-color);
+    }
     #visible-addon{
        /*  background-color: rgb(200 208 215) !important; */
         border-color: rgb(160 169 177);
@@ -683,7 +697,10 @@ footer a{
         -webkit-text-fill-color: var(--dark-input-text-color) !important;
         font-weight: 200 !important;
     }
-    .pdp-container.product h1, .pdp-container.product h4{
+    #visible-addon{
+        background-color: rgba(0, 0, 0, .05);
+    }
+    .product-title, .pdp-container.product h4{
         color: rgb(102, 102, 102) !important;
     }
     .pdp-container.product .product-text {
@@ -700,6 +717,9 @@ footer a{
     }
     .pdp-container .product-presentation strong{
         color: var(--terciary-light-color) !important;
+    }
+    .product .share-btn, .product .rrss a {
+        color: var(--terciary-light-color);
     }
     .card-ddvr:hover {
         box-shadow: .25rem 1rem 1rem 0 rgba(0, 0, 0, .375) !important;

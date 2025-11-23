@@ -1,3 +1,8 @@
+<?php
+$base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
+  ? '/develop'
+  : '';
+?>
 <!doctype html>
 <html lang="es" data-bs-theme="dark">
   <head>
@@ -6,7 +11,7 @@
     <title>DDVR</title>
 
     <meta name="theme-color" content="#712cf9" />
-    <!-- <meta id="site-root" name="site-root" content="" /> -->
+    <meta id="site-path" name="site-path" content="<?= $base ?>" />
 
     <meta property="og:image" content="https://ddvr.cl/api/qr/qr-get.php?url=<?= urlencode('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI' ]) ?>">
     <meta property="og:image:type" content="image/jpeg" />
@@ -20,19 +25,19 @@
     <link id="icon-sm" rel="icon" href="" sizes="16x16" type="image/png">
 
     <!-- Color Mode Script -->
-    <script type="text/javascript" src="./components/js/color-modes.js"></script>
+    <script type="text/javascript" src="<?= $base ?>/components/js/color-modes.js"></script>
 
     <!-- CSS -->
-    <link href="./assets/css/lib/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
-    <link href="./assets/css/lib/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="./assets/css/lib/animate.min.css" rel="stylesheet">
+    <link href="<?= $base ?>/assets/css/lib/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
+    <link href="<?= $base ?>/assets/css/lib/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="<?= $base ?>/assets/css/lib/animate.min.css" rel="stylesheet">
 
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">--> 
 
     <!-- Custom CSS -->
-    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="<?= $base ?>/assets/css/main.css" rel="stylesheet">
     
   </head>
   <body class="bg-body-tertiary">
@@ -67,31 +72,31 @@
     </div>
 
     <!-- Scripts -->
-    <script src="./assets/js/lib/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/lib/isotope.pkgd.min.js"></script>
+    <script src="<?= $base ?>/assets/js/lib/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="<?= $base ?>/assets/js/lib/isotope.pkgd.min.js"></script>
 
     <!-- Librerías externas -->
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>-->
 
     <!-- Funciones navegación -->
-    <script src="./pages/js/router/include.js"></script>
-    <script src="./pages/js/router/router.js"></script>
+    <script src="<?= $base ?>/pages/js/router/include.js"></script>
+    <script src="<?= $base ?>/pages/js/router/router.js"></script>
     
 
     <!-- Lógica por páginas -->
-    <script src="./pages/js/plp.js"></script>
-    <script src="./pages/js/pdp.js"></script>
+    <script src="<?= $base ?>/pages/js/plp.js"></script>
+    <script src="<?= $base ?>/pages/js/pdp.js"></script>
 
     <!-- Componentes -->
-    <script src="./components/js/form-post.js"></script>
-    <script src="./components/js/qr-btns.js"></script>
+    <script src="<?= $base ?>/components/js/form-post.js"></script>
+    <script src="<?= $base ?>/components/js/qr-btns.js"></script>
     
 
     <!-- Entrypoint: arranca todo -->
-    <script src="./pages/js/router/main.js"></script>
+    <script src="<?= $base ?>/pages/js/router/main.js"></script>
 
-    <script src="./pages/js/app.js"></script>
+    <script src="<?= $base ?>/pages/js/app.js"></script>
 
   </body>
 </html>
