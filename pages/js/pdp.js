@@ -6,7 +6,7 @@ function initPdp() {
     // Obtener ID desde URL ?id=1
     urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
-
+    console.log(id);
     if (!id) {
         console.error("No se pasó id de producto en la URL");
         return;

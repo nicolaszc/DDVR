@@ -197,7 +197,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <span class="navbar-brand d-flex align-items-center">
                     <strong class="d-none">DDVR</strong>
                 </span>
+                <div class="actions d-flex align-items-center">
+                <a class="btn btn-pass d-flex align-items-center" href="#"><span>Password</span><i class="bi bi-key ms-2 fs-4 lh-1"></i></a>
+                <span class="px-4">|</span>
                 <a class="logout navbar-toggler pe-0" href="?logout=1"><span>Cerrar sesión</span><i class="bi bi-box-arrow-right ms-2"></i></a>
+                </div>
             </div>
         </div>
 
@@ -269,9 +273,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <form method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="action" value="upload_images">
                                 <div class="field">
-                                    <label class="ms-0 mb-3" for="img_categoria">Categoría</label>
                                     <select class="form-select pe-5 w-50" name="img_categoria" id="img_categoria" required>
-                                        <option value="">Selecciona...</option>
+                                        <option value="">Selecciona Categoría...</option>
                                         <option value="automotriz">Automotriz</option>
                                         <option value="industrial">Industrial</option>
                                     </select>
@@ -294,9 +297,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <form method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="action" value="upload_pdfs">
                                 <div class="field">
-                                    <label class="ms-0 mb-3" for="pdf_categoria">Categoría</label>
                                     <select class="form-select pe-5 w-50" name="pdf_categoria" id="pdf_categoria" required>
-                                        <option value="">Selecciona...</option>
+                                        <option value="">Selecciona Categoría...</option>
                                         <option value="automotriz">Automotriz</option>
                                         <option value="industrial">Industrial</option>
                                     </select>

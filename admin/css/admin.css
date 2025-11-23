@@ -14,7 +14,20 @@
     font-size:0.85rem;
     margin-bottom:0.25rem;
 }
-
+.actions span.px-4{
+    color: var(--terciary-light-color);
+}
+.btn-pass{
+    color: var(--card-text-color);
+    font-weight: 200;
+    font-size: .875rem;
+}
+.btn-pass:hover{
+    color: var(--main-color);
+}
+.btn-pass i{
+    transform: scaleX(-1);
+}
 .field{
     margin:0.75rem 0;
 }
@@ -33,4 +46,7 @@ h1{
 }
 .btn{
     font-size: .875rem !important;
+}
+small{
+    color: var(--card-text-color) !important;
 }
