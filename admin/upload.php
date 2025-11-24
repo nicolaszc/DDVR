@@ -297,7 +297,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                         id="automotive_json"
                                         accept=".json"
                                         required>
-                                    <small class="d-block mt-2">
+                                    <small class="help-text d-block mt-2">
                                         * Debes subir un archivo .json con la estructura correcta.
                                     </small>
                                 </div>
@@ -329,7 +329,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                         id="industrial_json"
                                         accept=".json"
                                         required>
-                                    <small class="d-block mt-2">
+                                    <small class="help-text d-block mt-2">
                                         * Debes subir un archivo .json con la estructura correcta.
                                     </small>
                                 </div>
@@ -367,7 +367,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                         accept=".jpg,.jpeg,.png,.webp,.gif"
                                         multiple
                                         required>
-                                    <small class="d-block mt-2">
+                                    <small class="help-text d-block mt-2">
                                         * Extensiones permitidas: jpg, jpeg, png, webp, gif.
                                     </small>
                                 </div>
@@ -405,7 +405,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                         accept=".pdf"
                                         multiple
                                         required>
-                                    <small class="d-block mt-2">
+                                    <small class="help-text d-block mt-2">
                                         * Sólo se permiten archivos .pdf.
                                     </small>
                                 </div>

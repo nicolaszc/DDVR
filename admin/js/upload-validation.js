@@ -38,14 +38,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // Limpiar clases previas
+       // Limpiar clases previas
         input.classList.remove("is-valid", "is-invalid");
 
+        const help = input.parentElement.querySelector(".help-text");
+
+        // Resetear colores previos
+        if (help) help.classList.remove("text-danger", "text-valid");
+
         if (isValid) {
-            input.classList.add("is-valid");   // ✔
+            input.classList.add("is-valid"); 
+            if (help) help.classList.add("text-valid");
         } else {
-            input.classList.add("is-invalid"); // ✖
+            input.classList.add("is-invalid");
+            if (help) help.classList.add("text-danger"); 
         }
+
+        input.setCustomValidity("");
+        return isValid;
+
+
+
 
         // Muy importante: vaciar siempre el mensaje nativo
         input.setCustomValidity("");
@@ -62,16 +75,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         select.classList.remove("is-valid", "is-invalid");
 
+        const help = select.parentElement.querySelector(".help-text");
+
+        if (help) help.classList.remove("text-danger", "text-valid");
+
         if (isValid) {
             select.classList.add("is-valid");
+            if (help) help.classList.add("text-valid");
         } else {
             select.classList.add("is-invalid");
+            if (help) help.classList.add("text-danger");
         }
 
-        // También limpiamos mensajes nativos
         select.setCustomValidity("");
-
         return isValid;
+
     }
 
     // Validación en vivo para inputs file

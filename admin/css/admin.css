@@ -50,3 +50,9 @@ h1{
 small{
     color: var(--card-text-color) !important;
 }
+.text-danger {
+    color: #ff5252 !important;
+}
+.text-valid {
+    color: #00FF00 !important;
+}
