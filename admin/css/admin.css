@@ -73,4 +73,9 @@ small{
 .nav-pills .nav-link{
     background-color: var(--terciary-light-color);
 }
-
+.login {
+    height: calc(100vh - 138px);
+}
+.uploads {
+    min-height: calc(100vh - 214px);
+}

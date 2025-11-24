@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </head>
 <body>
-<main class="bg-body-tertiary py-5">
+<main class="bg-body-tertiary py-5 login d-flex align-items-center">
     <div class="container"> 
         <div class="row"> 
 

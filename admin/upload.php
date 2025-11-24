@@ -272,7 +272,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
         </div>
     <?php endif; ?>
 
-    <main class="bg-body-tertiary py-5">
+    <main class="bg-body-tertiary py-5 uploads">
         <div class="container"> 
             <div class="row">    
                 <h1 class="fs-3 mb-3" style="color: #ccc;">Panel de administración</h1>
