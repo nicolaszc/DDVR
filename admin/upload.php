@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'chang
         if (file_put_contents($credFile, $newLine, LOCK_EX) !== false) {
             $msg = 'Credenciales actualizadas correctamente.';
         } else {
-            $msg = 'Error al guardar las nuevas credenciales.';
+            $msgxx = 'Error al guardar las nuevas credenciales.';
         }
     }
 }
@@ -276,94 +276,142 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
         <div class="container"> 
             <div class="row">    
                 <h1 class="fs-3 mb-3">Panel de administración</h1>
+
                 <!-- 1. Subir /data/automotive.json -->
                 <div class="col-md-6 mb-4">
                     <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
-                        <div class="d-flex justify-content-between align-items-center w-100 mb-2">
-                            <h4 class="mb-0 lh-1">Actualizar catálogo automotriz</h4>
-                            <button type="submit" class="btn">
-                                <i class="bi bi-download fs-5 lh-1"></i>
-                            </button>
-                        </div>
-                        <p>Este archivo reemplazara el actual <code>automotive.json</code>.</p>
-                            <form method="post" enctype="multipart/form-data">
+                            <div class="d-flex justify-content-between align-items-center w-100 mb-2">
+                                <h4 class="mb-0 lh-1">Actualizar catálogo automotriz</h4>
+                                <a href="../data/automotive.json" download>
+                                    <i class="bi bi-download fs-5 lh-1"></i>
+                                </a>
+                            </div>
+                            <p>Este archivo reemplazara el actual <code>automotive.json</code>.</p>
+                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_automotive_json">
                                 <div class="field">
-                                    <input type="file" class="form-control w-50"  class="form-control w-50" name="automotive_json" id="automotive_json" accept=".json" required>
-                                    <small class="d-block mt-2">* Debes subir un archivo .json con la estructura correcta.</small>
+                                    <input type="file"
+                                        class="form-control w-50"
+                                        name="automotive_json"
+                                        id="automotive_json"
+                                        accept=".json"
+                                        required>
+                                    <small class="d-block mt-2">
+                                        * Debes subir un archivo .json con la estructura correcta.
+                                    </small>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir automotive.json<i class="bi bi-upload ms-2"></i></button>
+                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                    Subir automotive.json<i class="bi bi-upload ms-2"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
                 </div>
+
                 <!-- 2. Subir /data/industrial.json -->
                 <div class="col-md-6 mb-4">
                     <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
                             <div class="d-flex justify-content-between align-items-center w-100 mb-2">   
                                 <h4>Actualizar catálogo industrial</h4>
-                                <button type="submit" class="btn">
+                                <a href="../data/industrial.json" download>
                                     <i class="bi bi-download fs-5 lh-1"></i>
-                                </button>
+                                </a>
                             </div>
                             <p>Este archivo reemplazara el actual <code>industrial.json</code>.</p>
-                            <form method="post" enctype="multipart/form-data">
+                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_industrial_json">
                                 <div class="field">
-                                    <input type="file" class="form-control w-50"  name="industrial_json" id="industrial_json" accept=".json" required>
-                                    <small class="d-block mt-2">* Debes subir un archivo .json con la estructura correcta.</small>
+                                    <input type="file"
+                                        class="form-control w-50"
+                                        name="industrial_json"
+                                        id="industrial_json"
+                                        accept=".json"
+                                        required>
+                                    <small class="d-block mt-2">
+                                        * Debes subir un archivo .json con la estructura correcta.
+                                    </small>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir industrial.json<i class="bi bi-upload ms-2"></i></button>
+                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                    Subir industrial.json<i class="bi bi-upload ms-2"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
                 </div>
+
                 <!-- 3. Subir imágenes -->
                 <div class="col-md-6 mb-4">
                     <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
                             <h4>Subir imágenes de productos</h4>
                             <p>Se guardan en <code>/uploads/img/automotriz</code> o <code>/uploads/img/industrial</code>.</p>
-                            <form method="post" enctype="multipart/form-data">
+                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_images">
                                 <div class="field">
-                                    <select class="form-select pe-5 w-50" name="img_categoria" id="img_categoria" required>
+                                    <select class="form-select pe-5 w-50"
+                                            name="img_categoria"
+                                            id="img_categoria"
+                                            required>
                                         <option value="">Selecciona Categoría...</option>
                                         <option value="automotriz">Automotriz</option>
                                         <option value="industrial">Industrial</option>
                                     </select>
                                 </div>
                                 <div class="field">
-                                    <input type="file" class="form-control w-50"  name="images[]" id="images" accept=".jpg,.jpeg,.png,.webp,.gif" multiple required>
-                                    <small class="d-block mt-2">* Extensiones permitidas: jpg, jpeg, png, webp, gif.</small>
+                                    <input type="file"
+                                        class="form-control w-50"
+                                        name="images[]"
+                                        id="images"
+                                        accept=".jpg,.jpeg,.png,.webp,.gif"
+                                        multiple
+                                        required>
+                                    <small class="d-block mt-2">
+                                        * Extensiones permitidas: jpg, jpeg, png, webp, gif.
+                                    </small>
                                 </div>
-                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir imágenes<i class="bi bi-upload ms-2"></i></button>
+                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                    Subir imágenes<i class="bi bi-upload ms-2"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
                 </div>
+
                 <!-- 4. Subir PDFs -->
                 <div class="col-md-6 mb-4">
                     <div class="card shadow card-ddvr mb-2 h-100 d-flex flex-column rounded overflow-hidden">
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
                             <h4>Subir fichas técnicas</h4>
                             <p>Se guardan en <code>/uploads/pdf/automotriz</code> o <code>/uploads/pdf/industrial</code>.</p>
-                            <form method="post" enctype="multipart/form-data">
+                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_pdfs">
                                 <div class="field">
-                                    <select class="form-select pe-5 w-50" name="pdf_categoria" id="pdf_categoria" required>
+                                    <select class="form-select pe-5 w-50"
+                                            name="pdf_categoria"
+                                            id="pdf_categoria"
+                                            required>
                                         <option value="">Selecciona Categoría...</option>
                                         <option value="automotriz">Automotriz</option>
                                         <option value="industrial">Industrial</option>
                                     </select>
                                 </div>
                                 <div class="field">
-                                    <input type="file" class="form-control w-50"  name="pdfs[]" id="pdfs" accept=".pdf" multiple required>
-                                    <small class="d-block mt-2">* Sólo se permiten archivos .pdf.</small>
+                                    <input type="file"
+                                        class="form-control w-50"
+                                        name="pdfs[]"
+                                        id="pdfs"
+                                        accept=".pdf"
+                                        multiple
+                                        required>
+                                    <small class="d-block mt-2">
+                                        * Sólo se permiten archivos .pdf.
+                                    </small>
                                 </div>
-                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">Subir PDFs<i class="bi bi-upload ms-2"></i></button>
+                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                    Subir PDFs<i class="bi bi-upload ms-2"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -372,6 +420,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
             </div>
         </div>
     </main>
+
 
     <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5">
         <div class="container">
@@ -384,5 +433,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
     </footer>
 <!-- Scripts -->
 <script src="../assets/js/lib/bootstrap.bundle.min.js" crossorigin="anonymous"></script>    
+<script src="js/upload-validation.js"></script>
+
 </body>
 </html>
