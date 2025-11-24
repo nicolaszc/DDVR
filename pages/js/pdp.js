@@ -12,8 +12,23 @@ function initPdp() {
         return;
     }
 
-    loadPdp(id);
+    fetchProductsData(siteRoot + "data/automotive.json").then(() => {
+        loadPdp(id);
+    });
 }
+
+
+// =========================
+// Cargar JSON
+// =========================
+function fetchProductsData(url) {
+    return fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            window.productsData = data;
+        });
+}
+
 
 // =========================
 // Cargar PDP sin recargar JSON
@@ -26,7 +41,7 @@ function loadPdp(id) {
         document.querySelector("main").innerHTML = `
             <div class="container py-5">
                 <div class="alert alert-danger">
-                    Producto no encontrado.
+                    Producto no encontrado.${id}
                 </div>
             </div>
         `;

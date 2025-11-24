@@ -38,7 +38,7 @@ let templatesReady = null;
 function initPlp() {
 
     // ====== SELECTORES ======
-    console.log('PDP cargada ✔ at ' + siteRoot);
+    console.log('PLP cargada ✔ at ' + siteRoot);
     plp = document.getElementById("plp");
 
     // ====== CARGA INICIAL ======
@@ -375,6 +375,6 @@ document.addEventListener("plpLoaded", () => {
     // ⬆️
 
     initPlp();
-    bindPlpControls();  
+    //bindPlpControls();  
     
 });
