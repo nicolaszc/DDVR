@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-/**
- * Config básica
- * Cambia estas credenciales a algo seguro.
- */
-const ADMIN_USER = 'admin';
-const ADMIN_PASS = '123456';
+$credFile = __DIR__ . '/credentials.txt';
+
+// Si no existe el archivo, se crea un usuraio y contraseña por defecto
+if (!file_exists($credFile)) {
+    file_put_contents($credFile, "admin:123456");
+}
 
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     header('Location: upload.php');
@@ -16,18 +16,22 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user = $_POST['username'] ?? '';
-    $pass = $_POST['password'] ?? '';
+    $user = trim($_POST['username'] ?? '');
+    $pass = trim($_POST['password'] ?? '');
 
-    if ($user === ADMIN_USER && $pass === ADMIN_PASS) {
+    // Leer credenciales desde credentials.txt
+    $line = trim(file_get_contents($credFile));
+    list($storedUser, $storedPass) = explode(':', $line);
+
+    if ($user === $storedUser && $pass === $storedPass) {
         $_SESSION['logged_in'] = true;
         header('Location: upload.php');
         exit;
     } else {
-        $error = '<div class="d-flex justify-content-center align-items-center alert alert-danger mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-x-octagon-fill me-2"></i>Usuario o contraseña incorrectos.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>' ;
-
+        $error = 'Usuario o contraseña incorrectos';
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
