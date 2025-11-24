@@ -275,7 +275,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
     <main class="bg-body-tertiary py-5">
         <div class="container"> 
             <div class="row">    
-                <h1 class="fs-3 mb-3">Panel de administración</h1>
+                <h1 class="fs-3 mb-3" style="color: #ccc;">Panel de administración</h1>
 
                 <!-- 1. Subir /data/automotive.json -->
                 <div class="col-md-6 mb-4">
@@ -285,6 +285,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                 <h4 class="mb-0 lh-1">Actualizar catálogo automotriz</h4>
                                 <a href="../data/automotive.json" download>
                                     <i class="bi bi-download fs-5 lh-1"></i>
+                                </a>
+                                <a href="editor.php?file=automotive" class="btn btn-sm btn-outline-light">
+                                    Editar JSON
                                 </a>
                             </div>
                             <p>Este archivo reemplazara el actual <code>automotive.json</code>.</p>
@@ -317,6 +320,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                 <h4>Actualizar catálogo industrial</h4>
                                 <a href="../data/industrial.json" download>
                                     <i class="bi bi-download fs-5 lh-1"></i>
+                                </a>
+                                <a href="editor.php?file=industrial" class="btn btn-sm btn-outline-light">
+                                    Editar JSON
                                 </a>
                             </div>
                             <p>Este archivo reemplazara el actual <code>industrial.json</code>.</p>

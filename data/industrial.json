@@ -1,633 +1,626 @@
 [
-  {
-    "id": 1,
-    "titulo": "Desengrasante Alto Poder",
-    "descripcion": "Desengrasante para remover suciedades pesadas en diversas superficies.",
-    "descripcion_corta": "Desengrasante para suciedades pesadas en áreas automotrices.",
-    "formatos": [
-      "5L",
-      "22L",
-      "208L"
-    ],
-    "imagen": "industrial/producto-1.webp",
-    "beneficios": [
-      "Elimina grasas y aceites adheridos",
-      "No inflamable",
-      "Libre de solventes clorados",
-      "Espuma fácil de enjuagar"
-    ],
-    "instrucciones": [
-      "Agitar bien antes de usar",
-      "Aplicar generosamente EOX Limpiador de Frenos sobre las piezas y dejar escurrir",
-      "Dejar evaporar el producto",
-      "En caso de suciedad extrema, repetir la operación"
-    ],
-    "aplicaciones": [
-      "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
-      "Balatas de embrague, prensas, volantes y elementos en general",
-      "Engranajes, bomba de aceite, disco",
-      "Piezas del motor, carburados y bombas de combustible"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "desengrasantes",
-    "pdf": "uploads/pdf/industrial/desengrasante-alto-poder.pdf"
-  },
-  {
-    "id": 2,
-    "titulo": "Desengrasante Ecológico Listo para Usar",
-    "descripcion": "Desengrasante ecológico de uso directo, formulado para limpieza de suciedades grasas en superficies industriales y de mantenimiento general.",
-    "descripcion_corta": "Desengrasante ecológico listo para usar.",
-    "formatos": [
-      "5L",
-      "22L"
-    ],
-    "imagen": "industrial/producto-2.webp",
-    "beneficios": [
-      "Biodegradable",
-      "Listo para usar, no requiere dilución",
-      "No inflamable",
-      "Apto para múltiples superficies lavables"
-    ],
-    "instrucciones": [
-      "Aplicar el producto directamente sobre la superficie a limpiar",
-      "Dejar actuar unos minutos para que emulsione la suciedad",
-      "Frotar si es necesario con cepillo o paño",
-      "Enjuagar con agua o retirar el excedente"
-    ],
-    "aplicaciones": [
-      "Pisos industriales y talleres",
-      "Mesones, estructuras metálicas y equipos",
-      "Áreas de producción con grasas ligeras",
-      "Limpieza general en plantas industriales"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "desengrasantes",
-    "pdf": "uploads/pdf/industrial/desengrasante-ecologico-listo-para-usar.pdf"
-  },
-  {
-    "id": 3,
-    "titulo": "Desengrasante Ecológico Industrial",
-    "descripcion": "Desengrasante ecológico concentrado para aplicación en procesos industriales con suciedades pesadas de grasas y aceites.",
-    "descripcion_corta": "Desengrasante ecológico concentrado para industria.",
-    "formatos": [
-      "5L",
-      "22L",
-      "208L"
-    ],
-    "imagen": "industrial/producto-3.webp",
-    "beneficios": [
-      "Biodegradable",
-      "Alta concentración",
-      "No inflamable",
-      "Apto para sistemas de limpieza por aspersión o inmersión"
-    ],
-    "instrucciones": [
-      "Diluir el producto según el grado de suciedad y tipo de aplicación",
-      "Aplicar por aspersión, inmersión o con cepillo",
-      "Dejar actuar unos minutos sin permitir que se seque",
-      "Enjuagar con agua a presión o retirar mecánicamente"
-    ],
-    "aplicaciones": [
-      "Pisos y fosos industriales con grasa acumulada",
-      "Equipos de proceso, líneas de producción y estructuras metálicas",
-      "Maquinaria pesada y componentes con aceite y grasa",
-      "Áreas de mantenimiento industrial"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "desengrasantes",
-    "pdf": "uploads/pdf/industrial/desengrasante-ecologico-industrial.pdf"
-  },
-  {
-    "id": 4,
-    "titulo": "Limpiador de Manos Exfoliante",
-    "descripcion": "Limpiador de manos con partículas exfoliantes para remover grasas, aceites y suciedad intensa generada en procesos industriales.",
-    "descripcion_corta": "Limpieza profunda de manos con suciedad industrial.",
-    "formatos": [
-      "470ml",
-      "5L"
-    ],
-    "imagen": "industrial/producto-4.webp",
-    "beneficios": [
-      "Contiene agentes humectantes",
-      "Alto poder de limpieza",
-      "Biodegradable",
-      "Aroma agradable"
-    ],
-    "instrucciones": [
-      "Aplicar una pequeña cantidad de producto directamente sobre las manos secas",
-      "Frotar enérgicamente, insistiendo en zonas con suciedad más adherida",
-      "Agregar un poco de agua y continuar frotando para emulsionar la suciedad",
-      "Enjuagar con abundante agua y secar completamente"
-    ],
-    "aplicaciones": [
-      "Talleres industriales y mecánicos",
-      "Áreas de mantención con aceites y grasas lubricantes",
-      "Procesos productivos donde las manos se ensucian con residuos pesados",
-      "Lavamanos en plantas industriales y faenas"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "manos",
-    "pdf": "uploads/pdf/industrial/limpiador-de-manos-exfoliante.pdf"
-  },
-  {
-    "id": 5,
-    "titulo": "Limpiador de Manos Orange",
-    "descripcion": "Limpiador de manos con abrasivos naturales y aroma cítrico, ideal para remover grasas, aceites y suciedad intensa en ambientes industriales.",
-    "descripcion_corta": "Removedor de grasas y aceites con abrasivos naturales.",
-    "formatos": [
-      "470ml",
-      "5L"
-    ],
-    "imagen": "industrial/producto-5.webp",
-    "beneficios": [
-      "Alta eficacia en suciedades pesadas",
-      "Biolípidos hidratantes",
-      "Uso con o sin enjuague",
-      "Aroma cítrico"
-    ],
-    "instrucciones": [
-      "Aplicar una dosis de producto sobre las manos, sin añadir agua al inicio",
-      "Frotar bien para desprender aceites, grasa y suciedad",
-      "Añadir un poco de agua para formar una emulsión",
-      "Enjuagar completamente y repetir si es necesario"
-    ],
-    "aplicaciones": [
-      "Plantas industriales y talleres de mantenimiento",
-      "Áreas de trabajo con uso intensivo de grasas y lubricantes",
-      "Faenas mineras y de construcción",
-      "Limpieza de manos en procesos con suciedad intensa"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "manos",
-    "pdf": "uploads/pdf/industrial/limpiador-de-manos-orange.pdf"
-  },
-  {
-    "id": 6,
-    "titulo": "Limpia Contactos",
-    "descripcion": "Limpia contactos para remover polvo, grasa ligera y humedad en conexiones eléctricas y electrónicas presentes en entornos industriales.",
-    "descripcion_corta": "Limpieza de conexiones y sistemas eléctricos industriales.",
-    "formatos": [
-      "325g"
-    ],
-    "imagen": "industrial/producto-6.webp",
-    "beneficios": [
-      "Secado rápido",
-      "No deja residuos",
-      "Mejora el contacto eléctrico",
-      "Aplicación dirigida"
-    ],
-    "instrucciones": [
-      "Desenergizar el circuito antes de aplicar",
-      "Pulverizar directamente sobre conectores, terminales o piezas a limpiar",
-      "Dejar actuar unos segundos para que arrastre suciedad y humedad",
-      "Permitir el secado completo antes de energizar nuevamente"
-    ],
-    "aplicaciones": [
-      "Tableros eléctricos, contactores y relés",
-      "Conectores y bornes de motores eléctricos",
-      "Instrumentos y equipos electrónicos industriales",
-      "Mantenimiento preventivo en paneles de control"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "electricos",
-    "pdf": "uploads/pdf/industrial/limpia-contactos.pdf"
-  },
-  {
-    "id": 7,
-    "titulo": "Limpia Contactos No Inflamable",
-    "descripcion": "Limpia contactos no inflamable para la limpieza segura de componentes eléctricos y electrónicos en zonas de difícil ventilación o con mayor exigencia de seguridad.",
-    "descripcion_corta": "Limpieza segura de componentes eléctricos y electrónicos.",
-    "formatos": [
-      "325g"
-    ],
-    "imagen": "industrial/producto-7.webp",
-    "beneficios": [
-      "No inflamable",
-      "Secado rápido",
-      "Compatible con muchos plásticos y gomas",
-      "No deja residuos"
-    ],
-    "instrucciones": [
-      "Aplicar directamente sobre el contacto o componente a limpiar",
-      "Dirigir el chorro para arrastrar suciedad, grasas y humedad",
-      "Evitar acumulaciones excesivas de producto",
-      "Esperar el secado completo antes de energizar el sistema"
-    ],
-    "aplicaciones": [
-      "Equipos eléctricos en salas de control",
-      "Conectores y bornes en áreas con riesgo de chispa",
-      "Tableros en plantas de proceso",
-      "Sistemas electrónicos sensibles donde se requiera producto no inflamable"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "electricos",
-    "pdf": "uploads/pdf/industrial/limpia-contactos-no-inflamable.pdf"
-  },
-  {
-    "id": 8,
-    "titulo": "Aire Comprimido de Limpieza No Inflamable",
-    "descripcion": "Aire comprimido no inflamable diseñado para remover polvo y partículas sueltas de equipos electrónicos, paneles y componentes de difícil acceso.",
-    "descripcion_corta": "Remoción de polvo con aire comprimido no inflamable.",
-    "formatos": [
-      "300g"
-    ],
-    "imagen": "industrial/producto-8.webp",
-    "beneficios": [
-      "No inflamable",
-      "No deja residuos",
-      "Permite llegar a zonas de difícil acceso",
-      "Uso rápido y limpio"
-    ],
-    "instrucciones": [
-      "Mantener el envase en posición vertical al aplicar",
-      "Dirigir la boquilla hacia la zona a limpiar",
-      "Aplicar ráfagas cortas de aire para desprender el polvo",
-      "Evitar agitar excesivamente el envase antes del uso"
-    ],
-    "aplicaciones": [
-      "Equipos electrónicos de control y medición",
-      "Tableros de mando y PLC",
-      "Computadores industriales y componentes de oficina en planta",
-      "Instrumentos delicados donde no se puede usar líquidos"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No perforar ni exponer al calor",
-      "No inhalar el gas expulsado",
-      "No utilizar cerca de llamas o fuentes de calor"
-    ],
-    "categoria": "electricos",
-    "pdf": "uploads/pdf/industrial/aire-comprimido-de-limpieza-no-inflamable.pdf"
-  },
-  {
-    "id": 9,
-    "titulo": "Desoxidante",
-    "descripcion": "Producto desoxidante formulado para remover óxido superficial y facilitar la preparación de superficies metálicas previo a procesos de pintado o protección.",
-    "descripcion_corta": "Remoción de óxido superficial en metales.",
-    "formatos": [
-      "5L",
-      "22L"
-    ],
-    "imagen": "industrial/producto-9.webp",
-    "beneficios": [
-      "Disuelve óxido superficial",
-      "Mejora la adherencia de recubrimientos posteriores",
-      "Fácil aplicación",
-      "Apto para distintas aleaciones metálicas compatibles"
-    ],
-    "instrucciones": [
-      "Aplicar el producto sobre la superficie oxidada limpia de suciedad suelta",
-      "Dejar actuar el tiempo recomendado según nivel de óxido",
-      "Si es necesario, ayudar con cepillo o fibra abrasiva",
-      "Enjuagar o retirar el excedente antes de aplicar recubrimientos"
-    ],
-    "aplicaciones": [
-      "Estructuras metálicas expuestas a la intemperie",
-      "Equipos y piezas con corrosión ligera",
-      "Preparación de superficies antes de pintar",
-      "Mantenimiento en plantas industriales y talleres"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "Usar elementos de protección personal durante su aplicación"
-    ],
-    "categoria": "tratamientos",
-    "pdf": "uploads/pdf/industrial/desoxidante.pdf"
-  },
-  {
-    "id": 10,
-    "titulo": "Aceite Multipropósito",
-    "descripcion": "Aceite multipropósito tipo aflojatodo para lubricar, penetrar óxido, desplazar humedad y proteger superficies metálicas en ambientes industriales.",
-    "descripcion_corta": "Aceite aflojatodo para aplicaciones industriales.",
-    "formatos": [
-      "300g",
-      "5L"
-    ],
-    "imagen": "industrial/producto-10.webp",
-    "beneficios": [
-      "Penetra óxido y corrosión",
-      "Desplaza humedad",
-      "Lubrica y protege",
-      "Ayuda a destrabar uniones y mecanismos"
-    ],
-    "instrucciones": [
-      "Aplicar unas gotas o rocío ligero en la zona a tratar",
-      "Dejar actuar para que el producto penetre",
-      "Mover el mecanismo para facilitar el destrabe",
-      "Retirar el exceso si es necesario"
-    ],
-    "aplicaciones": [
-      "Pernos, tuercas y pernos prisioneros trabados",
-      "Bisagras y mecanismos de puertas industriales",
-      "Herramientas manuales y equipos menores",
-      "Componentes metálicos expuestos a humedad"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No aplicar en sistemas donde se requiera lubricante específico"
-    ],
-    "categoria": "lubricantes",
-    "pdf": "uploads/pdf/industrial/aceite-multiproposito.pdf"
-  },
-  {
-    "id": 11,
-    "titulo": "Anticorrosivo",
-    "descripcion": "Producto anticorrosivo diseñado para proteger superficies metálicas frente a la formación de óxido y corrosión en ambientes agresivos.",
-    "descripcion_corta": "Protección anticorrosiva para superficies metálicas.",
-    "formatos": [
-      "5L",
-      "22L",
-      "208L"
-    ],
-    "imagen": "industrial/producto-11.webp",
-    "beneficios": [
-      "Forma una película protectora",
-      "Ayuda a prevenir la corrosión",
-      "Apto para almacenamiento temporal de piezas",
-      "Aplicable por aspersión o inmersión"
-    ],
-    "instrucciones": [
-      "Aplicar sobre la superficie limpia y seca",
-      "Asegurar una cobertura uniforme",
-      "Dejar secar según las indicaciones del producto",
-      "Reaplicar cuando se requiera prolongar la protección"
-    ],
-    "aplicaciones": [
-      "Piezas metálicas almacenadas",
-      "Estructuras expuestas a ambientes húmedos o salinos",
-      "Equipos de proceso fuera de servicio",
-      "Componentes de transporte y carga"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "Usar elementos de protección personal según ficha de seguridad"
-    ],
-    "categoria": "tratamientos",
-    "pdf": "uploads/pdf/industrial/anticorrosivo.pdf"
-  },
-  {
-    "id": 12,
-    "titulo": "Silicona Desmoldante Alta Temperatura",
-    "descripcion": "Silicona desmoldante especialmente formulada para procesos que requieren resistencia a altas temperaturas, facilitando el desmoldeo de piezas sin dejar residuos significativos.",
-    "descripcion_corta": "Silicona desmoldante para procesos de alta temperatura.",
-    "formatos": [
-      "300g"
-    ],
-    "imagen": "industrial/producto-12.webp",
-    "beneficios": [
-      "Alta resistencia térmica",
-      "Buena capacidad desmoldante",
-      "Aplicación en capas delgadas",
-      "Reduce el desgaste de moldes"
-    ],
-    "instrucciones": [
-      "Agitar bien el envase antes de usar",
-      "Aplicar una capa fina sobre la superficie del molde limpio y seco",
-      "Dejar evaporar el solvente antes de iniciar el proceso",
-      "Reaplicar según necesidad de acuerdo con la frecuencia de uso del molde"
-    ],
-    "aplicaciones": [
-      "Procesos de moldeo en la industria plástica y del caucho",
-      "Moldes expuestos a temperaturas elevadas",
-      "Líneas de producción que requieran desmoldeo frecuente",
-      "Piezas metálicas, de elastómeros u otros materiales compatibles"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No aplicar cerca de fuentes de ignición"
-    ],
-    "categoria": "desmoldantes",
-    "pdf": "uploads/pdf/industrial/silicona-desmoldante-alta-temperatura.pdf"
-  },
-  {
-    "id": 13,
-    "titulo": "Silicona Desmoldante GA",
-    "descripcion": "Silicona desmoldante de uso general para facilitar el desmoldeo de piezas en procesos industriales, mejorando la productividad y reduciendo daños en las superficies de los moldes.",
-    "descripcion_corta": "Silicona desmoldante de uso general.",
-    "formatos": [
-      "300g"
-    ],
-    "imagen": "industrial/producto-13.webp",
-    "beneficios": [
-      "Buena capacidad desmoldante",
-      "Apta para diversos materiales",
-      "Fácil aplicación en aerosol",
-      "Permite ciclos de producción más eficientes"
-    ],
-    "instrucciones": [
-      "Agitar bien el envase antes de usar",
-      "Aplicar una capa fina y uniforme sobre el molde limpio",
-      "Evitar excesos para no dejar residuos innecesarios",
-      "Reaplicar de acuerdo con la frecuencia de uso y complejidad de las piezas"
-    ],
-    "aplicaciones": [
-      "Procesos de moldeo de plásticos y elastómeros",
-      "Moldes de producción en serie",
-      "Piezas donde se requiera desmoldeo rápido y limpio",
-      "Aplicaciones generales en la industria manufacturera"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No pulverizar cerca de llamas o superficies calientes"
-    ],
-    "categoria": "desmoldantes",
-    "pdf": "uploads/pdf/industrial/silicona-desmoldante-ga.pdf"
-  },
-  {
-    "id": 14,
-    "titulo": "Limpiavidrios",
-    "descripcion": "Limpiador de vidrios para uso industrial en oficinas, plantas y áreas de servicio, formulado para remover grasa ligera, huellas y suciedad ambiental.",
-    "descripcion_corta": "Limpieza de vidrios y superficies acristaladas.",
-    "formatos": [
-      "950ml",
-      "5L"
-    ],
-    "imagen": "industrial/producto-14.webp",
-    "beneficios": [
-      "No deja aureolas",
-      "Secado rápido",
-      "Aroma agradable",
-      "Apto para uso en interiores"
-    ],
-    "instrucciones": [
-      "Aplicar directamente sobre el vidrio o sobre un paño limpio",
-      "Distribuir el producto de forma uniforme",
-      "Secar con paño de microfibra o papel no abrasivo",
-      "Repetir en zonas con suciedad más adherida si es necesario"
-    ],
-    "aplicaciones": [
-      "Vidrios de oficinas y salas de reunión",
-      "Ventanas en plantas industriales",
-      "Superficies acristaladas en áreas de servicio",
-      "Espejos y mamparas de vidrio compatibles"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "superficies",
-    "pdf": false
-  },
-  {
-    "id": 15,
-    "titulo": "Solvente Dieléctrico 80 NC",
-    "descripcion": "Solvente dieléctrico formulado para remover grasas, aceites y suciedades pesadas en componentes eléctricos y electrónicos, con tensión de ruptura adecuada para aplicaciones industriales exigentes.",
-    "descripcion_corta": "Solvente dieléctrico para limpieza de componentes eléctricos.",
-    "formatos": [
-      "5L",
-      "19L",
-      "60L",
-      "208L"
-    ],
-    "imagen": "industrial/producto-15.webp",
-    "beneficios": [
-      "Alta capacidad disolvente de grasas y aceites",
-      "No deja residuos conductores",
-      "Apto para inmersión en algunos procesos",
-      "Secado relativamente rápido"
-    ],
-    "instrucciones": [
-      "Aplicar por aspersión, inmersión o con paño sobre el componente a limpiar",
-      "Permitir que el producto disuelva la suciedad y escurra por gravedad",
-      "Si es necesario, ayudar con brocha o pincel",
-      "Esperar que la superficie esté completamente seca antes de energizar el equipo"
-    ],
-    "aplicaciones": [
-      "Motores eléctricos, generadores y alternadores",
-      "Componentes eléctricos contaminados con aceite",
-      "Equipos de conmutación y paneles de control",
-      "Elementos metálicos donde se requiera limpieza sin residuos"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "Usar en áreas ventiladas y con elementos de protección personal"
-    ],
-    "categoria": "electricos",
-    "pdf": "uploads/pdf/industrial/solvente-dielectrico-80-nc.pdf"
-  },
-  {
-    "id": 16,
-    "titulo": "Dieléctrico No Inflamable",
-    "descripcion": "Limpiador dieléctrico no inflamable para la eliminación de aceites, grasas y suciedades en equipos eléctricos y electrónicos industriales, ofreciendo alta seguridad en la aplicación.",
-    "descripcion_corta": "Limpieza de piezas y sistemas eléctricos industriales.",
-    "formatos": [
-      "5L",
-      "19L",
-      "60L",
-      "208L"
-    ],
-    "imagen": "industrial/producto-16.webp",
-    "beneficios": [
-      "No inflamable",
-      "Solventes no conductores",
-      "Apto para uso en zonas con mayores requisitos de seguridad",
-      "Baja residualidad"
-    ],
-    "instrucciones": [
-      "Desenergizar el equipo antes de la aplicación cuando sea posible",
-      "Aplicar el producto directamente sobre las zonas a limpiar",
-      "Dejar actuar para que arrastre aceites y suciedad",
-      "Esperar el secado completo antes de volver a energizar el sistema"
-    ],
-    "aplicaciones": [
-      "Motores eléctricos y generadores",
-      "Tableros de distribución y control",
-      "Equipos de automatización y electrónica de potencia",
-      "Sistemas eléctricos en plantas y faenas industriales"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No respirar los vapores"
-    ],
-    "categoria": "electricos",
-    "pdf": "uploads/pdf/industrial/dielectrico-no-inflamable.pdf"
-  },
-  {
-    "id": 17,
-    "titulo": "Grasa Líquida Adhesiva",
-    "descripcion": "Grasa líquida adhesiva para el lubricado de cadenas, engranajes y piezas sometidas a impactos y vibraciones en ambientes industriales.",
-    "descripcion_corta": "Lubricante adhesivo para cadenas y engranajes.",
-    "formatos": [
-      "500ml"
-    ],
-    "imagen": "industrial/producto-17.webp",
-    "beneficios": [
-      "Larga duración",
-      "Alta adhesión",
-      "Protección contra corrosión",
-      "Reduce desgaste y ruido"
-    ],
-    "instrucciones": [
-      "Agitar bien el envase antes de usar",
-      "Aplicar sobre la pieza limpia y seca, asegurando cubrir toda la superficie",
-      "Retirar el exceso de producto para evitar goteos",
-      "Reaplicar según la frecuencia de uso y condiciones de operación"
-    ],
-    "aplicaciones": [
-      "Cadenas transportadoras y de transmisión",
-      "Engranajes abiertos y cremalleras",
-      "Guías deslizantes y rieles",
-      "Mecanismos expuestos a polvo, agua y vibración"
-    ],
-    "precauciones": [
-      "Mantener fuera del alcance de niños",
-      "No ingerir",
-      "Evitar el contacto con los ojos y la piel",
-      "No inhalar el aerosol, usar en ambientes ventilados"
-    ],
-    "categoria": "lubricantes",
-    "pdf": "uploads/pdf/industrial/grasa-liquida-adhesiva.pdf"
-  }
+    {
+        "id": 1,
+        "titulo": "Desengrasante Alto Poder",
+        "descripcion": "Desengrasante para remover suciedades pesadas en diversas superficies.",
+        "descripcion_corta": "Desengrasante para suciedades pesadas en áreas automotrices.",
+        "formatos": [
+            "5L",
+            "22L",
+            "208L"
+        ],
+        "imagen": "industrial\/producto-1.webp",
+        "beneficios": [
+            "Elimina grasas y aceites adheridos",
+            "No inflamable",
+            "Libre de solventes clorados",
+            "Espuma fácil de enjuagar"
+        ],
+        "aplicaciones": [
+            "Frenos de disco y de tambor, calipers, pastillas, balatas, resortes y pistones",
+            "Balatas de embrague, prensas, volantes y elementos en general",
+            "Engranajes, bomba de aceite, disco",
+            "Piezas del motor, carburados y bombas de combustible"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "desengrasantes",
+        "pdf": "uploads\/pdf\/industrial\/desengrasante-alto-poder.pdf"
+    },
+    {
+        "id": 2,
+        "titulo": "Desengrasante Ecológico Listo para Usar",
+        "descripcion": "Desengrasante ecológico de uso directo, formulado para limpieza de suciedades grasas en superficies industriales y de mantenimiento general.",
+        "descripcion_corta": "Desengrasante ecológico listo para usar.",
+        "formatos": [
+            "5L",
+            "22L"
+        ],
+        "imagen": "industrial\/producto-2.webp",
+        "beneficios": [
+            "Biodegradable",
+            "Listo para usar, no requiere dilución",
+            "No inflamable",
+            "Apto para múltiples superficies lavables"
+        ],
+        "instrucciones": [
+            "Aplicar el producto directamente sobre la superficie a limpiar",
+            "Dejar actuar unos minutos para que emulsione la suciedad",
+            "Frotar si es necesario con cepillo o paño",
+            "Enjuagar con agua o retirar el excedente"
+        ],
+        "aplicaciones": [
+            "Pisos industriales y talleres",
+            "Mesones, estructuras metálicas y equipos",
+            "Áreas de producción con grasas ligeras",
+            "Limpieza general en plantas industriales"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "desengrasantes",
+        "pdf": "uploads\/pdf\/industrial\/desengrasante-ecologico-listo-para-usar.pdf"
+    },
+    {
+        "id": 3,
+        "titulo": "Desengrasante Ecológico Industrial",
+        "descripcion": "Desengrasante ecológico concentrado para aplicación en procesos industriales con suciedades pesadas de grasas y aceites.",
+        "descripcion_corta": "Desengrasante ecológico concentrado para industria.",
+        "formatos": [
+            "5L",
+            "22L",
+            "208L"
+        ],
+        "imagen": "industrial\/producto-3.webp",
+        "beneficios": [
+            "Biodegradable",
+            "Alta concentración",
+            "No inflamable",
+            "Apto para sistemas de limpieza por aspersión o inmersión"
+        ],
+        "instrucciones": [
+            "Diluir el producto según el grado de suciedad y tipo de aplicación",
+            "Aplicar por aspersión, inmersión o con cepillo",
+            "Dejar actuar unos minutos sin permitir que se seque",
+            "Enjuagar con agua a presión o retirar mecánicamente"
+        ],
+        "aplicaciones": [
+            "Pisos y fosos industriales con grasa acumulada",
+            "Equipos de proceso, líneas de producción y estructuras metálicas",
+            "Maquinaria pesada y componentes con aceite y grasa",
+            "Áreas de mantenimiento industrial"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "desengrasantes",
+        "pdf": "uploads\/pdf\/industrial\/desengrasante-ecologico-industrial.pdf"
+    },
+    {
+        "id": 4,
+        "titulo": "Limpiador de Manos Exfoliante",
+        "descripcion": "Limpiador de manos con partículas exfoliantes para remover grasas, aceites y suciedad intensa generada en procesos industriales.",
+        "descripcion_corta": "Limpieza profunda de manos con suciedad industrial.",
+        "formatos": [
+            "470ml",
+            "5L"
+        ],
+        "imagen": "industrial\/producto-4.webp",
+        "beneficios": [
+            "Contiene agentes humectantes",
+            "Alto poder de limpieza",
+            "Biodegradable",
+            "Aroma agradable"
+        ],
+        "instrucciones": [
+            "Aplicar una pequeña cantidad de producto directamente sobre las manos secas",
+            "Frotar enérgicamente, insistiendo en zonas con suciedad más adherida",
+            "Agregar un poco de agua y continuar frotando para emulsionar la suciedad",
+            "Enjuagar con abundante agua y secar completamente"
+        ],
+        "aplicaciones": [
+            "Talleres industriales y mecánicos",
+            "Áreas de mantención con aceites y grasas lubricantes",
+            "Procesos productivos donde las manos se ensucian con residuos pesados",
+            "Lavamanos en plantas industriales y faenas"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "manos",
+        "pdf": "uploads\/pdf\/industrial\/limpiador-de-manos-exfoliante.pdf"
+    },
+    {
+        "id": 5,
+        "titulo": "Limpiador de Manos Orange",
+        "descripcion": "Limpiador de manos con abrasivos naturales y aroma cítrico, ideal para remover grasas, aceites y suciedad intensa en ambientes industriales.",
+        "descripcion_corta": "Removedor de grasas y aceites con abrasivos naturales.",
+        "formatos": [
+            "470ml",
+            "5L"
+        ],
+        "imagen": "industrial\/producto-5.webp",
+        "beneficios": [
+            "Alta eficacia en suciedades pesadas",
+            "Biolípidos hidratantes",
+            "Uso con o sin enjuague",
+            "Aroma cítrico"
+        ],
+        "instrucciones": [
+            "Aplicar una dosis de producto sobre las manos, sin añadir agua al inicio",
+            "Frotar bien para desprender aceites, grasa y suciedad",
+            "Añadir un poco de agua para formar una emulsión",
+            "Enjuagar completamente y repetir si es necesario"
+        ],
+        "aplicaciones": [
+            "Plantas industriales y talleres de mantenimiento",
+            "Áreas de trabajo con uso intensivo de grasas y lubricantes",
+            "Faenas mineras y de construcción",
+            "Limpieza de manos en procesos con suciedad intensa"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "manos",
+        "pdf": "uploads\/pdf\/industrial\/limpiador-de-manos-orange.pdf"
+    },
+    {
+        "id": 6,
+        "titulo": "Limpia Contactos",
+        "descripcion": "Limpia contactos para remover polvo, grasa ligera y humedad en conexiones eléctricas y electrónicas presentes en entornos industriales.",
+        "descripcion_corta": "Limpieza de conexiones y sistemas eléctricos industriales.",
+        "formatos": [
+            "325g"
+        ],
+        "imagen": "industrial\/producto-6.webp",
+        "beneficios": [
+            "Secado rápido",
+            "No deja residuos",
+            "Mejora el contacto eléctrico",
+            "Aplicación dirigida"
+        ],
+        "instrucciones": [
+            "Desenergizar el circuito antes de aplicar",
+            "Pulverizar directamente sobre conectores, terminales o piezas a limpiar",
+            "Dejar actuar unos segundos para que arrastre suciedad y humedad",
+            "Permitir el secado completo antes de energizar nuevamente"
+        ],
+        "aplicaciones": [
+            "Tableros eléctricos, contactores y relés",
+            "Conectores y bornes de motores eléctricos",
+            "Instrumentos y equipos electrónicos industriales",
+            "Mantenimiento preventivo en paneles de control"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "electricos",
+        "pdf": "uploads\/pdf\/industrial\/limpia-contactos.pdf"
+    },
+    {
+        "id": 7,
+        "titulo": "Limpia Contactos No Inflamable",
+        "descripcion": "Limpia contactos no inflamable para la limpieza segura de componentes eléctricos y electrónicos en zonas de difícil ventilación o con mayor exigencia de seguridad.",
+        "descripcion_corta": "Limpieza segura de componentes eléctricos y electrónicos.",
+        "formatos": [
+            "325g"
+        ],
+        "imagen": "industrial\/producto-7.webp",
+        "beneficios": [
+            "No inflamable",
+            "Secado rápido",
+            "Compatible con muchos plásticos y gomas",
+            "No deja residuos"
+        ],
+        "instrucciones": [
+            "Aplicar directamente sobre el contacto o componente a limpiar",
+            "Dirigir el chorro para arrastrar suciedad, grasas y humedad",
+            "Evitar acumulaciones excesivas de producto",
+            "Esperar el secado completo antes de energizar el sistema"
+        ],
+        "aplicaciones": [
+            "Equipos eléctricos en salas de control",
+            "Conectores y bornes en áreas con riesgo de chispa",
+            "Tableros en plantas de proceso",
+            "Sistemas electrónicos sensibles donde se requiera producto no inflamable"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "electricos",
+        "pdf": "uploads\/pdf\/industrial\/limpia-contactos-no-inflamable.pdf"
+    },
+    {
+        "id": 8,
+        "titulo": "Aire Comprimido de Limpieza No Inflamable",
+        "descripcion": "Aire comprimido no inflamable diseñado para remover polvo y partículas sueltas de equipos electrónicos, paneles y componentes de difícil acceso.",
+        "descripcion_corta": "Remoción de polvo con aire comprimido no inflamable.",
+        "formatos": [
+            "300g"
+        ],
+        "imagen": "industrial\/producto-8.webp",
+        "beneficios": [
+            "No inflamable",
+            "No deja residuos",
+            "Permite llegar a zonas de difícil acceso",
+            "Uso rápido y limpio"
+        ],
+        "instrucciones": [
+            "Mantener el envase en posición vertical al aplicar",
+            "Dirigir la boquilla hacia la zona a limpiar",
+            "Aplicar ráfagas cortas de aire para desprender el polvo",
+            "Evitar agitar excesivamente el envase antes del uso"
+        ],
+        "aplicaciones": [
+            "Equipos electrónicos de control y medición",
+            "Tableros de mando y PLC",
+            "Computadores industriales y componentes de oficina en planta",
+            "Instrumentos delicados donde no se puede usar líquidos"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No perforar ni exponer al calor",
+            "No inhalar el gas expulsado",
+            "No utilizar cerca de llamas o fuentes de calor"
+        ],
+        "categoria": "electricos",
+        "pdf": "uploads\/pdf\/industrial\/aire-comprimido-de-limpieza-no-inflamable.pdf"
+    },
+    {
+        "id": 9,
+        "titulo": "Desoxidante",
+        "descripcion": "Producto desoxidante formulado para remover óxido superficial y facilitar la preparación de superficies metálicas previo a procesos de pintado o protección.",
+        "descripcion_corta": "Remoción de óxido superficial en metales.",
+        "formatos": [
+            "5L",
+            "22L"
+        ],
+        "imagen": "industrial\/producto-9.webp",
+        "beneficios": [
+            "Disuelve óxido superficial",
+            "Mejora la adherencia de recubrimientos posteriores",
+            "Fácil aplicación",
+            "Apto para distintas aleaciones metálicas compatibles"
+        ],
+        "instrucciones": [
+            "Aplicar el producto sobre la superficie oxidada limpia de suciedad suelta",
+            "Dejar actuar el tiempo recomendado según nivel de óxido",
+            "Si es necesario, ayudar con cepillo o fibra abrasiva",
+            "Enjuagar o retirar el excedente antes de aplicar recubrimientos"
+        ],
+        "aplicaciones": [
+            "Estructuras metálicas expuestas a la intemperie",
+            "Equipos y piezas con corrosión ligera",
+            "Preparación de superficies antes de pintar",
+            "Mantenimiento en plantas industriales y talleres"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "Usar elementos de protección personal durante su aplicación"
+        ],
+        "categoria": "tratamientos",
+        "pdf": "uploads\/pdf\/industrial\/desoxidante.pdf"
+    },
+    {
+        "id": 10,
+        "titulo": "Aceite Multipropósito",
+        "descripcion": "Aceite multipropósito tipo aflojatodo para lubricar, penetrar óxido, desplazar humedad y proteger superficies metálicas en ambientes industriales.",
+        "descripcion_corta": "Aceite aflojatodo para aplicaciones industriales.",
+        "formatos": [
+            "300g",
+            "5L"
+        ],
+        "imagen": "industrial\/producto-10.webp",
+        "beneficios": [
+            "Penetra óxido y corrosión",
+            "Desplaza humedad",
+            "Lubrica y protege",
+            "Ayuda a destrabar uniones y mecanismos"
+        ],
+        "instrucciones": [
+            "Aplicar unas gotas o rocío ligero en la zona a tratar",
+            "Dejar actuar para que el producto penetre",
+            "Mover el mecanismo para facilitar el destrabe",
+            "Retirar el exceso si es necesario"
+        ],
+        "aplicaciones": [
+            "Pernos, tuercas y pernos prisioneros trabados",
+            "Bisagras y mecanismos de puertas industriales",
+            "Herramientas manuales y equipos menores",
+            "Componentes metálicos expuestos a humedad"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No aplicar en sistemas donde se requiera lubricante específico"
+        ],
+        "categoria": "lubricantes",
+        "pdf": "uploads\/pdf\/industrial\/aceite-multiproposito.pdf"
+    },
+    {
+        "id": 11,
+        "titulo": "Anticorrosivo",
+        "descripcion": "Producto anticorrosivo diseñado para proteger superficies metálicas frente a la formación de óxido y corrosión en ambientes agresivos.",
+        "descripcion_corta": "Protección anticorrosiva para superficies metálicas.",
+        "formatos": [
+            "5L",
+            "22L",
+            "208L"
+        ],
+        "imagen": "industrial\/producto-11.webp",
+        "beneficios": [
+            "Forma una película protectora",
+            "Ayuda a prevenir la corrosión",
+            "Apto para almacenamiento temporal de piezas",
+            "Aplicable por aspersión o inmersión"
+        ],
+        "instrucciones": [
+            "Aplicar sobre la superficie limpia y seca",
+            "Asegurar una cobertura uniforme",
+            "Dejar secar según las indicaciones del producto",
+            "Reaplicar cuando se requiera prolongar la protección"
+        ],
+        "aplicaciones": [
+            "Piezas metálicas almacenadas",
+            "Estructuras expuestas a ambientes húmedos o salinos",
+            "Equipos de proceso fuera de servicio",
+            "Componentes de transporte y carga"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "Usar elementos de protección personal según ficha de seguridad"
+        ],
+        "categoria": "tratamientos",
+        "pdf": "uploads\/pdf\/industrial\/anticorrosivo.pdf"
+    },
+    {
+        "id": 12,
+        "titulo": "Silicona Desmoldante Alta Temperatura",
+        "descripcion": "Silicona desmoldante especialmente formulada para procesos que requieren resistencia a altas temperaturas, facilitando el desmoldeo de piezas sin dejar residuos significativos.",
+        "descripcion_corta": "Silicona desmoldante para procesos de alta temperatura.",
+        "formatos": [
+            "300g"
+        ],
+        "imagen": "industrial\/producto-12.webp",
+        "beneficios": [
+            "Alta resistencia térmica",
+            "Buena capacidad desmoldante",
+            "Aplicación en capas delgadas",
+            "Reduce el desgaste de moldes"
+        ],
+        "instrucciones": [
+            "Agitar bien el envase antes de usar",
+            "Aplicar una capa fina sobre la superficie del molde limpio y seco",
+            "Dejar evaporar el solvente antes de iniciar el proceso",
+            "Reaplicar según necesidad de acuerdo con la frecuencia de uso del molde"
+        ],
+        "aplicaciones": [
+            "Procesos de moldeo en la industria plástica y del caucho",
+            "Moldes expuestos a temperaturas elevadas",
+            "Líneas de producción que requieran desmoldeo frecuente",
+            "Piezas metálicas, de elastómeros u otros materiales compatibles"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No aplicar cerca de fuentes de ignición"
+        ],
+        "categoria": "desmoldantes",
+        "pdf": "uploads\/pdf\/industrial\/silicona-desmoldante-alta-temperatura.pdf"
+    },
+    {
+        "id": 13,
+        "titulo": "Silicona Desmoldante GA",
+        "descripcion": "Silicona desmoldante de uso general para facilitar el desmoldeo de piezas en procesos industriales, mejorando la productividad y reduciendo daños en las superficies de los moldes.",
+        "descripcion_corta": "Silicona desmoldante de uso general.",
+        "formatos": [
+            "300g"
+        ],
+        "imagen": "industrial\/producto-13.webp",
+        "beneficios": [
+            "Buena capacidad desmoldante",
+            "Apta para diversos materiales",
+            "Fácil aplicación en aerosol",
+            "Permite ciclos de producción más eficientes"
+        ],
+        "instrucciones": [
+            "Agitar bien el envase antes de usar",
+            "Aplicar una capa fina y uniforme sobre el molde limpio",
+            "Evitar excesos para no dejar residuos innecesarios",
+            "Reaplicar de acuerdo con la frecuencia de uso y complejidad de las piezas"
+        ],
+        "aplicaciones": [
+            "Procesos de moldeo de plásticos y elastómeros",
+            "Moldes de producción en serie",
+            "Piezas donde se requiera desmoldeo rápido y limpio",
+            "Aplicaciones generales en la industria manufacturera"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No pulverizar cerca de llamas o superficies calientes"
+        ],
+        "categoria": "desmoldantes",
+        "pdf": "uploads\/pdf\/industrial\/silicona-desmoldante-ga.pdf"
+    },
+    {
+        "id": 14,
+        "titulo": "Limpiavidrios",
+        "descripcion": "Limpiador de vidrios para uso industrial en oficinas, plantas y áreas de servicio, formulado para remover grasa ligera, huellas y suciedad ambiental.",
+        "descripcion_corta": "Limpieza de vidrios y superficies acristaladas.",
+        "formatos": [
+            "950ml",
+            "5L"
+        ],
+        "imagen": "industrial\/producto-14.webp",
+        "beneficios": [
+            "No deja aureolas",
+            "Secado rápido",
+            "Aroma agradable",
+            "Apto para uso en interiores"
+        ],
+        "instrucciones": [
+            "Aplicar directamente sobre el vidrio o sobre un paño limpio",
+            "Distribuir el producto de forma uniforme",
+            "Secar con paño de microfibra o papel no abrasivo",
+            "Repetir en zonas con suciedad más adherida si es necesario"
+        ],
+        "aplicaciones": [
+            "Vidrios de oficinas y salas de reunión",
+            "Ventanas en plantas industriales",
+            "Superficies acristaladas en áreas de servicio",
+            "Espejos y mamparas de vidrio compatibles"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "superficies",
+        "pdf": false
+    },
+    {
+        "id": 15,
+        "titulo": "Solvente Dieléctrico 80 NC",
+        "descripcion": "Solvente dieléctrico formulado para remover grasas, aceites y suciedades pesadas en componentes eléctricos y electrónicos, con tensión de ruptura adecuada para aplicaciones industriales exigentes.",
+        "descripcion_corta": "Solvente dieléctrico para limpieza de componentes eléctricos.",
+        "formatos": [
+            "5L",
+            "19L",
+            "60L",
+            "208L"
+        ],
+        "imagen": "industrial\/producto-15.webp",
+        "beneficios": [
+            "Alta capacidad disolvente de grasas y aceites",
+            "No deja residuos conductores",
+            "Apto para inmersión en algunos procesos",
+            "Secado relativamente rápido"
+        ],
+        "instrucciones": [
+            "Aplicar por aspersión, inmersión o con paño sobre el componente a limpiar",
+            "Permitir que el producto disuelva la suciedad y escurra por gravedad",
+            "Si es necesario, ayudar con brocha o pincel",
+            "Esperar que la superficie esté completamente seca antes de energizar el equipo"
+        ],
+        "aplicaciones": [
+            "Motores eléctricos, generadores y alternadores",
+            "Componentes eléctricos contaminados con aceite",
+            "Equipos de conmutación y paneles de control",
+            "Elementos metálicos donde se requiera limpieza sin residuos"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "Usar en áreas ventiladas y con elementos de protección personal"
+        ],
+        "categoria": "electricos",
+        "pdf": "uploads\/pdf\/industrial\/solvente-dielectrico-80-nc.pdf"
+    },
+    {
+        "id": 16,
+        "titulo": "Dieléctrico No Inflamable",
+        "descripcion": "Limpiador dieléctrico no inflamable para la eliminación de aceites, grasas y suciedades en equipos eléctricos y electrónicos industriales, ofreciendo alta seguridad en la aplicación.",
+        "descripcion_corta": "Limpieza de piezas y sistemas eléctricos industriales.",
+        "formatos": [
+            "5L",
+            "19L",
+            "60L",
+            "208L"
+        ],
+        "imagen": "industrial\/producto-16.webp",
+        "beneficios": [
+            "No inflamable",
+            "Solventes no conductores",
+            "Apto para uso en zonas con mayores requisitos de seguridad",
+            "Baja residualidad"
+        ],
+        "instrucciones": [
+            "Desenergizar el equipo antes de la aplicación cuando sea posible",
+            "Aplicar el producto directamente sobre las zonas a limpiar",
+            "Dejar actuar para que arrastre aceites y suciedad",
+            "Esperar el secado completo antes de volver a energizar el sistema"
+        ],
+        "aplicaciones": [
+            "Motores eléctricos y generadores",
+            "Tableros de distribución y control",
+            "Equipos de automatización y electrónica de potencia",
+            "Sistemas eléctricos en plantas y faenas industriales"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No respirar los vapores"
+        ],
+        "categoria": "electricos",
+        "pdf": "uploads\/pdf\/industrial\/dielectrico-no-inflamable.pdf"
+    },
+    {
+        "id": 17,
+        "titulo": "Grasa Líquida Adhesiva",
+        "descripcion": "Grasa líquida adhesiva para el lubricado de cadenas, engranajes y piezas sometidas a impactos y vibraciones en ambientes industriales.",
+        "descripcion_corta": "Lubricante adhesivo para cadenas y engranajes.",
+        "formatos": [
+            "500ml"
+        ],
+        "imagen": "industrial\/producto-17.webp",
+        "beneficios": [
+            "Larga duración",
+            "Alta adhesión",
+            "Protección contra corrosión",
+            "Reduce desgaste y ruido"
+        ],
+        "instrucciones": [
+            "Agitar bien el envase antes de usar",
+            "Aplicar sobre la pieza limpia y seca, asegurando cubrir toda la superficie",
+            "Retirar el exceso de producto para evitar goteos",
+            "Reaplicar según la frecuencia de uso y condiciones de operación"
+        ],
+        "aplicaciones": [
+            "Cadenas transportadoras y de transmisión",
+            "Engranajes abiertos y cremalleras",
+            "Guías deslizantes y rieles",
+            "Mecanismos expuestos a polvo, agua y vibración"
+        ],
+        "precauciones": [
+            "Mantener fuera del alcance de niños",
+            "No ingerir",
+            "Evitar el contacto con los ojos y la piel",
+            "No inhalar el aerosol, usar en ambientes ventilados"
+        ],
+        "categoria": "lubricantes",
+        "pdf": "uploads\/pdf\/industrial\/grasa-liquida-adhesiva.pdf"
+    }
 ]
-
