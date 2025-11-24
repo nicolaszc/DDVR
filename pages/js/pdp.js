@@ -13,6 +13,7 @@ function initPdp() {
     }
 
     fetchProductsData(siteRoot + "data/automotive.json").then(() => {
+        console.log(productsData)
         loadPdp(id);
     });
 }
@@ -25,7 +26,7 @@ function fetchProductsData(url) {
     return fetch(url)
         .then(res => res.json())
         .then(data => {
-            window.productsData = data;
+            productsData = data;
         });
 }
 
@@ -36,7 +37,7 @@ function fetchProductsData(url) {
 function loadPdp(id) {
     // Buscar producto en productsData (ya cargado en la PLP)
     const product = productsData.find(p => String(p.id) === String(id));
-
+     console.log(product)
     if (!product) {
         document.querySelector("main").innerHTML = `
             <div class="container py-5">
@@ -50,7 +51,7 @@ function loadPdp(id) {
 
     // Renderizar plantilla
     const html = renderPdpHtml(product);
-
+    console.log(html)
     // Inyectar en el DOM
     const container = document.querySelector("main");
     container.innerHTML = html;
