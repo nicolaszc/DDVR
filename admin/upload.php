@@ -283,12 +283,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
                             <div class="d-flex justify-content-between align-items-center w-100 mb-2">
                                 <h4 class="mb-0 lh-1">Actualizar catálogo automotriz</h4>
-                                <a href="../data/automotive.json" download>
-                                    <i class="bi bi-download fs-5 lh-1"></i>
-                                </a>
-                                <a href="editor.php?file=automotive" class="btn btn-sm btn-outline-light">
-                                    Editar JSON
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <a href="../data/automotive.json" class="btn" download>
+                                        <i class="bi bi-download fs-5 lh-1"></i>
+                                    </a>
+                                    <a href="editor.php?file=automotive" class="btn">
+                                        <i class="bi bi-pencil fs-5 lh-1"></i>
+                                    </a>
+                                </div>
                             </div>
                             <p>Este archivo reemplazara el actual <code>automotive.json</code>.</p>
                             <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
@@ -318,12 +320,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
                             <div class="d-flex justify-content-between align-items-center w-100 mb-2">   
                                 <h4>Actualizar catálogo industrial</h4>
-                                <a href="../data/industrial.json" download>
-                                    <i class="bi bi-download fs-5 lh-1"></i>
-                                </a>
-                                <a href="editor.php?file=industrial" class="btn btn-sm btn-outline-light">
-                                    Editar JSON
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <a href="../data/industrial.json" class="btn" download>
+                                        <i class="bi bi-download fs-5 lh-1"></i>
+                                    </a>
+                                    <a href="editor.php?file=industrial" class="btn">
+                                        <i class="bi bi-pencil fs-5 lh-1"></i>
+                                    </a>
+                                </div>
                             </div>
                             <p>Este archivo reemplazara el actual <code>industrial.json</code>.</p>
                             <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
