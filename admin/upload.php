@@ -13,6 +13,27 @@ if (isset($_GET['logout'])) {
     exit;
 }
 
+// Sobrescritura credentials.txt 
+
+// Archivo donde se guardan las credenciales del login
+$credFile = __DIR__ . '/credentials.txt';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'change_credentials') {
+    $newUser = trim($_POST['new_username'] ?? '');
+    $newPass = trim($_POST['new_password'] ?? '');
+
+    if ($newUser === '' || $newPass === '') {
+        $msg = 'Usuario y contraseña no pueden estar vacíos.';
+    } else {
+        // Formato usuario:password, pisando el txt anterior
+        $newLine = $newUser . ':' . $newPass;
+        if (file_put_contents($credFile, $newLine, LOCK_EX) !== false) {
+            $msg = 'Credenciales actualizadas correctamente.';
+        } else {
+            $msg = 'Error al guardar las nuevas credenciales.';
+        }
+    }
+}
 /**
  * Rutas base en función de la estructura:
  * raíz
@@ -43,7 +64,7 @@ function sanitize_filename($filename) {
 /**
  * Manejo de formularios
  */
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'change_credentials')) {
     $action = $_POST['action'] ?? '';
     
     // 1) Sobrescribir automotive.json
@@ -198,7 +219,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <strong class="d-none">DDVR</strong>
                 </span>
                 <div class="actions d-flex align-items-center">
-                <a class="btn btn-pass d-flex align-items-center" href="#"><span>Password</span><i class="bi bi-key ms-2 fs-4 lh-1"></i></a>
+                    <a class="btn btn-pass d-flex align-items-center"href="#"data-bs-toggle="modal"data-bs-target="#changeCredsModal"><span>Password</span><i class="bi bi-key ms-2 fs-4 lh-1"></i></a>
                 <span class="px-4">|</span>
                 <a class="logout navbar-toggler pe-0" href="?logout=1"><span>Cerrar sesión</span><i class="bi bi-box-arrow-right ms-2"></i></a>
                 </div>
@@ -206,6 +227,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
     </header>
+
+    <!-- Moda cambio contraseña -->
+    <div class="modal fade" id="changeCredsModal" tabindex="-1" aria-labelledby="changeCredsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <form method="post" action="upload.php">
+            <input type="hidden" name="action" value="change_credentials">
+
+            <div class="modal-header">
+            <h5 class="modal-title" id="changeCredsLabel">Cambiar credenciales de acceso</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+            <div class="mb-3">
+                <label class="form-label">Nuevo usuario</label>
+                <input type="text" name="new_username" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Nueva contraseña</label>
+                <input type="password" name="new_password" class="form-control" required>
+            </div>
+            </div>
+
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </div>
+
+        </form>
+        </div>
+    </div>
+    </div>
+
  
 
     <?php if (!empty($messages)): ?>
