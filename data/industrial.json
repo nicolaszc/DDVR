@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "i-1",
         "titulo": "Desengrasante Alto Poder",
         "descripcion": "Desengrasante para remover suciedades pesadas en diversas superficies.",
         "descripcion_corta": "Desengrasante para suciedades pesadas en áreas automotrices.",
@@ -32,7 +32,7 @@
         "pdf": "uploads\/pdf\/industrial\/desengrasante-alto-poder.pdf"
     },
     {
-        "id": 2,
+        "id": "i-2",
         "titulo": "Desengrasante Ecológico Listo para Usar",
         "descripcion": "Desengrasante ecológico de uso directo, formulado para limpieza de suciedades grasas en superficies industriales y de mantenimiento general.",
         "descripcion_corta": "Desengrasante ecológico listo para usar.",
@@ -69,7 +69,7 @@
         "pdf": "uploads\/pdf\/industrial\/desengrasante-ecologico-listo-para-usar.pdf"
     },
     {
-        "id": 3,
+        "id": "i-3",
         "titulo": "Desengrasante Ecológico Industrial",
         "descripcion": "Desengrasante ecológico concentrado para aplicación en procesos industriales con suciedades pesadas de grasas y aceites.",
         "descripcion_corta": "Desengrasante ecológico concentrado para industria.",
@@ -107,7 +107,7 @@
         "pdf": "uploads\/pdf\/industrial\/desengrasante-ecologico-industrial.pdf"
     },
     {
-        "id": 4,
+        "id": "i-4",
         "titulo": "Limpiador de Manos Exfoliante",
         "descripcion": "Limpiador de manos con partículas exfoliantes para remover grasas, aceites y suciedad intensa generada en procesos industriales.",
         "descripcion_corta": "Limpieza profunda de manos con suciedad industrial.",
@@ -144,7 +144,7 @@
         "pdf": "uploads\/pdf\/industrial\/limpiador-de-manos-exfoliante.pdf"
     },
     {
-        "id": 5,
+        "id": "i-5",
         "titulo": "Limpiador de Manos Orange",
         "descripcion": "Limpiador de manos con abrasivos naturales y aroma cítrico, ideal para remover grasas, aceites y suciedad intensa en ambientes industriales.",
         "descripcion_corta": "Removedor de grasas y aceites con abrasivos naturales.",
@@ -181,7 +181,7 @@
         "pdf": "uploads\/pdf\/industrial\/limpiador-de-manos-orange.pdf"
     },
     {
-        "id": 6,
+        "id": "i-6",
         "titulo": "Limpia Contactos",
         "descripcion": "Limpia contactos para remover polvo, grasa ligera y humedad en conexiones eléctricas y electrónicas presentes en entornos industriales.",
         "descripcion_corta": "Limpieza de conexiones y sistemas eléctricos industriales.",
@@ -217,7 +217,7 @@
         "pdf": "uploads\/pdf\/industrial\/limpia-contactos.pdf"
     },
     {
-        "id": 7,
+        "id": "i-7",
         "titulo": "Limpia Contactos No Inflamable",
         "descripcion": "Limpia contactos no inflamable para la limpieza segura de componentes eléctricos y electrónicos en zonas de difícil ventilación o con mayor exigencia de seguridad.",
         "descripcion_corta": "Limpieza segura de componentes eléctricos y electrónicos.",
@@ -253,7 +253,7 @@
         "pdf": "uploads\/pdf\/industrial\/limpia-contactos-no-inflamable.pdf"
     },
     {
-        "id": 8,
+        "id": "i-8",
         "titulo": "Aire Comprimido de Limpieza No Inflamable",
         "descripcion": "Aire comprimido no inflamable diseñado para remover polvo y partículas sueltas de equipos electrónicos, paneles y componentes de difícil acceso.",
         "descripcion_corta": "Remoción de polvo con aire comprimido no inflamable.",
@@ -289,7 +289,7 @@
         "pdf": "uploads\/pdf\/industrial\/aire-comprimido-de-limpieza-no-inflamable.pdf"
     },
     {
-        "id": 9,
+        "id": "i-9",
         "titulo": "Desoxidante",
         "descripcion": "Producto desoxidante formulado para remover óxido superficial y facilitar la preparación de superficies metálicas previo a procesos de pintado o protección.",
         "descripcion_corta": "Remoción de óxido superficial en metales.",
@@ -326,7 +326,7 @@
         "pdf": "uploads\/pdf\/industrial\/desoxidante.pdf"
     },
     {
-        "id": 10,
+        "id": "i-10",
         "titulo": "Aceite Multipropósito",
         "descripcion": "Aceite multipropósito tipo aflojatodo para lubricar, penetrar óxido, desplazar humedad y proteger superficies metálicas en ambientes industriales.",
         "descripcion_corta": "Aceite aflojatodo para aplicaciones industriales.",
@@ -363,7 +363,7 @@
         "pdf": "uploads\/pdf\/industrial\/aceite-multiproposito.pdf"
     },
     {
-        "id": 11,
+        "id": "i-11",
         "titulo": "Anticorrosivo",
         "descripcion": "Producto anticorrosivo diseñado para proteger superficies metálicas frente a la formación de óxido y corrosión en ambientes agresivos.",
         "descripcion_corta": "Protección anticorrosiva para superficies metálicas.",
@@ -401,7 +401,7 @@
         "pdf": "uploads\/pdf\/industrial\/anticorrosivo.pdf"
     },
     {
-        "id": 12,
+        "id": "i-12",
         "titulo": "Silicona Desmoldante Alta Temperatura",
         "descripcion": "Silicona desmoldante especialmente formulada para procesos que requieren resistencia a altas temperaturas, facilitando el desmoldeo de piezas sin dejar residuos significativos.",
         "descripcion_corta": "Silicona desmoldante para procesos de alta temperatura.",
@@ -437,7 +437,7 @@
         "pdf": "uploads\/pdf\/industrial\/silicona-desmoldante-alta-temperatura.pdf"
     },
     {
-        "id": 13,
+        "id": "i-13",
         "titulo": "Silicona Desmoldante GA",
         "descripcion": "Silicona desmoldante de uso general para facilitar el desmoldeo de piezas en procesos industriales, mejorando la productividad y reduciendo daños en las superficies de los moldes.",
         "descripcion_corta": "Silicona desmoldante de uso general.",
@@ -473,7 +473,7 @@
         "pdf": "uploads\/pdf\/industrial\/silicona-desmoldante-ga.pdf"
     },
     {
-        "id": 14,
+        "id": "i-14",
         "titulo": "Limpiavidrios",
         "descripcion": "Limpiador de vidrios para uso industrial en oficinas, plantas y áreas de servicio, formulado para remover grasa ligera, huellas y suciedad ambiental.",
         "descripcion_corta": "Limpieza de vidrios y superficies acristaladas.",
@@ -510,7 +510,7 @@
         "pdf": false
     },
     {
-        "id": 15,
+        "id": "i-15",
         "titulo": "Solvente Dieléctrico 80 NC",
         "descripcion": "Solvente dieléctrico formulado para remover grasas, aceites y suciedades pesadas en componentes eléctricos y electrónicos, con tensión de ruptura adecuada para aplicaciones industriales exigentes.",
         "descripcion_corta": "Solvente dieléctrico para limpieza de componentes eléctricos.",
@@ -549,7 +549,7 @@
         "pdf": "uploads\/pdf\/industrial\/solvente-dielectrico-80-nc.pdf"
     },
     {
-        "id": 16,
+        "id": "i-16",
         "titulo": "Dieléctrico No Inflamable",
         "descripcion": "Limpiador dieléctrico no inflamable para la eliminación de aceites, grasas y suciedades en equipos eléctricos y electrónicos industriales, ofreciendo alta seguridad en la aplicación.",
         "descripcion_corta": "Limpieza de piezas y sistemas eléctricos industriales.",
@@ -588,7 +588,7 @@
         "pdf": "uploads\/pdf\/industrial\/dielectrico-no-inflamable.pdf"
     },
     {
-        "id": 17,
+        "id": "i-17",
         "titulo": "Grasa Líquida Adhesiva",
         "descripcion": "Grasa líquida adhesiva para el lubricado de cadenas, engranajes y piezas sometidas a impactos y vibraciones en ambientes industriales.",
         "descripcion_corta": "Lubricante adhesivo para cadenas y engranajes.",

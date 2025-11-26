@@ -24,9 +24,9 @@ let iso = null;
 let actualFilter = "*";
 
 let productsData = [];
-
-let pdpTemplate = "";
-let cardTemplate = "";
+let jsonRoute = "data/automotive.json";
+//let pdpTemplate = "";
+//let cardTemplate = "";
 
 // ⬅️ ESTA ES LA ÚNICA LÍNEA CAMBIADA ARRIBA
 let templatesReady = null;
@@ -42,7 +42,16 @@ function initPlp() {
     plp = document.getElementById("plp");
 
     // ====== CARGA INICIAL ======
-    loadPlp(siteRoot + "data/automotive.json");
+    //jsonRoute = siteRoot + "data/automotive.json";
+    btnAutomotive = document.getElementById("btn-automotive");
+    btnIndustrial = document.getElementById("btn-industrial");
+    if(jsonRoute == "data/automotive.json"){
+        catalogBtnsActive('automotive')
+    }
+    if(jsonRoute == "data/industrial.json"){
+        catalogBtnsActive('industrial')
+    }
+    loadPlp(siteRoot +  jsonRoute);
 }
 
 
@@ -132,9 +141,16 @@ function renderCards(products) {
         plp.appendChild(col);
     });
 
-    // =========================
-    // Navegar a PDP
-    // =========================
+    
+
+    
+    attachCardListener();
+}
+
+// =========================
+// Listener Btns Card
+// =========================
+function attachCardListener(){
     const buttons = document.querySelectorAll('.card .btn-ddvr[data-product-slug]');
     buttons.forEach(btn => {
         btn.addEventListener('click', e => {
@@ -151,42 +167,40 @@ function renderCards(products) {
             //scrollToTop();
 
             // Random cards
-            window.pendingRandomCards = renderRandomCardsHtml(product);
+            //window.pendingRandomCards = renderRandomCardsHtml(product);
             
             navigate(`/producto/${slug}?id=${productId}`);
         });
     });
-
-    // =========================
-    // Agregar listeners de share
-    // =========================
-    const shareButtons = document.querySelectorAll(".share-btn");       
-    
-    document.querySelector('main').addEventListener('click', e => {  
-        const btn = e.target.closest('.share-btn');
-        if (!btn) return;
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        const rrssCurrent = btn.closest(".share-container").querySelector(".rrss");
-        if (!rrssCurrent) return;
-
-        shareButtons.forEach((el) => {
-            if (el !== btn) el.classList.remove("active");
-        });
-
-        btn.classList.toggle("active");
-
-        const allRrss = document.querySelectorAll(".rrss");
-        allRrss.forEach((el) => {
-            if (el !== rrssCurrent) el.classList.remove("active");
-        });
-
-        rrssCurrent.classList.toggle("active");
-    });
 }
+// =========================
+// Agregar listeners de share
+// =========================
+const shareButtons = document.querySelectorAll(".share-btn");       
 
+document.querySelector('main').addEventListener('click', e => {  
+    const btn = e.target.closest('.share-btn');
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const rrssCurrent = btn.closest(".share-container").querySelector(".rrss");
+    if (!rrssCurrent) return;
+
+    shareButtons.forEach((el) => {
+        if (el !== btn) el.classList.remove("active");
+    });
+
+    btn.classList.toggle("active");
+
+    const allRrss = document.querySelectorAll(".rrss");
+    allRrss.forEach((el) => {
+        if (el !== rrssCurrent) el.classList.remove("active");
+    });
+
+    rrssCurrent.classList.toggle("active");
+});
 
 // ===============================
 // Inicializar / refrescar Isotope
@@ -214,14 +228,16 @@ function initIsotope() {
 }
 
 
+// ===============================
+// Bind Filter / Sort Btns
+// ===============================
 function bindPlpControls() {
     console.log("Rebinding PLP controls...");
     
-    btnAutomotive = document.getElementById("btn-automotive");
-    btnIndustrial = document.getElementById("btn-industrial");
+    
     filtersGroup = document.querySelector(".filters-button-group");
     filterGroupBtns = document.querySelectorAll("button.btn-filter");
-    btnSort = document.getElementById("btn-sort");
+    btnSort = document.getElementById("sort");
     filterAnchor = document.getElementById("filter-anchor");
     filterIconParent = null;
     filterIconObject = document.getElementById('filter-icon');
@@ -232,13 +248,7 @@ function bindPlpControls() {
         btnAutomotive.addEventListener("click", (e) => {
         e.preventDefault();
         loadPlp(siteRoot + "data/automotive.json");
-
-        btnAutomotive.classList.add("btn-primary");
-        btnAutomotive.classList.remove("btn-secondary");
-        if (btnIndustrial) {
-            btnIndustrial.classList.add("btn-secondary");
-            btnIndustrial.classList.remove("btn-primary");
-        }
+        catalogBtnsActive('automotive');
         });
     }
 
@@ -246,13 +256,8 @@ function bindPlpControls() {
         btnIndustrial.addEventListener("click", (e) => {
         e.preventDefault();
         loadPlp(siteRoot + "data/industrial.json");
-
-        btnIndustrial.classList.add("btn-primary");
-        btnIndustrial.classList.remove("btn-secondary");
-        if (btnAutomotive) {
-            btnAutomotive.classList.add("btn-secondary");
-            btnAutomotive.classList.remove("btn-primary");
-        }
+        catalogBtnsActive('industrial');
+        
         });
     }
     
@@ -307,49 +312,34 @@ function bindPlpControls() {
 }
 
 
-// =========================
-// Random cards
-// =========================
-
-function renderUniqueRandomCards(min, max, count) {
-    const uniqueCards = new Set();
-    while (uniqueCards.size < count) {
-        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-        uniqueCards.add(randomNumber);
-    }
-    return Array.from(uniqueCards);
-}
-
-const uniqueCardsArray = renderUniqueRandomCards(1, 31, 4);
-
-function renderRandomCardsHtml(currentProduct) {
-    const max = productsLength;
-    const ids = renderUniqueRandomCards(1, max, 4)
-        .filter(id => id !== currentProduct.id);
-
-    let html = "";
-
-    ids.forEach(id => {
-        const original = document.getElementById(String(id));
-        if (!original) return;
-
-        const clone = original.cloneNode(true);
-        clone.removeAttribute('style');
-        clone.id = "";
-
-        html += clone.outerHTML;
+function animatePlp() {
+    const c = document.querySelector(".plp-container");
+    if (!c) return;
+    c.classList.remove("show");
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            c.classList.add("show");
+        });
     });
-
-    html = 
-    `<div class="container mb-4">
-        <h2 class="product-title mb-3 mt-4 fs-4">Otros usuarios también vieron</h1>
-        <div id="plp" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 product">
-            ${html}
-        </div>
-    </div>`;
-    return html;
 }
 
+
+function catalogBtnsActive(btn){
+    if(btn == 'automotive'){
+        btnIndustrial.classList.remove("btn-primary");
+        btnIndustrial.classList.add("btn-secondary");
+        btnAutomotive.classList.remove("btn-secondary");
+        btnAutomotive.classList.add("btn-primary");
+    }
+    if(btn == 'industrial'){
+        btnIndustrial.classList.add("btn-primary");
+        btnIndustrial.classList.remove("btn-secondary");
+        btnAutomotive.classList.add("btn-secondary");
+        btnAutomotive.classList.remove("btn-primary");
+    }
+    
+
+}
 
 // =========================
 // Esperar include.js
@@ -360,19 +350,12 @@ document.addEventListener("plpLoaded", () => {
     // Se obtiene el siteRoot AQUÍ
     //siteRoot = document.getElementById('site-root').getAttribute('content');
 
-    // ⬇️ SE MUEVE AQUÍ el fetch de templates
     templatesReady = fetch(siteRoot + 'components/card.php')
-        .then(res => res.text())
-        .then(html => {
-            cardTemplate = html;
-            return fetch(siteRoot + 'pages/pdp.html');
-        })
-        .then(res => res.text())
-        .then(html => {
-            pdpTemplate = html;
-        })
-        .catch(err => console.error("Error cargando templates", err));
-    // ⬆️
+    .then(res => res.text())
+    .then(html => {
+        cardTemplate = html;
+    })
+    .catch(err => console.error("Error cargando card template", err));
 
     initPlp();
     //bindPlpControls();  

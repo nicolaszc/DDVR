@@ -48,13 +48,13 @@ Promise.all([
   router();
 
   // Detectar si hay un id de producto en la URL y disparar initPdp
-  const urlParams = new URLSearchParams(window.location.search);
+  /* const urlParams = new URLSearchParams(window.location.search);
   const productId = urlParams.get('id');
   if (productId) {
     document.addEventListener('pdpLoaded', () => {
-      initPdp(productId);
+      initPdp();
     }, { once: true });
-  }
+  } */
 
   // Soporta back/forward
   window.onpopstate = router;

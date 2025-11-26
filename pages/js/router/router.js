@@ -7,6 +7,7 @@ async function router() {
 
   if (path === '/' || path === '/index.html') {
     await includeHTML('pages/plp.html', 'main', 'include');
+    animatePlp();
     console.log('router PLP')
     document.dispatchEvent(new Event('plpLoaded'));
   }

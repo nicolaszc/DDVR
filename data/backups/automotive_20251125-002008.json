@@ -1,7 +1,7 @@
 [
     {
-        "id": "a-1",
-        "titulo": "Limpiador de Frenos",
+        "id": 1,
+        "titulo": "Limpiador de Frenos2",
         "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar la seguridad en el frenado, removiendo grasa, aceite, polvo de fricción y otras suciedades en calipers, discos, tambores y componentes asociados. Gracias a su fórmula de secado rápido, no deja residuos que puedan afectar el desempeño del sistema de frenos y puede ser usado como un limpiador universal de grasas y aceites.",
         "descripcion_corta": "Limpieza de calipers, pastillas, discos y tambores de freno.",
         "formatos": [
@@ -36,7 +36,7 @@
         "pdf": "uploads\/pdf\/automotriz\/limpiador-de-frenos.pdf"
     },
     {
-        "id": "a-2",
+        "id": 2,
         "titulo": "Dieléctrico No Inflamable",
         "descripcion": "Limpiador dieléctrico no inflamable formulado con solventes no conductores, diseñado para remover grasa, aceite y suciedad en motores, componentes y sistemas eléctricos del vehículo, reduciendo el riesgo de falla por contaminación.",
         "descripcion_corta": "Limpieza de piezas, motores y sistemas eléctricos en automoción.",
@@ -75,7 +75,7 @@
         "pdf": "uploads\/pdf\/automotriz\/dielectrico-no-inflamable.pdf"
     },
     {
-        "id": "a-3",
+        "id": 3,
         "titulo": "Solvente Dieléctrico",
         "descripcion": "Solvente dieléctrico formulado para remover grasas, aceites y suciedades pesadas sin dejar residuos, permitiendo la limpieza segura de componentes eléctricos y electrónicos automotrices.",
         "descripcion_corta": "Remoción de grasas y suciedades pesadas en componentes eléctricos.",
@@ -113,7 +113,7 @@
         "pdf": "uploads\/pdf\/automotriz\/solvente-dielectrico.pdf"
     },
     {
-        "id": "a-4",
+        "id": 4,
         "titulo": "Limpia Contactos",
         "descripcion": "Limpia contactos de secado rápido diseñado para eliminar grasa ligera, polvo y humedad de conexiones eléctricas y electrónicas, asegurando buena continuidad de corriente sin dejar residuos.",
         "descripcion_corta": "Limpieza de conexiones y sistemas eléctricos del vehículo.",
@@ -149,7 +149,7 @@
         "pdf": "uploads\/pdf\/automotriz\/limpia-contactos.pdf"
     },
     {
-        "id": "a-5",
+        "id": 5,
         "titulo": "Limpia Contactos No Inflamable",
         "descripcion": "Limpia contactos no inflamable de secado ultra rápido para la limpieza segura de componentes eléctricos y electrónicos, incluso en zonas donde no es posible desenergizar totalmente el sistema.",
         "descripcion_corta": "Limpieza segura de componentes eléctricos y electrónicos.",
@@ -185,7 +185,7 @@
         "pdf": "uploads\/pdf\/automotriz\/limpia-contactos-no-inflamable.pdf"
     },
     {
-        "id": "a-6",
+        "id": 6,
         "titulo": "Desengrasante Alto Poder",
         "descripcion": "EOX Limpiador de Frenos está diseñado para optimizar la seguridad en el frenado, removiendo grasa, aceite, polvo de fricción y otras suciedades en calipers, discos, tambores y componentes asociados. Gracias a su fórmula de secado rápido, no deja residuos que puedan afectar el desempeño del sistema de frenos y puede ser usado como un limpiador universal de grasas y aceites.",
         "descripcion_corta": "Desengrasante para suciedades pesadas en áreas automotrices.",
@@ -223,7 +223,7 @@
         "pdf": "uploads\/pdf\/automotriz\/desengrasante-alto-poder.pdf"
     },
     {
-        "id": "a-7",
+        "id": 7,
         "titulo": "Limpiaparabrisas",
         "descripcion": "Aditivo limpiaparabrisas concentrado para remover aceite, insectos, polvo y suciedad del parabrisas sin dejar marcas ni aureolas, mejorando la visibilidad y seguridad en la conducción.",
         "descripcion_corta": "Limpieza de parabrisas y superficies vidriadas del vehículo.",
@@ -260,7 +260,7 @@
         "pdf": false
     },
     {
-        "id": "a-8",
+        "id": 8,
         "titulo": "Limpiador de Manos Exfoliante",
         "descripcion": "Limpiador de manos exfoliante con microesferas abrasivas para remover grasas, aceites y suciedades pesadas típicas del trabajo automotriz, dejando la piel limpia y suave.",
         "descripcion_corta": "Limpieza profunda de manos con suciedad automotriz.",
@@ -297,7 +297,7 @@
         "pdf": "uploads\/pdf\/automotriz\/limpiador-de-manos-exfoliante.pdf"
     },
     {
-        "id": "a-9",
+        "id": 9,
         "titulo": "Limpiador de Manos Orange",
         "descripcion": "Limpiador de manos con abrasivos naturales y aroma cítrico, formulado para eliminar grasas, aceites y suciedad intensa sin resecar la piel gracias a sus biolípidos hidratantes.",
         "descripcion_corta": "Removedor de grasas y aceites con abrasivos naturales.",
@@ -334,7 +334,7 @@
         "pdf": "uploads\/pdf\/automotriz\/limpiador-de-manos-orange.pdf"
     },
     {
-        "id": "a-10",
+        "id": 10,
         "titulo": "Grasa Líquida Adhesiva",
         "descripcion": "Grasa líquida adhesiva de alta resistencia formulada para lubricar piezas sometidas a fuertes cargas, impactos y vibraciones en aplicaciones automotrices y de maquinaria.",
         "descripcion_corta": "Lubricante para piezas sometidas a alta presión.",
@@ -370,7 +370,7 @@
         "pdf": "uploads\/pdf\/automotriz\/grasa-liquida-adhesiva.pdf"
     },
     {
-        "id": "a-11",
+        "id": 11,
         "titulo": "Aceite Multipropósito",
         "descripcion": "Aceite multipropósito tipo aflojatodo que penetra óxido y corrosión, desplaza la humedad, lubrica y protege piezas móviles y mecanismos automotrices.",
         "descripcion_corta": "Aceite aflojatodo para mecanismos automotrices.",
@@ -404,7 +404,7 @@
         "pdf": "uploads\/pdf\/automotriz\/aceite-multiproposito.pdf"
     },
     {
-        "id": "a-12",
+        "id": 12,
         "titulo": "Limpiador Aire Acondicionado",
         "descripcion": "Limpiador de aire acondicionado en aerosol diseñado para higienizar ductos y evaporador, ayudando a eliminar malos olores y mejorar la calidad del aire al interior del vehículo.",
         "descripcion_corta": "Limpieza de ductos y sistema de aire acondicionado del vehículo.",
@@ -440,7 +440,7 @@
         "pdf": false
     },
     {
-        "id": "a-13",
+        "id": 13,
         "titulo": "Líquido de Frenos DOT 3 \/ DOT 4",
         "descripcion": "Líquido de frenos para sistemas hidráulicos de freno y embrague que cumplan especificaciones DOT 3 y DOT 4, formulado para brindar respuesta segura y estable bajo altas temperaturas.",
         "descripcion_corta": "Para sistemas hidráulicos de freno y embrague.",
@@ -475,7 +475,7 @@
         "pdf": false
     },
     {
-        "id": "a-14",
+        "id": 14,
         "titulo": "Limpiador de Llantas \/ Aluminio",
         "descripcion": "Limpiador ácido para la remoción intensiva de suciedades difíciles como óxido ligero, sarro, polvo de freno y restos de barro en llantas de acero y aluminio resistente.",
         "descripcion_corta": "Limpieza intensiva de llantas de acero y aluminio.",
@@ -513,7 +513,7 @@
         "pdf": false
     },
     {
-        "id": "a-15",
+        "id": 15,
         "titulo": "Limpiador de Llantas Rim Cleaner",
         "descripcion": "Limpiador de llantas en formato gatillo desarrollado para eliminar polvo de frenos, barro y suciedad general, dejando las llantas limpias y con acabado brillante.",
         "descripcion_corta": "Limpieza y cuidado de llantas (excepto aluminio pulido\/anodizado sin protección).",
@@ -548,7 +548,7 @@
         "pdf": false
     },
     {
-        "id": "a-16",
+        "id": 16,
         "titulo": "Limpiador de Llantas Intensivo",
         "descripcion": "Limpiador intensivo de llantas de uso profesional, formulado para remover rápidamente polvo de frenos, grasas ligeras y suciedad acumulada en ruedas de acero y aluminio.",
         "descripcion_corta": "Limpieza intensiva de llantas de acero y aluminio.",
@@ -585,7 +585,7 @@
         "pdf": false
     },
     {
-        "id": "a-17",
+        "id": 17,
         "titulo": "Shampoo Prelavado Ácido",
         "descripcion": "Shampoo de prelavado ácido diseñado para desincrustar y desoxidar suciedades difíciles, preparando la superficie del vehículo antes del lavado principal.",
         "descripcion_corta": "Prelavado para remover suciedades difíciles.",
@@ -622,7 +622,7 @@
         "pdf": false
     },
     {
-        "id": "a-18",
+        "id": 18,
         "titulo": "Shampoo Automotriz Concentrado",
         "descripcion": "Shampoo concentrado para lavado manual de vehículos, formulado para remover suciedad de la carrocería sin dañar ceras ni selladores, dejando un acabado limpio y brillante.",
         "descripcion_corta": "Shampoo concentrado para lavado de vehículos.",
@@ -660,7 +660,7 @@
         "pdf": false
     },
     {
-        "id": "a-19",
+        "id": 19,
         "titulo": "Shampoo Automotriz Espuma Controlada",
         "descripcion": "Shampoo automotriz con espuma controlada, ideal para sistemas de lavado con recuperación de agua o donde se requiera bajo nivel de espuma para un enjuague rápido.",
         "descripcion_corta": "Shampoo de baja espuma para lavado automotriz.",
@@ -698,7 +698,7 @@
         "pdf": false
     },
     {
-        "id": "a-20",
+        "id": 20,
         "titulo": "Shampoo Seco Ecológico",
         "descripcion": "Shampoo seco ecológico formulado para limpiar la carrocería del vehículo sin necesidad de enjuague, ideal para lugares con restricción de agua o servicios móviles.",
         "descripcion_corta": "Limpieza de carrocería sin enjuague.",
@@ -734,7 +734,7 @@
         "pdf": false
     },
     {
-        "id": "a-21",
+        "id": 21,
         "titulo": "Shampoo Seco Concentrado",
         "descripcion": "Shampoo seco concentrado diseñado para aplicaciones de lavado sin enjuague en flotas de vehículos y servicios profesionales, permitiendo alta eficiencia de limpieza con bajo consumo de producto.",
         "descripcion_corta": "Shampoo seco concentrado para uso profesional.",
@@ -771,7 +771,7 @@
         "pdf": false
     },
     {
-        "id": "a-22",
+        "id": 22,
         "titulo": "Cera Líquida Alto Brillo",
         "descripcion": "Cera líquida formulada para aportar brillo y protección a la pintura del vehículo, dejando una película repelente al agua y a la suciedad ligera.",
         "descripcion_corta": "Cera líquida para brillo y protección.",
@@ -807,7 +807,7 @@
         "pdf": false
     },
     {
-        "id": "a-23",
+        "id": 23,
         "titulo": "Cera Alta Presión Autosecante",
         "descripcion": "Cera autosecante para túneles y puentes de lavado de alta presión, formulada para acelerar el escurrimiento del agua y mejorar el acabado final del vehículo.",
         "descripcion_corta": "Cera autosecante para sistemas de alta presión.",
@@ -845,7 +845,7 @@
         "pdf": false
     },
     {
-        "id": "a-24",
+        "id": 24,
         "titulo": "Limpiador de Motor",
         "descripcion": "Limpiador de motor formulado para remover grasas, aceites y suciedad adherida en la superficie del motor y compartimientos, facilitando las labores de inspección y mantención.",
         "descripcion_corta": "Limpieza exterior de motores automotrices.",
@@ -883,7 +883,7 @@
         "pdf": "uploads\/pdf\/automotriz\/limpiador-de-motor.pdf"
     },
     {
-        "id": "a-25",
+        "id": 25,
         "titulo": "All Purpose Cleaner",
         "descripcion": "Limpiador multiuso para superficies interiores y exteriores del vehículo, capaz de remover suciedad general en plásticos, tapices, gomas y otras superficies lavables.",
         "descripcion_corta": "Limpiador multiuso para interior y exterior.",
@@ -920,7 +920,7 @@
         "pdf": false
     },
     {
-        "id": "a-26",
+        "id": 26,
         "titulo": "Limpiavidrios",
         "descripcion": "Limpiador de vidrios formulado para remover grasa ligera, marcas de dedos, polvo y residuos del ambiente, dejando una superficie transparente y sin aureolas.",
         "descripcion_corta": "Limpieza de vidrios y espejos del vehículo.",
@@ -957,7 +957,7 @@
         "pdf": false
     },
     {
-        "id": "a-27",
+        "id": 27,
         "titulo": "Renovador de Gomas",
         "descripcion": "Renovador de gomas diseñado para limpiar y devolver el aspecto original a neumáticos y otras superficies de caucho, aportando brillo y protección frente a la intemperie.",
         "descripcion_corta": "Limpieza y renovación de neumáticos y gomas.",
@@ -994,7 +994,7 @@
         "pdf": false
     },
     {
-        "id": "a-28",
+        "id": 28,
         "titulo": "Acondicionador Gomas y Plásticos",
         "descripcion": "Acondicionador para gomas y plásticos que limpia, protege y devuelve el brillo natural a superficies interiores y exteriores, ayudando a prevenir el resecamiento y la decoloración.",
         "descripcion_corta": "Protección y brillo para gomas y plásticos.",
@@ -1030,7 +1030,7 @@
         "pdf": false
     },
     {
-        "id": "a-29",
+        "id": 29,
         "titulo": "Silicona Emulsionada",
         "descripcion": "Silicona en emulsión acuosa para el acondicionamiento de gomas y plásticos, ideal para aplicaciones donde se requiera un acabado satinado y menor sensación grasosa.",
         "descripcion_corta": "Silicona en emulsión para gomas y plásticos.",
@@ -1067,7 +1067,7 @@
         "pdf": false
     },
     {
-        "id": "a-30",
+        "id": 30,
         "titulo": "Acondicionador Cueros",
         "descripcion": "Acondicionador para cueros formulado para nutrir, proteger y mantener la flexibilidad de tapices y superficies de cuero natural o sintético en el interior del vehículo.",
         "descripcion_corta": "Cuidado y protección de superficies de cuero.",
@@ -1103,7 +1103,7 @@
         "pdf": false
     },
     {
-        "id": "a-31",
+        "id": 31,
         "titulo": "Restaurador de Plásticos y Gomas",
         "descripcion": "Restaurador diseñado para devolver el color y aspecto original a plásticos y gomas exteriores deslavados por el sol y la intemperie, proporcionando protección y mejorando la apariencia del vehículo.",
         "descripcion_corta": "Restauración de color en plásticos y gomas exteriores.",

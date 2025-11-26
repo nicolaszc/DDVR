@@ -616,6 +616,26 @@ footer #qr-container{
 }
 
 /* PDP */
+.pdp-container {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all .75s ease;
+}
+
+.pdp-container.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.plp-container {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all .75s ease;
+}
+
+.plp-container.show {
+    opacity: 1;
+    transform: translateX(0);
+}
 .pdp-container ul li{
     margin-bottom: 0;
 }

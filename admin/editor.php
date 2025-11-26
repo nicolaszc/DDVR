@@ -143,22 +143,22 @@ rsort($backups);
         <ul class="nav nav-pills d-flex align-items-center justify-content-between mb-4">
            <li class="nav-item d-flex align-items-center">
                 <a href="editor.php?file=automotive"
-                class="nav-link btn btn-primary btn-ddvr my-2 py-2 px-4 me-2 <?= $fileKey === 'automotive' ? 'active' : '' ?>">
+                class="nav-link btn btn-primary btn-ddvr py-2 px-4 me-2 <?= $fileKey === 'automotive' ? 'active' : '' ?>">
                 <i class="bi bi-car-front-fill me-2"></i>Automotriz
                 </a>
                 <a href="editor.php?file=industrial"
-                class="nav-link btn btn-primary btn-ddvr my-2 py-2 px-4 <?= $fileKey === 'industrial' ? 'active' : '' ?>">
+                class="nav-link btn btn-primary btn-ddvr py-2 px-4 <?= $fileKey === 'industrial' ? 'active' : '' ?>">
                 Industrial<i class="bi bi-buildings-fill ms-2"></i>
                 </a>
             </li>
             <li>
-                <a href="upload.php" class="btn btn-primary btn-ddvr my-2 py-2 px-4"><i class="bi bi-arrow-left-short"></i>Volver</a>
+                <a href="upload.php" class="btn btn-primary btn-ddvr py-2 px-4"><i class="bi bi-arrow-left-short"></i><span class="d-none d-md-inline">Volver</span></a>
             </li>
         </ul>
         <div class="row g-4">
             <!-- Editor JSON -->
             <div class="col-lg-8 col-xl-9">
-                <div class="card shadow h-100">
+                <div class="card shadow h-100 rounded overflow-hidden pt-2 px-2">
                     <div class="bg-dark card-body py-3">
                         <div id="editor" class="editor-container"></div>
 
@@ -176,7 +176,7 @@ rsort($backups);
 
             <!-- Historial -->
             <div class="col-lg-4 col-xl-3">
-                <div class="card shadow backups-card h-100">
+                <div class="card shadow backups-card h-100 rounded overflow-hidden pt-2 px-2">
                     <div class="bg-dark card-body py-3">
                         <h2 class="h6 mb-2">Historial de cambios</h2>
                         <p class="small text-secondary">
@@ -209,8 +209,14 @@ rsort($backups);
     </div>
 </main>
 
-<footer class="bg-dark text-center text-secondary py-3">
-    © 2025 DVR Distribuidora
+<footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5">
+    <div class="container">
+            <div class="row">
+            <div class="col-12 d-flex justify-content-center mt-5 mb-2">
+                <small class="mt-3 mb-0">© 2025 DVR Distribuidora</small>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <!-- Monaco Editor -->

@@ -41,6 +41,9 @@ p{
 code{
     color: var(--main-color);
 }
+h1, h2, h3, h4, h5, h6{
+    font-weight: 300 !important;
+}
 h1{
     color: var(--terciary-light-color);
 }
@@ -78,4 +81,8 @@ small{
 }
 .uploads {
     min-height: calc(100vh - 214px);
+}
+.alert{
+    font-size: .875rem;
+    font-weight: 200;
 }

@@ -45,9 +45,9 @@ $rootDir       = dirname(__DIR__);           // sube de /admin a raíz
 $dataDir       = $rootDir . '/data/';
 $uploadsImgDir = $rootDir . '/uploads/img/';
 $uploadsPdfDir = $rootDir . '/uploads/pdf/';
-$success = '<div class="d-flex justify-content-center align-items-center alert alert-success mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-check-circle-fill me-2"></i>Catálogo actualizado correctamente.! <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-$error = '<div class="d-flex justify-content-center align-items-center alert alert-danger mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-x-octagon-fill me-2"></i>Error actualizando el catálogo. <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-$no_file = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>No se seleccionaron archivos. <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+$success = '<div class="d-flex w-100 justify-content-between pe-3 py-0 align-items-center alert alert-success mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-check-circle-fill me-2 fs-5"></i>Catálogo actualizado correctamente.! <button type="button" class="btn pe-0" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x fs-4"></i></button></div>';
+$error = '<div class="d-flex w-100 justify-content-between pe-3 py-0 align-items-center alert alert-danger mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-x-octagon-fill me-2 fs-5"></i>Error actualizando el catálogo. <button type="button" class="btn pe-0" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x fs-4"></i></button></div>';
+$no_file = '<div class="d-flex w-100 justify-content-between pe-3 py-0 align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>No se seleccionaron archivos. <button type="button" class="btn pe-0" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x fs-4"></i></button></div>';
 $messages = [];
 
 /**
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
             $ext  = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
             if ($ext !== 'json') {
-                $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>El archivo de catálogo automotriz debe ser .json</div>';
+                $messages[] = '<div class="d-flex w-100 justify-content-between pe-3 py-0 align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>El archivo de catálogo automotriz debe ser .json</div>';
             } else {
                 $dest = $dataDir . 'automotive.json';
                 if (move_uploaded_file($tmp, $dest)) {
@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
             $ext  = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
             if ($ext !== 'json') {
-                $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>El archivo de catálogo industrial debe ser .json</div>';
+                $messages[] = '<div class="d-flex w-100 justify-content-between pe-3 py-0 align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>El archivo de catálogo industrial debe ser .json</div>';
             } else {
                 $dest = $dataDir . 'industrial.json';
                 if (move_uploaded_file($tmp, $dest)) {
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                     $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
                     if (!in_array($ext, $allowed, true)) {
-                        $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>Archivo '.$name.' ignorado (extensión no permitida).</div>';
+                        $messages[] = '<div class="d-flex w-100 justify-content-between pe-3 py-0 align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>Archivo '.$name.' ignorado (extensión no permitida).</div>';
                         continue;
                     }
 
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                     $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
 
                     if (!in_array($ext, $allowed, true)) {
-                        $messages[] = '<div class="d-flex justify-content-center align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>Archivo '.$name.' ignorado (debe ser PDF).</div>';
+                        $messages[] = '<div class="d-flex w-100 justify-content-between pe-3 py-0 align-items-center alert alert-warning mt-5 mb-0 text-center alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle-fill me-2"></i>Archivo '.$name.' ignorado (debe ser PDF).</div>';
                         continue;
                     }
 
@@ -275,7 +275,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
     <main class="bg-body-tertiary py-5 uploads">
         <div class="container"> 
             <div class="row">    
-                <h1 class="fs-3 mb-3" style="color: #ccc;">Panel de administración</h1>
+                <h1 class="fs-3 mb-3" style="color: #999;">Panel de administración</h1>
 
                 <!-- 1. Subir /data/automotive.json -->
                 <div class="col-md-6 mb-4">
@@ -435,7 +435,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
     <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5">
         <div class="container">
              <div class="row">
-                <div class="col-12 d-flex justify-content-center mt-5 mb-2">
+                <div class="col-12 d-flex w-100 justify-content-between pe-3 mt-5 mb-2">
                     <small class="mt-3 mb-0">© 2025 DVR Distribuidora</small>
                 </div>
             </div>

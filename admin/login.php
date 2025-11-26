@@ -74,7 +74,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h4 class="text-center">Panel de administración</h4>
 
                     <?php if ($error): ?>
-                        <div class="messages container mb-0"></div>
+                        <div class="d-flex w-100 justify-content-between align-items-center alert alert-danger mt-2 mb-0 pe-3 py-0 text-center alert-dismissible fade show" role="alert">
+                            <i class="bi bi-x-octagon-fill me-2 fs-5"></i>
+                            <?= htmlspecialchars($error) ?>
+                            
+                            <button type="button" class="btn pe-0" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x fs-4"></i></button>
+                        </div>
                     <?php endif; ?>
 
                         <form method="post" action="">
