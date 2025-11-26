@@ -328,9 +328,16 @@ footer #qr-container{
 
 /* Hero */
 .hero{
-    background: rgb(33, 37, 41) url(../img/hero.webp);
     background-size: cover;
     background-position: center;
+    transition: all .75s ease;
+}
+.hero.automotriz{
+    background: rgb(33, 37, 41) url(../img/automotriz.webp);
+    
+}
+.hero.industrial{
+    background: rgb(33, 37, 41) url(../img/industrial.webp);
 }
 .hero .overlay{
     position: absolute;
@@ -635,6 +642,13 @@ footer #qr-container{
 .plp-container.show {
     opacity: 1;
     transform: translateX(0);
+}
+footer{
+    opacity: 0;
+    transition: all .75s ease;
+}
+footer.show{
+    opacity: 1;
 }
 .pdp-container ul li{
     margin-bottom: 0;

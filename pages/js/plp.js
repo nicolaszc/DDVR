@@ -8,6 +8,7 @@
 // =========================
 // Variables globales
 // =========================
+let hero = null; 
 let btnAutomotive = null; 
 let btnIndustrial = null; 
 let filtersGroup = null; 
@@ -43,6 +44,7 @@ function initPlp() {
 
     // ====== CARGA INICIAL ======
     //jsonRoute = siteRoot + "data/automotive.json";
+    hero = document.getElementById("hero");
     btnAutomotive = document.getElementById("btn-automotive");
     btnIndustrial = document.getElementById("btn-industrial");
     if(jsonRoute == "data/automotive.json"){
@@ -315,10 +317,13 @@ function bindPlpControls() {
 function animatePlp() {
     const c = document.querySelector(".plp-container");
     if (!c) return;
+    const f = document.querySelector("footer");
     c.classList.remove("show");
+    f.classList.remove("show");
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
             c.classList.add("show");
+            f.classList.add("show");
         });
     });
 }
@@ -330,12 +335,16 @@ function catalogBtnsActive(btn){
         btnIndustrial.classList.add("btn-secondary");
         btnAutomotive.classList.remove("btn-secondary");
         btnAutomotive.classList.add("btn-primary");
+        hero.classList.remove("industrial");
+        hero.classList.add("automotriz");
     }
     if(btn == 'industrial'){
         btnIndustrial.classList.add("btn-primary");
         btnIndustrial.classList.remove("btn-secondary");
         btnAutomotive.classList.add("btn-secondary");
         btnAutomotive.classList.remove("btn-primary");
+        hero.classList.remove("automotriz");
+        hero.classList.add("industrial");
     }
     
 

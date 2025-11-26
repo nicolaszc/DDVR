@@ -242,10 +242,13 @@ containerRC.innerHTML = allCards;
 function animatePdp() {
     const c = document.querySelector(".pdp-container");
     if (!c) return;
+    const f = document.querySelector("footer");
     c.classList.remove("show");
+    f.classList.remove("show");
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
             c.classList.add("show");
+            f.classList.add("show");
         });
     });
 }
