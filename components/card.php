@@ -4,7 +4,7 @@ $base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
   : '';
 ?>
 <!-- /components/card.html -->
-<div class="card shadow mb-2 h-100 d-flex flex-column card-ddvr" data-slug="{{slug}}" data-id="{{id}}">
+<div class="card shadow mb-2 h-100 d-flex flex-column card-ddvr" data-product-id="{{id}}" data-product-slug="{{slug}}">
     <div class="card-img pt-5">
         <img src="<?= $base ?>/uploads/img/{{imagen}}" alt="{{titulo}}">
     </div>
@@ -20,8 +20,7 @@ $base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
             <button
                 type="button"
                 class="btn btn-sm btn-primary btn-ddvr py-2 px-4"
-                data-product-id="{{id}}"
-                data-product-slug="{{slug}}">
+                >
                 Ver Más<i class="bi bi-arrow-right-short"></i>
             </button>
             

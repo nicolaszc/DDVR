@@ -13,7 +13,7 @@ $base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
     <meta name="theme-color" content="#712cf9" />
     <meta id="site-path" name="site-path" content="<?= $base ?>" />
 
-    <meta property="og:image" content="<?= 'https://' . $_SERVER['HTTP_HOST'] ?>/api/qr/qr-get.php?url=<?= urlencode('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI' ]) ?>">
+    <meta property="og:image" content="<?= 'https://' . $_SERVER['HTTP_HOST'] ?>/api/qr/qr-get.php?url=<?= urlencode('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI' ]) ?>" id="ogImage">
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />

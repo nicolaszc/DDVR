@@ -1,56 +1,45 @@
-/index.html          ← entrypoint de la SPA, contiene el main <div> y carga scripts
+/index.html          ← entrypoint de la SPA
 
 /assets/
-│
-└── js/                 ← librerías locales (solo copias, offline)
-     ├── [jquery, isotope, etc.] 
-     └── ...            
+└── js/              ← librerías locales (offline: jQuery, Isotope, QR, etc.)
 
 /pages/
-│
 ├── js/
-│   ├── router/         ← lógica del SPA
-│   │   ├── include.js
-│   │   ├── router.js
-│   │   └── main.js      ← entrypoint que arranca todo
-│   │
-│   ├── app.js           ← funciones generales de UI
-│   ├── plp.js           ← lógica específica de la PLP
-│   └── pdp.js           ← lógica específica de la PDP
-│
-├── plp.html             ← markup de catálogo
-└── pdp.html             ← markup de ficha de producto
+│   ├── router/
+│   │   ├── include.js   ← carga HTML de componentes de manera asíncrona
+│   │   ├── router.js    ← controla la navegación SPA (PLP <-> PDP)
+│   │   └── main.js      ← entrypoint principal del frontend, inicializa todo
+│   ├── app.js           ← funciones globales UI, animaciones, helpers
+│   ├── plp.js           ← lógica específica de PLP: render, filtros, isotope
+│   └── pdp.js           ← lógica específica de PDP: render producto, random cards
+├── plp.html             ← markup de catálogo (PLP)
+├── pdp.html             ← markup de ficha producto (PDP)
 
 /components/
-│
 ├── js/
-│   ├── form-post.js
-│   └── qr-btns.js
-│
-└── [otros componentes...] 
+│   ├── form-post.js     ← validación y envío de formularios
+│   └── qr-btns.js       ← generación de QR y acciones de share
+└── otros componentes... ← header, footer, card, botones fijos, theme toggle, etc.
 
-/data/                  ← JSONs de productos
-│   ├── automotive.json
-│   └── industrial.json
-│
-/api/                   ← endpoints PHP
-│
+/data/
+├── automotive.json      ← productos automotriz
+└── industrial.json      ← productos industrial
+
+/api/
 ├── qr/
-│   └── qr-get.php
-│
+│   └── qr-get.php       ← genera QR dinámicos de cada producto
 └── mail/
-    └── form-post.php
+    └── form-post.php    ← recibe formularios de contacto
 
-/admin/                 
-   ├── login.php
-   └── upload.php
+/admin/
+├── login.php            ← autenticación admin
+├── upload.php           ← subida de archivos (img/pdf)
+└── editor.php           ← editor de contenido (Monaco)
 
 /uploads/
-│
 ├── img/
 │   ├── automotriz
 │   └── industrial
-│
 └── pdf/
     ├── automotriz
     └── industrial

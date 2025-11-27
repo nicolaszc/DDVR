@@ -5,15 +5,16 @@ function initQr() {
     // Get the element where the QR code will be displayed
     const qrContainer = document.getElementById("qr-code");
     // Define the data to be encoded in the QR code
+    const ogImage = document.getElementById("ogImage");
     const qrLocation = window.location.href;
     const copyQr = document.getElementById('copy-qr');
 
     //////////////// MOSTRAR QR DINAMICO qr-get.php ////////////////
-
+    let qrSource =  window.location.origin + '/api/qr/qr-get.php?url=' + encodeURIComponent(qrLocation);
     let qrImage = qrContainer.querySelector('img');
-    qrImage.src = window.location.origin + '/api/qr/qr-get.php?url=' + qrLocation;
+    qrImage.src = qrSource;
     qrImage.setAttribute('src', qrImage.src);
-
+    ogImage.setAttribute('content', qrSource)
     ////////// ANIMATIONS /////////////////
 
     let timeoutId;

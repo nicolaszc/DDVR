@@ -227,9 +227,6 @@ function renderCardsPDP(products) {
             .filter(Boolean)
             .join(" ");
 
-        const col = document.createElement("div");
-        col.className = `col grid-item ${categoriaClase}`;
-        col.id = `${product.id}`;
 
         let html = cardTemplate
         .replace(/{{slug}}/g, slug)
@@ -239,17 +236,20 @@ function renderCardsPDP(products) {
         .replace(/{{descripcion_corta}}/g, product.descripcion_corta)
         .replace(/{{formatosTexto}}/g, formatosTexto);
 
-    allCards += `
-        <div class="col-md-3">
-            ${html}
-        </div>
-    `; 
+        allCards += `
+            <div class="col-md-3 grid-item mb-3 mb-md-0 ${categoriaClase}">
+                ${html}
+            </div>
+        `; 
         
     });
 
-containerRC.innerHTML = allCards; 
-    
-    attachCardListener();
+    containerRC.innerHTML = allCards; 
+    containerRC.querySelectorAll('.card-ddvr').forEach(card => {
+    card.style.visibility = 'visible';
+});
+    attachCardListener('.card-ddvr .btn-ddvr, .card-ddvr img');
+
 }
 
 

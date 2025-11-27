@@ -140,12 +140,13 @@ function renderCards(products) {
         .replace(/{{titulo}}/g, product.titulo)
         .replace(/{{descripcion_corta}}/g, product.descripcion_corta)
         .replace(/{{formatosTexto}}/g, formatosTexto);
-
+        
         col.innerHTML = html;
         plp.appendChild(col);
+        col.querySelector('.card-ddvr').style.visibility = 'visible';
     });
     animateView('.plp-container');
-    attachCardListener();
+    attachCardListener('.card-ddvr .btn-ddvr, .card-ddvr img');
 }
 
 
@@ -206,7 +207,7 @@ function bindPlpControls() {
     filterActive(btn);
     
     console.log('2. ' + sortByValue)
-sortActive();
+    sortActive();
     if (btnAutomotive) {
         btnAutomotive.addEventListener("click", (e) => {
         e.preventDefault();
@@ -231,8 +232,11 @@ sortActive();
             actualFilter = btn.getAttribute('data-filter') || '*';
             console.log(actualFilter)
             grid.arrange({ filter: actualFilter });
-
-            filterAnchor.scrollIntoView();
+            // Esperar a que termine Isotope de reorganizar
+grid.once('arrangeComplete', () => {
+    filterAnchor.scrollIntoView({ behavior: 'smooth' });
+});
+            
         });
     
 
@@ -284,6 +288,7 @@ function filterActive(btn){
     iconContainer.setAttribute('id', 'filter-icon-container');
     btn.classList.remove('d-none');
     btn.classList.add('active');
+    
 }
 
 function sortActive(){

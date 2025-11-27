@@ -421,6 +421,7 @@ footer #qr-container{
     width: auto;
     max-height: 160px;
     mix-blend-mode: multiply;
+    cursor: pointer;
 }
 .card-body {
     display: flex;
@@ -429,6 +430,11 @@ footer #qr-container{
 .product-main-info{
     height: 6.5rem;
     line-height: 1.5;
+}
+@media(max-width: 576px){
+    .product-main-info {
+        height: auto;
+    } 
 }
 .product h4{
     font-size: 1.25rem;
@@ -495,6 +501,7 @@ footer #qr-container{
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
 }
 .card-ddvr{
+    visibility: hidden;
     border:none;
     overflow: hidden!important;
     position: relative;
@@ -733,6 +740,23 @@ footer a{
     }
     #visible-addon{
         background-color: rgba(0, 0, 0, .05);
+    }
+      
+    .pdp-container.product .card h4 {
+        font-size: 1.25rem;
+        color: var(--main-light-color) !important;
+    }
+    .pdp-container.product .card .product-text {
+        color: var(--card-text-color) !important;
+        font-size: .875rem;
+    }
+    .pdp-container.product .card .product-presentation {
+        color: var(--secondary-light-color) !important;
+        font-size: .875rem;
+    }
+    .pdp-container.product .card .product-presentation strong {
+        font-weight: 300;
+        color: var(--main-light-color) !important;
     }
     .product-title, .pdp-container.product h4{
         color: rgb(102, 102, 102) !important;

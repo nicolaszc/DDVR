@@ -86,17 +86,18 @@ function navbarHeaderCollapsel() {
 // Listener Btns Card
 // =========================
 
-function attachCardListener(){
-    const buttons = document.querySelectorAll('.card .btn-ddvr[data-product-slug]');
-    
-    buttons.forEach(btn => {
-        btn.addEventListener('click', e => {
+function attachCardListener(linkElements){
+    const links = document.querySelectorAll(linkElements);
+    links.forEach(link => {
+        link.addEventListener('click', e => {
             e.preventDefault();
             e.stopPropagation();
 
-            const slug = btn.dataset.productSlug;
-            const productId = btn.dataset.productId;
-
+            const card = link.closest('.card-ddvr');
+            console.log(card)
+            const slug = card.dataset.productSlug;
+            const productId = card.dataset.productId;
+            console.log(productId)
             // Buscar el producto en productsData
             const product = productsData.find(p => String(p.id) === String(productId));
             if (!product) return console.error("Producto no encontrado");
