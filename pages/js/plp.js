@@ -1,16 +1,9 @@
 // =========================
-// Root
-// =========================
-
-//let siteRoot = null; 
-
-
-// =========================
 // Variables globales
 // =========================
 let hero = null; 
 let btnAutomotive = null; 
-let btnIndustrial = null; 
+let btnIndustrial = null;
 let filtersGroup = null; 
 let filterGroupBtns = null; 
 let filterAnchor = null; 
@@ -18,42 +11,50 @@ let filterIconParent = null;
 let filterIconObject = null;
 let myStorageObject = null;
 let filterOpenBtn = "";
+let btn = "";
+let btnSort = "";
 
 let plp = null;
 
-let iso = null;   
+let grid = null;   
 let actualFilter = "*";
+let sortByValue = null;
 
 let productsData = [];
-let jsonRoute = "data/automotive.json";
-//let pdpTemplate = "";
-//let cardTemplate = "";
+let currentCatalog = "automotive"
+function getJsonRoute() {
+  return `${siteRoot}data/${currentCatalog}.json`;
+}
+
+function changeCatalog(name) {
+  currentCatalog = name;
+  catalogBtnsActive(name);
+  loadPlp(getJsonRoute());
+
+}
 
 // ⬅️ ESTA ES LA ÚNICA LÍNEA CAMBIADA ARRIBA
 let templatesReady = null;
 
+const main = document.querySelector('main');
+let currentHeight = "";
 
 // =========================
 // Init
 // =========================
-function initPlp() {
 
+function initPlp() {
     // ====== SELECTORES ======
     console.log('PLP cargada ✔ at ' + siteRoot);
     plp = document.getElementById("plp");
 
     // ====== CARGA INICIAL ======
-    //jsonRoute = siteRoot + "data/automotive.json";
     hero = document.getElementById("hero");
     btnAutomotive = document.getElementById("btn-automotive");
     btnIndustrial = document.getElementById("btn-industrial");
-    if(jsonRoute == "data/automotive.json"){
-        catalogBtnsActive('automotive')
-    }
-    if(jsonRoute == "data/industrial.json"){
-        catalogBtnsActive('industrial')
-    }
-    loadPlp(siteRoot +  jsonRoute);
+    footer = document.querySelector("footer");
+    changeCatalog(currentCatalog);
+    
 }
 
 
@@ -63,6 +64,7 @@ function initPlp() {
 
 function loadPlp(jsonRoute) {
     const plp = document.getElementById("plp");
+    
     plp.innerHTML = `
     <div class="col-12 text-center py-4">
         <div class="spinner-border" role="status">
@@ -80,8 +82,8 @@ function loadPlp(jsonRoute) {
         productsData = data;
         templatesReady.then(() => {
             renderCards(data);
-            initIsotope();  
-            bindPlpControls();        
+            initIsotope();      
+              
         });
     })
     .catch((err) => {
@@ -93,14 +95,14 @@ function loadPlp(jsonRoute) {
             </div>
         </div>
         `; 
-    });   
-     
+    });        
 }
 
 
 // =========================
 // Render Cards
 // =========================
+
 function renderCards(products) {
     if (!cardTemplate) console.warn("cardTemplate no cargado aún");
     plp.innerHTML = "";
@@ -142,76 +144,20 @@ function renderCards(products) {
         col.innerHTML = html;
         plp.appendChild(col);
     });
-
-    
-
-    
+    animateView('.plp-container');
     attachCardListener();
 }
 
-// =========================
-// Listener Btns Card
-// =========================
-function attachCardListener(){
-    const buttons = document.querySelectorAll('.card .btn-ddvr[data-product-slug]');
-    buttons.forEach(btn => {
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-            e.stopPropagation();
-
-            const slug = btn.dataset.productSlug;
-            const productId = btn.dataset.productId;
-
-            // Buscar el producto en productsData
-            const product = productsData.find(p => String(p.id) === String(productId));
-            if (!product) return console.error("Producto no encontrado");
-
-            //scrollToTop();
-
-            // Random cards
-            //window.pendingRandomCards = renderRandomCardsHtml(product);
-            
-            navigate(`/producto/${slug}?id=${productId}`);
-        });
-    });
-}
-// =========================
-// Agregar listeners de share
-// =========================
-const shareButtons = document.querySelectorAll(".share-btn");       
-
-document.querySelector('main').addEventListener('click', e => {  
-    const btn = e.target.closest('.share-btn');
-    if (!btn) return;
-
-    e.preventDefault();
-    e.stopPropagation();
-
-    const rrssCurrent = btn.closest(".share-container").querySelector(".rrss");
-    if (!rrssCurrent) return;
-
-    shareButtons.forEach((el) => {
-        if (el !== btn) el.classList.remove("active");
-    });
-
-    btn.classList.toggle("active");
-
-    const allRrss = document.querySelectorAll(".rrss");
-    allRrss.forEach((el) => {
-        if (el !== rrssCurrent) el.classList.remove("active");
-    });
-
-    rrssCurrent.classList.toggle("active");
-});
 
 // ===============================
 // Inicializar / refrescar Isotope
 // ===============================
+
 function initIsotope() {
     if (!window.Isotope) return;
 
-    if (!iso) {
-        iso = new Isotope(plp, {
+    if (!grid) {
+        grid = new Isotope(plp, {
             itemSelector: ".grid-item",
             layoutMode: "fitRows",
             fitRows: {
@@ -221,21 +167,22 @@ function initIsotope() {
                 name: '.name'
             }
         });
+        bindPlpControls();  
     } else {
-        iso.reloadItems();
+        grid.reloadItems();
     }
-
-    iso.arrange({ filter: actualFilter });  
-       
+    
+    grid.arrange({ filter: actualFilter });     
+    grid.arrange({ sortBy : sortByValue });  
 }
 
 
 // ===============================
-// Bind Filter / Sort Btns
+// Bind Filter, Sort y Btns
 // ===============================
+
 function bindPlpControls() {
-    console.log("Rebinding PLP controls...");
-    
+    console.log("Binding PLP controls...");   
     
     filtersGroup = document.querySelector(".filters-button-group");
     filterGroupBtns = document.querySelectorAll("button.btn-filter");
@@ -246,108 +193,110 @@ function bindPlpControls() {
     myStorageObject = { storedElement: filterIconObject}; 
     filterOpenBtn = document.querySelector(('button:has(span#filter-icon-container'));
 
-     if (btnAutomotive) {
+    console.log('1. ' + sortByValue)
+    if(!btn){ 
+        btn = document.querySelector('[data-filter = "*"');
+    }else{
+        btn = document.querySelector('[data-filter = "' + actualFilter + '"]');
+    }
+
+    if(!sortByValue){
+        sortByValue = "original-order";
+    }
+    filterActive(btn);
+    
+    console.log('2. ' + sortByValue)
+sortActive();
+    if (btnAutomotive) {
         btnAutomotive.addEventListener("click", (e) => {
         e.preventDefault();
-        loadPlp(siteRoot + "data/automotive.json");
-        catalogBtnsActive('automotive');
+        changeCatalog("automotive");
         });
     }
 
     if (btnIndustrial) {
         btnIndustrial.addEventListener("click", (e) => {
         e.preventDefault();
-        loadPlp(siteRoot + "data/industrial.json");
-        catalogBtnsActive('industrial');
-        
+        changeCatalog("industrial");       
         });
     }
-    
-
    
         filtersGroup.addEventListener('click', (e) => {
-            const btn = e.target.closest('button.btn-filter');
-            if (!btn || !iso) return;
+            btn = e.target.closest('button.btn-filter');
+            if (!btn || !grid) return;           
 
-            filterAnchor.scrollIntoView();
-
-            filterIconParent = document.getElementById('filter-icon-container');
-            filterIconParent.removeChild(filterIconObject);
-            filterIconParent.removeAttribute('id');
-
-            console.log('clickeo');
-            // activo visual
-            filterGroupBtns.forEach(function(b){
-                    b.classList.remove('active');
-                    b.classList.toggle('d-none');
-                }
-            );
-            
-            const iconContainer = btn.querySelector('.filter-icon-container')
-            iconContainer.prepend(myStorageObject.storedElement);
-            iconContainer.setAttribute('id', 'filter-icon-container');
-            btn.classList.remove('d-none');
-            btn.classList.add('active');
+            filterActive(btn)
 
             // aplicar filtro
             actualFilter = btn.getAttribute('data-filter') || '*';
-            iso.arrange({ filter: actualFilter });
+            console.log(actualFilter)
+            grid.arrange({ filter: actualFilter });
+
+            filterAnchor.scrollIntoView();
         });
     
 
     if(btnSort){
-        btnSort.addEventListener('click', (e) =>{
-            if (!btnSort || !iso) return;
+        btnSort.addEventListener('click', () =>{
+            if (!btnSort || !grid) return;
 
-            var sortByValue = btnSort.getAttribute('data-sort-by');
-            iso.arrange({ sortBy : sortByValue });
+            sortByValue = btnSort.getAttribute('data-sort-by');
+            grid.arrange({ sortBy : sortByValue });
 
-            if(sortByValue == 'name'){
-            btnSort.setAttribute('data-sort-by' , 'original-order');
-            }else{
-            btnSort.setAttribute('data-sort-by' , 'name');
-            }
-            
-            btnSort.classList.toggle('active');
+            sortActive()
+           
         })
     }
 }
 
 
-function animatePlp() {
-    const c = document.querySelector(".plp-container");
-    if (!c) return;
-    const f = document.querySelector("footer");
-    c.classList.remove("show");
-    f.classList.remove("show");
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            c.classList.add("show");
-            f.classList.add("show");
-        });
-    });
+// =========================================
+// Activar Filter, Sort y Btns
+// =========================================
+
+function catalogBtnsActive(name){
+    if(name == 'automotive'){
+        btnIndustrial.classList.replace("btn-primary", "btn-secondary");
+        btnAutomotive.classList.replace("btn-secondary", "btn-primary");
+        hero.classList.replace("industrial", "automotriz");
+    }
+    if(name == 'industrial'){
+        btnIndustrial.classList.replace("btn-secondary", "btn-primary");
+        btnAutomotive.classList.replace("btn-primary", "btn-secondary");
+        hero.classList.replace("automotriz", "industrial");
+    }
 }
 
+function filterActive(btn){
+    filterIconParent = document.getElementById('filter-icon-container');
+    filterIconParent.removeChild(filterIconObject);
+    filterIconParent.removeAttribute('id');
 
-function catalogBtnsActive(btn){
-    if(btn == 'automotive'){
-        btnIndustrial.classList.remove("btn-primary");
-        btnIndustrial.classList.add("btn-secondary");
-        btnAutomotive.classList.remove("btn-secondary");
-        btnAutomotive.classList.add("btn-primary");
-        hero.classList.remove("industrial");
-        hero.classList.add("automotriz");
-    }
-    if(btn == 'industrial'){
-        btnIndustrial.classList.add("btn-primary");
-        btnIndustrial.classList.remove("btn-secondary");
-        btnAutomotive.classList.add("btn-secondary");
-        btnAutomotive.classList.remove("btn-primary");
-        hero.classList.remove("automotriz");
-        hero.classList.add("industrial");
-    }
+    // activo visual
+    filterGroupBtns.forEach(function(b){
+            b.classList.remove('active');
+            b.classList.toggle('d-none');
+        }
+    );
     
+    const iconContainer = btn.querySelector('.filter-icon-container')
+    iconContainer.prepend(myStorageObject.storedElement);
+    iconContainer.setAttribute('id', 'filter-icon-container');
+    btn.classList.remove('d-none');
+    btn.classList.add('active');
+}
 
+function sortActive(){
+    console.log('3. ' + sortByValue)
+    if(sortByValue == 'name'){
+        btnSort.setAttribute('data-sort-by' , 'original-order');
+        btnSort.classList.add('active')
+    }else{
+        btnSort.setAttribute('data-sort-by' , 'name');
+        btnSort.classList.remove('active')
+       
+    }  
+    console.log('4. ' + sortByValue)  
 }
 
 // =========================
@@ -355,9 +304,6 @@ function catalogBtnsActive(btn){
 // =========================
 
 document.addEventListener("plpLoaded", () => {
-
-    // Se obtiene el siteRoot AQUÍ
-    //siteRoot = document.getElementById('site-root').getAttribute('content');
 
     templatesReady = fetch(siteRoot + 'components/card.php')
     .then(res => res.text())
@@ -367,6 +313,5 @@ document.addEventListener("plpLoaded", () => {
     .catch(err => console.error("Error cargando card template", err));
 
     initPlp();
-    //bindPlpControls();  
-    
+    //bindPlpControls();     
 });

@@ -1,43 +1,34 @@
+// =========================
+// Site Root from <?= $base ?>
+// =========================
+
 let siteRoot = document.getElementById('site-path').content; // o lo que estés usando
 siteRoot = siteRoot + '/';
-/* [...document.getElementsByTagName('script')].forEach(scriptTag => {
-  let src = scriptTag.getAttribute('src');
 
-  // ignora scripts inline o externos absolutos
-  if (!src || src.startsWith('http') || src.startsWith(siteRoot)) return;
 
-  // si empieza con "./" o "/"
-  if (src.startsWith('./')) src = src.slice(1);
-  if (src.startsWith('/')) src = src.slice(1);
-
-  scriptTag.src = siteRoot + src;
-});
-
-[...document.getElementsByTagName('link')].forEach(linkTag => {
-  let src = linkTag.getAttribute('href');
-
-  // ignora scripts inline o externos absolutos
-  if (!src || src.startsWith('http') || src.startsWith(siteRoot)) return;
-
-  // si empieza con "./" o "/"
-  if (src.startsWith('./')) src = src.slice(1);
-  if (src.startsWith('/')) src = src.slice(1);
-
-  linkTag.src = siteRoot + src;
-}); */
 // =========================
 // Variables globales
 // =========================
+
 const headerAnchor = document.getElementById("header");
 let hasClass = null;
 const aboutClassToCheck = 'collapsed';
 let btnAbout = null;
 const toTop = document.querySelector('.to-top');
+window._lastPath = window.location.pathname;
+
+// =========================
+// Restaurar scroll manual
+// =========================
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 
 
 // =========================
 // Init
 // =========================
+
 function initApp() {
   
   btnAbout = document.getElementById("btn-about");
@@ -48,13 +39,9 @@ function initApp() {
   const iconLg = document.getElementById("icon-lg");
   const iconSm = document.getElementById("icon-sm");
  
-  //const metaSiteRoot = document.getElementById("site-root");
   iconAt.setAttribute('href', siteRoot + 'assets/img/ico.png');
   iconLg.setAttribute('href', siteRoot + 'assets/img/ico.png');
   iconSm.setAttribute('href', siteRoot + 'assets/img/ico.png');
-
-  
-  //metaSiteRoot.setAttribute('content', siteRoot)
 
   // TO TOP
   if (toTop) {
@@ -73,10 +60,20 @@ function initApp() {
 
 }
 
+
+// =========================
+// Scroll top
+// =========================
+
 function scrollToTop(){
   headerAnchor.scrollIntoView();
-  console.log('toTop');
 }
+
+
+// =========================
+// Cerrar about
+// =========================
+
 function navbarHeaderCollapsel() {
   var navbarHeaderCollapse = new bootstrap.Collapse(document.getElementById('navbarHeader'), {
       toggle: false // Prevent default toggling
@@ -84,9 +81,107 @@ function navbarHeaderCollapsel() {
   navbarHeaderCollapse.hide();
 }
 
+
+// =========================
+// Listener Btns Card
+// =========================
+
+function attachCardListener(){
+    const buttons = document.querySelectorAll('.card .btn-ddvr[data-product-slug]');
+    
+    buttons.forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const slug = btn.dataset.productSlug;
+            const productId = btn.dataset.productId;
+
+            // Buscar el producto en productsData
+            const product = productsData.find(p => String(p.id) === String(productId));
+            if (!product) return console.error("Producto no encontrado");
+
+            currentHeight = main.offsetHeight;
+            main.style.height = currentHeight + 'px';
+            el.classList.remove("show");
+            footer.classList.remove("show");
+
+            navigate(`/producto/${slug}?id=${productId}`);
+      
+        });
+    });
+}
+
+
+// =========================
+// Agregar listeners de share
+// =========================
+
+const shareButtons = document.querySelectorAll(".share-btn");       
+
+document.querySelector('main').addEventListener('click', e => {  
+    const btn = e.target.closest('.share-btn');
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const rrssCurrent = btn.closest(".share-container").querySelector(".rrss");
+    if (!rrssCurrent) return;
+
+    shareButtons.forEach((el) => {
+        if (el !== btn) el.classList.remove("active");
+    });
+
+    btn.classList.toggle("active");
+
+    const allRrss = document.querySelectorAll(".rrss");
+    allRrss.forEach((el) => {
+        if (el !== rrssCurrent) el.classList.remove("active");
+    });
+
+    rrssCurrent.classList.toggle("active");
+});
+
+
+// =========================
+// Animar vistas
+// =========================
+
+function animateView(selector) {
+    el = document.querySelector(selector);
+    if (!el) return;
+
+    const currentPath = window.location.pathname;
+    const isNewView = currentPath !== window._lastPath;
+    window._lastPath = currentPath; // actualizar para la próxima navegación
+
+    if (isNewView) {
+        history.scrollRestoration = 'manual';
+    }
+
+    const startAnimation = () => {
+        el.classList.add("show");
+        main.style.height = '';
+        footer.classList.add("show");
+    };
+
+    if (window.scrollY === 0) {
+        startAnimation();
+    } else {
+        window.addEventListener('scrollend', startAnimation, { once: true });
+        scrollToTop();
+    }
+
+}
+
+
+// =========================
+// Esperar include.js
+// =========================
+
 if (document.readyState === "loading") {
-  document.addEventListener("componentsLoaded", initApp);
-  
+  document.addEventListener("componentsLoaded", initApp); 
 } else {
   initApp();
 }

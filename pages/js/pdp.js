@@ -1,13 +1,23 @@
+// =========================
+// Variables globales
+// =========================
+
 let urlParams = null;
 let pdpTemplate = "";
 let cardTemplate = "";
 //let jsonRoute = null;
 let randomCardsJson = "";
 let catalog = "";
+
+
+// =========================
+// Init
+// =========================
+
 function initPdp() {
     console.log("PDP inicializada");
-    const qr = document.getElementById('qr-image');
-    //qr.src = siteRoot + '/api/qr/qr-get.php?url=<?' + window.location.href;
+    cdp = document.querySelector(".pdp-container");
+
     // Obtener ID desde URL ?id=1
     initQr();
     urlParams = new URLSearchParams(window.location.search);
@@ -15,8 +25,8 @@ function initPdp() {
     const id = urlParams.get("id");
     const [catalogPrefix, productId] = id.split("-");
 
-    if (catalogPrefix === "a") jsonRoute = "data/automotive.json";
-    if (catalogPrefix === "i") jsonRoute = "data/industrial.json";
+    if (catalogPrefix === "a") currentCatalog = "automotive";
+    if (catalogPrefix === "i") currentCatalog = "industrial";
     catalog = catalogPrefix + "-";
     console.log(id);
 
@@ -25,8 +35,8 @@ function initPdp() {
         return;
     }
 
-    fetchProductsData(siteRoot + jsonRoute).then(() => {
-        console.log(productsData)
+    fetchProductsData(getJsonRoute()).then(() => {
+
         loadPdp(id);
     });
 }
@@ -35,6 +45,7 @@ function initPdp() {
 // =========================
 // Cargar JSON
 // =========================
+
 function fetchProductsData(url) {
     return fetch(url)
         .then(res => res.json())
@@ -47,10 +58,11 @@ function fetchProductsData(url) {
 // =========================
 // Cargar PDP sin recargar JSON
 // =========================
+
 function loadPdp(id) {
     // Buscar producto en productsData (ya cargado en la PLP)
     const product = productsData.find(p => String(p.id) === String(id));
-     console.log(product)
+
     if (!product) {
         document.querySelector("main").innerHTML = `
             <div class="container py-5">
@@ -64,34 +76,38 @@ function loadPdp(id) {
 
     // Renderizar plantilla
     const html = renderPdpHtml(product);
-    //console.log(html);
-    
-    //console.log(renderedRandomCards)
+
     // Inyectar en el DOM
     const container = document.querySelector("main");
     container.innerHTML = html;
-    animatePdp();
-    //if (renderedRandomCards) {
-        //container.insertAdjacentHTML("beforeend", renderedRandomCards);
-        
-      //}
+
+    animateView('.pdp-container');
+
     // Botón volver (SPA)
     const backBtn = document.getElementById("btn-back");
     if (backBtn) {
         backBtn.addEventListener("click", e => {
             e.preventDefault();
             navbarHeaderCollapsel();
-            scrollToTop();
-            //jsonRoute = "data/automotive.json"
-            window.history.back();
+
+            currentHeight = main.offsetHeight;
+            main.style.height = currentHeight + 'px';
+            el.classList.remove("show");
+            footer.classList.remove("show");
+
+            grid = null;   
+
+            window.history.back();          
         });
     }
     renderRandomCardsHtml(product);
 }
 
+
 // =========================
 // Render PDP
 // =========================
+
 function renderPdpHtml(productId) {
 
     const formatosTexto = Array.isArray(productId.formatos)
@@ -178,14 +194,16 @@ function renderRandomCardsHtml(currentProduct) {
     return renderCardsPDP(randomCardsArray);
 }
 
+
 // =========================
 // Render Cards
 // =========================
+
 function renderCardsPDP(products) {
     if (!cardTemplate) console.warn("cardTemplate no cargado aún");
-    //plp.innerHTML = "";
+
     productsLength = products.length;
-    console.log(productsLength);
+   
     let allCards = "";
     const containerRC = document.querySelector("#random-cards");
     products.forEach((product) => {
@@ -221,10 +239,6 @@ function renderCardsPDP(products) {
         .replace(/{{descripcion_corta}}/g, product.descripcion_corta)
         .replace(/{{formatosTexto}}/g, formatosTexto);
 
-        //col.innerHTML = html;
-        //plp.appendChild(col);
-        
-        console.log(html)
     allCards += `
         <div class="col-md-3">
             ${html}
@@ -239,20 +253,9 @@ containerRC.innerHTML = allCards;
 }
 
 
-function animatePdp() {
-    const c = document.querySelector(".pdp-container");
-    if (!c) return;
-    const f = document.querySelector("footer");
-    c.classList.remove("show");
-    f.classList.remove("show");
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            c.classList.add("show");
-            f.classList.add("show");
-        });
-    });
-}
-
+// =========================
+// Cargar template PDP
+// =========================
 
 function loadPdpTemplates() {
     return fetch(siteRoot + 'pages/pdp.html')
@@ -265,13 +268,9 @@ function loadPdpTemplates() {
         .then(res => res.text())
         .then(html => {
             cardTemplate = html;
-            console.log('card')
         })
         .catch(err => console.error("Error cargando templates", err));
 }
-
-
-
 
 
 // =========================
