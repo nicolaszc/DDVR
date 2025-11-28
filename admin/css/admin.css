@@ -14,8 +14,9 @@
     font-size:0.85rem;
     margin-bottom:0.25rem;
 }
-.actions span.px-4{
+.actions span.spacer{
     color: var(--terciary-light-color);
+    font-weight: 200;
 }
 .btn-pass{
     color: var(--card-text-color);
@@ -60,8 +61,8 @@ small{
     color: #00FF00 !important;
 }
 .editor-container {
-    height: 70vh;
-    min-height: 400px;
+    height: 55vh;
+    max-height: 420px;
     border-radius: 0.5rem;
     overflow: hidden;
     border: 1px solid #374151;
@@ -85,4 +86,10 @@ small{
 .alert{
     font-size: .875rem;
     font-weight: 200;
+}
+/* Light Mode */
+[data-bs-theme="light"] {
+    .login .navbar-brand{
+        background-image: url(../../assets/img/logo-light.webp);
+    }
 }

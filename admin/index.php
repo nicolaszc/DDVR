@@ -9,7 +9,7 @@ if (!file_exists($credFile)) {
 }
 
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    header('Location: upload.php');
+    header('Location: /admin/upload.php');
     exit;
 }
 
@@ -32,32 +32,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+$base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
+  ? '/develop'
+  : '';
+
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <title>Login Admin Catálogo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#712cf9" />
+    <meta name="theme-color" content="#ef7e09" />
+    <meta property="og:image" content="<?= 'https://' . $_SERVER['HTTP_HOST'] . $base ?>/assets/img/ico-OG.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    
     <!-- Favicon -->
-    <link id="icon-at" rel="apple-touch-icon" href="../assets/img/ico.png" sizes="180x180">
-    <link id="icon-lg" rel="icon" href="../assets/img/ico.png" sizes="32x32" type="image/png">
-    <link id="icon-sm" rel="icon" href="../assets/img/ico.png" sizes="16x16" type="image/png">
-
+    <link rel="apple-touch-icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="180x180" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="180x180" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: light)">
+    
     <!-- Color Mode Script -->
-    <script type="text/javascript" src="../components/js/color-modes.js"></script>
+    <script type="text/javascript" src="<?= $base ?>/components/js/color-modes.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
-    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="<?= $base ?>/assets/css/main.css" rel="stylesheet">
     <link href="css/admin.css" rel="stylesheet">
 
 </head>
 <body>
-<main class="bg-body-tertiary py-5 login d-flex align-items-center">
+<main class="bg-body-tertiary py-5 login d-flex align-items-center login">
     <div class="container"> 
         <div class="row"> 
 
@@ -102,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </main>
 
- <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5">
+ <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5 show">
     <div class="container">
             <div class="row">
             <div class="col-12 d-flex justify-content-center mt-5 mb-2">

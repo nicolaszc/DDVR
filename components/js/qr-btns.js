@@ -10,7 +10,7 @@ function initQr() {
     const copyQr = document.getElementById('copy-qr');
 
     //////////////// MOSTRAR QR DINAMICO qr-get.php ////////////////
-    let qrSource =  window.location.origin + '/api/qr/qr-get.php?url=' + encodeURIComponent(qrLocation);
+    let qrSource =  window.location.origin + siteRoot + 'api/qr/qr-get.php?url=' + encodeURIComponent(qrLocation);
     let qrImage = qrContainer.querySelector('img');
     qrImage.src = qrSource;
     qrImage.setAttribute('src', qrImage.src);

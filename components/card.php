@@ -1,12 +1,7 @@
-<?php
-$base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
-  ? '/develop'
-  : '';
-?>
 <!-- /components/card.html -->
 <div class="card shadow mb-2 h-100 d-flex flex-column card-ddvr" data-product-id="{{id}}" data-product-slug="{{slug}}">
     <div class="card-img pt-5">
-        <img src="<?= $base ?>/uploads/img/{{imagen}}" alt="{{titulo}}">
+        <img src="/uploads/img/{{imagen}}" alt="{{titulo}}">
     </div>
     <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
         <div class="product-main-info">

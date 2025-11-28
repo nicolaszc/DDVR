@@ -2,6 +2,7 @@
 $base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
   ? '/develop'
   : '';
+  global $base;
 ?>
 <!doctype html>
 <html lang="es" data-bs-theme="dark">
@@ -13,16 +14,18 @@ $base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
     <meta name="theme-color" content="#712cf9" />
     <meta id="site-path" name="site-path" content="<?= $base ?>" />
 
-    <meta property="og:image" content="<?= 'https://' . $_SERVER['HTTP_HOST'] ?>/api/qr/qr-get.php?url=<?= urlencode('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI' ]) ?>" id="ogImage">
+    <meta property="og:image" content="" id="ogImage">
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-
-    <!-- Favicon -->
-    <link id="icon-at" rel="apple-touch-icon" href="" sizes="180x180">
-    <link id="icon-lg" rel="icon" href="" sizes="32x32" type="image/png">
-    <link id="icon-sm" rel="icon" href="" sizes="16x16" type="image/png">
+   <!-- Favicon -->
+    <link rel="apple-touch-icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="180x180" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="180x180" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: light)">
 
     <!-- Color Mode Script -->
     <script type="text/javascript" src="<?= $base ?>/components/js/color-modes.js"></script>

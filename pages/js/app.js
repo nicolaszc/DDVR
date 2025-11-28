@@ -1,8 +1,16 @@
 // =========================
+// Jquery style
+// =========================
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+
+
+// =========================
 // Site Root from <?= $base ?>
 // =========================
 
-let siteRoot = document.getElementById('site-path').content; // o lo que estés usando
+let siteRoot = $('#site-path').content; // o lo que estés usando
 siteRoot = siteRoot + '/';
 
 
@@ -10,7 +18,7 @@ siteRoot = siteRoot + '/';
 // Variables globales
 // =========================
 
-const headerAnchor = document.getElementById("header");
+const headerAnchor = document.getElementById('header');
 let hasClass = null;
 const aboutClassToCheck = 'collapsed';
 let btnAbout = null;
@@ -34,14 +42,6 @@ function initApp() {
   btnAbout = document.getElementById("btn-about");
    
   hasClass = btnAbout.classList.contains(aboutClassToCheck);
- 
-  const iconAt = document.getElementById("icon-at");
-  const iconLg = document.getElementById("icon-lg");
-  const iconSm = document.getElementById("icon-sm");
- 
-  iconAt.setAttribute('href', siteRoot + 'assets/img/ico.png');
-  iconLg.setAttribute('href', siteRoot + 'assets/img/ico.png');
-  iconSm.setAttribute('href', siteRoot + 'assets/img/ico.png');
 
   // TO TOP
   if (toTop) {
@@ -148,6 +148,9 @@ document.querySelector('main').addEventListener('click', e => {
 // =========================
 // Animar vistas
 // =========================
+function isSafari() {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
 
 function animateView(selector) {
     el = document.querySelector(selector);
@@ -170,9 +173,24 @@ function animateView(selector) {
     if (window.scrollY === 0) {
         startAnimation();
     } else {
-        window.addEventListener('scrollend', startAnimation, { once: true });
         scrollToTop();
+
+        if (isSafari()) {
+            // fallback Safari
+            const checkScroll = () => {
+                if (window.scrollY === 0) {
+                    startAnimation();
+                } else {
+                    requestAnimationFrame(checkScroll);
+                }
+            };
+            requestAnimationFrame(checkScroll);
+        } else {
+            // navegadores que soportan scrollend
+            window.addEventListener('scrollend', startAnimation, { once: true });
+        }
     }
+
 
 }
 

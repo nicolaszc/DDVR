@@ -2,14 +2,14 @@
 session_start();
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 }
 
 // Logout rápido con ?logout=1
 if (isset($_GET['logout'])) {
     session_destroy();
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -185,6 +185,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
         }
     }
 }
+
+$base = (strpos($_SERVER['REQUEST_URI'], '/develop') === 0)
+  ? '/develop'
+  : '';
+
 ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
@@ -192,20 +197,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
     <meta charset="UTF-8">
     <title>DDVR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#712cf9" />
+    <meta name="theme-color" content="#ef7e09" />
+    <meta property="og:image" content="<?= 'https://' . $_SERVER['HTTP_HOST'] . $base ?>/assets/img/ico-OG.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+   
     <!-- Favicon -->
-    <link id="icon-at" rel="apple-touch-icon" href="../assets/img/ico.png" sizes="180x180">
-    <link id="icon-lg" rel="icon" href="../assets/img/ico.png" sizes="32x32" type="image/png">
-    <link id="icon-sm" rel="icon" href="../assets/img/ico.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="180x180" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-dark.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="180x180" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="<?= $base ?>/assets/img/favicon-light.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: light)">
 
     <!-- Color Mode Script -->
-    <script type="text/javascript" src="../components/js/color-modes.js"></script>
+    <script type="text/javascript" src="<?= $base ?>/components/js/color-modes.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
-    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="<?= $base ?>/assets/css/main.css" rel="stylesheet">
     <link href="css/admin.css" rel="stylesheet">
 
 </head>
@@ -219,9 +232,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                     <strong class="d-none">DDVR</strong>
                 </span>
                 <div class="actions d-flex align-items-center">
-                    <a class="btn btn-pass d-flex align-items-center"href="#"data-bs-toggle="modal"data-bs-target="#changeCredsModal"><span>Password</span><i class="bi bi-key ms-2 fs-4 lh-1"></i></a>
-                <span class="px-4">|</span>
-                <a class="logout navbar-toggler pe-0" href="?logout=1"><span>Cerrar sesión</span><i class="bi bi-box-arrow-right ms-2"></i></a>
+                    <a class="btn btn-pass d-flex align-items-center pb-0 pt-1" href="#" data-bs-toggle="modal" data-bs-target="#changeCredsModal"><span class="d-none d-md-inline">Password</span><i class="bi bi-key ms-2 fs-4 lh-1"></i></a>
+                    <span class="px-md-4 spacer fs-4 lh-1">|</span>
+                    <a class="logout navbar-toggler pe-0 py-0" href="?logout=1"><span class="d-none d-md-inline">Cerrar sesión</span><i class="bi bi-box-arrow-right ms-2 fs-4 lh-1"></i></a>
                 </div>
             </div>
         </div>
@@ -272,7 +285,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
         </div>
     <?php endif; ?>
 
-    <main class="bg-body-tertiary py-5 uploads">
+    <main class="bg-body-tertiary pt-4 pb-5 uploads">
         <div class="container"> 
             <div class="row">    
                 <h1 class="fs-3 mb-3" style="color: #999;">Panel de administración</h1>
@@ -293,22 +306,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                 </div>
                             </div>
                             <p>Este archivo reemplazara el actual <code>automotive.json</code>.</p>
-                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
+                            <form class="row js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_automotive_json">
-                                <div class="field">
+                                <div class="field col-md-6">
                                     <input type="file"
-                                        class="form-control w-50"
+                                        class="form-control"
                                         name="automotive_json"
                                         id="automotive_json"
                                         accept=".json"
                                         required>
-                                    <small class="help-text d-block mt-2">
+                                    <small class="help-text d-block m-2 ms-0">
                                         * Debes subir un archivo .json con la estructura correcta.
                                     </small>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">
-                                    Subir automotive.json<i class="bi bi-upload ms-2"></i>
-                                </button>
+                                    <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                        Subir automotive.json<i class="bi bi-upload ms-2"></i>
+                                    </button>
+                                </div>                           
                             </form>
                         </div>
                     </div>
@@ -330,22 +343,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                 </div>
                             </div>
                             <p>Este archivo reemplazara el actual <code>industrial.json</code>.</p>
-                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
+                            <form class="row js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_industrial_json">
-                                <div class="field">
+                                <div class="field col-md-6">
                                     <input type="file"
-                                        class="form-control w-50"
+                                        class="form-control"
                                         name="industrial_json"
                                         id="industrial_json"
                                         accept=".json"
                                         required>
-                                    <small class="help-text d-block mt-2">
+                                    <small class="help-text d-block m-2 ms-0">
                                         * Debes subir un archivo .json con la estructura correcta.
                                     </small>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">
-                                    Subir industrial.json<i class="bi bi-upload ms-2"></i>
-                                </button>
+                                    <button type="submit" class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                        Subir industrial.json<i class="bi bi-upload ms-2"></i>
+                                    </button>
+                                </div>                             
                             </form>
                         </div>
                     </div>
@@ -357,10 +370,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
                             <h4>Subir imágenes de productos</h4>
                             <p>Se guardan en <code>/uploads/img/automotriz</code> o <code>/uploads/img/industrial</code>.</p>
-                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
+                            <form class="row js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_images">
-                                <div class="field">
-                                    <select class="form-select pe-5 w-50"
+                                <div class="field col-md-6">
+                                    <select class="form-select pe-5 mb-2"
                                             name="img_categoria"
                                             id="img_categoria"
                                             required>
@@ -368,22 +381,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                         <option value="automotriz">Automotriz</option>
                                         <option value="industrial">Industrial</option>
                                     </select>
-                                </div>
-                                <div class="field">
+                               
                                     <input type="file"
-                                        class="form-control w-50"
+                                        class="form-control"
                                         name="images[]"
                                         id="images"
                                         accept=".jpg,.jpeg,.png,.webp,.gif"
                                         multiple
                                         required>
-                                    <small class="help-text d-block mt-2">
+                                    <small class="help-text d-block m-2 ms-0">
                                         * Extensiones permitidas: jpg, jpeg, png, webp, gif.
                                     </small>
-                                </div>
-                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">
-                                    Subir imágenes<i class="bi bi-upload ms-2"></i>
-                                </button>
+                                    <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                        Subir imágenes<i class="bi bi-upload ms-2"></i>
+                                    </button>
+                                </div>                             
                             </form>
                         </div>
                     </div>
@@ -395,10 +407,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                         <div data-bs-theme="dark" class="bg-dark card-body d-flex flex-column py-4">
                             <h4>Subir fichas técnicas</h4>
                             <p>Se guardan en <code>/uploads/pdf/automotriz</code> o <code>/uploads/pdf/industrial</code>.</p>
-                            <form class="js-upload-form" method="post" enctype="multipart/form-data" novalidate>
+                            <form class="row js-upload-form" method="post" enctype="multipart/form-data" novalidate>
                                 <input type="hidden" name="action" value="upload_pdfs">
-                                <div class="field">
-                                    <select class="form-select pe-5 w-50"
+                                <div class="field col-md-6">
+
+                                    <select class="form-select pe-5 mb-2"
                                             name="pdf_categoria"
                                             id="pdf_categoria"
                                             required>
@@ -406,22 +419,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
                                         <option value="automotriz">Automotriz</option>
                                         <option value="industrial">Industrial</option>
                                     </select>
-                                </div>
-                                <div class="field">
+                               
                                     <input type="file"
-                                        class="form-control w-50"
+                                        class="form-control"
                                         name="pdfs[]"
                                         id="pdfs"
                                         accept=".pdf"
                                         multiple
                                         required>
-                                    <small class="help-text d-block mt-2">
+
+                                    <small class="help-text d-block m-2 ms-0">
                                         * Sólo se permiten archivos .pdf.
                                     </small>
-                                </div>
-                                <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">
-                                    Subir PDFs<i class="bi bi-upload ms-2"></i>
-                                </button>
+                                    <button type="submit"  class="btn btn-primary btn-ddvr my-2 py-2 px-4">
+                                        Subir PDFs<i class="bi bi-upload ms-2"></i>
+                                    </button>
+                                </div>                           
                             </form>
                         </div>
                     </div>
@@ -432,10 +445,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') !== 'chan
     </main>
 
 
-    <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5">
+    <footer  data-bs-theme="dark" class="bg-dark text-body-secondary pt-5 show">
         <div class="container">
              <div class="row">
-                <div class="col-12 d-flex w-100 justify-content-between pe-3 mt-5 mb-2">
+                <div class="col-12 d-flex w-100 justify-content-center pe-3 mt-5 mb-2">
                     <small class="mt-3 mb-0">© 2025 DVR Distribuidora</small>
                 </div>
             </div>

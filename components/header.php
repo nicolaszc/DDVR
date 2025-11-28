@@ -1,4 +1,3 @@
-
 <header data-bs-theme="dark">
     <div class="text-bg-dark collapse bg-body-tertiary" id="navbarHeader">
         <div class="about container pb-5">
@@ -61,7 +60,7 @@
 
     <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a href="/" class="navbar-brand d-flex align-items-center d-online-block">
+            <a href="javascript: navigate(window.location.origin)" onclick="navigate(window.location.origin); return false;" class="navbar-brand d-flex align-items-center d-online-block">
                 <strong class="d-none">DDVR</strong>
             </a>
 

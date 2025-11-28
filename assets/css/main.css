@@ -331,13 +331,15 @@ footer #qr-container{
     background-size: cover;
     background-position: center;
     transition: all .75s ease;
+    background-color: rgb(33, 37, 41) ;
 }
 .hero.automotriz{
-    background: rgb(33, 37, 41) url(../img/automotriz.webp);
+    background-image: url(../img/automotriz.webp);
+    
     
 }
 .hero.industrial{
-    background: rgb(33, 37, 41) url(../img/industrial.webp);
+    background-image: url(../img/industrial.webp);
 }
 .hero .overlay{
     position: absolute;
@@ -393,6 +395,9 @@ footer #qr-container{
     color: var(--main-light-color);
 }
 @media (max-width: 768px){
+    #filter-section{
+        height: 86px;
+    }
     #filters{
         width: 185px;
     }
@@ -500,12 +505,14 @@ footer #qr-container{
     transform: translateX(0);
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
 }
-.card-ddvr{
-    visibility: hidden;
+.card-ddvr{  
     border:none;
     overflow: hidden!important;
     position: relative;
     transition: all 1s ease;
+}
+.product .card-ddvr{
+    visibility: hidden;
 }
 .card-ddvr::before {
     content: '';
@@ -568,9 +575,9 @@ footer #qr-container{
 #contactForm .offcanvas-body .phone-input {
     padding-right: 2.5rem !important;
 }
-#contactForm .offcanvas-body #btn-submit:disabled{
+:disabled{
     text-decoration: line-through;
-    background-color: rgba(239, 126, 9, .625);
+    background-color: rgba(239, 126, 9, .625) !important;
 }
 
 /* Modal Producto */

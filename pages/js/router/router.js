@@ -6,18 +6,19 @@ async function router() {
   main.innerHTML = '';
 
   if (path === '/' || path === '/index.html') {
+
     await includeHTML('pages/plp.html', 'main', 'include');
-    //animatePlp();
     console.log('router PLP')
     document.dispatchEvent(new Event('plpLoaded'));
-  }
-  else if (path.startsWith('/producto/')) {
+
+  } else if (path.startsWith('/producto/')) {
+
     const slug = decodeURIComponent(path.split('/producto/')[1]);
     await includeHTML('pages/pdp.html', 'main', 'include');
     console.log('router PDP')
     document.dispatchEvent(new CustomEvent('pdpLoaded', { detail: { name: slug }}));
-  }
-  else {
+
+  } else {
     main.innerHTML = '<h2>Página no encontrada</h2>';
   }
 }
